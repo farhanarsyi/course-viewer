@@ -35,6 +35,7 @@ $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $videoUrl);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+curl_setopt($ch, CURLOPT_ENCODING, ''); // Auto-decode gzip/deflate responses from CDN
 curl_setopt($ch, CURLOPT_REFERER, 'https://www.codepolitan.com');
 curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
 // Set a reasonable timeout
