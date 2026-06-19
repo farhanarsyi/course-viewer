@@ -469,12 +469,27 @@ function renderCourse(course, idx) {
       // Global flat index
       const flatIdx = state.currentLessonFlat.findIndex(fl => fl.moduleIdx === mIdx && fl.lessonIdx === lIdx);
 
+      // Check status
+      let indicatorHtml = '';
+      const storageKey = `kf_status_${course.course_slug}_${lesson.title.replace(/\s+/g, '_')}`;
+      const status = localStorage.getItem(storageKey);
+      if (status === 'mengerti') {
+        indicatorHtml = `<span class="lesson-status-dot mengerti" title="Mengerti"></span>`;
+      } else if (status === 'ragu') {
+        indicatorHtml = `<span class="lesson-status-dot ragu" title="Ragu-ragu"></span>`;
+      } else if (status === 'tidak') {
+        indicatorHtml = `<span class="lesson-status-dot tidak" title="Belum Paham"></span>`;
+      }
+
       const li = document.createElement('li');
       li.className = 'lesson-item';
       li.innerHTML = `
         <span class="lesson-num">${lessonCounter}</span>
         <div class="lesson-info">
-          <div class="lesson-name">${escapeHtml(lesson.title)}</div>
+          <div class="lesson-name" style="display:flex; align-items:center; gap:8px;">
+            ${escapeHtml(lesson.title)}
+            ${indicatorHtml}
+          </div>
           <div class="lesson-badges">
             ${hasYt ? `<span class="lesson-badge yt">▶ YouTube</span>` : ''}
             ${hasVid ? `<span class="lesson-badge video">🎬 Video</span>` : ''}
@@ -622,11 +637,61 @@ function renderLesson() {
     videoContainer.innerHTML = '';
   }
 
+  // ── Status handling ─────────────────────────────────────────────
+  renderStatus(lesson);
+
   // ── Quiz handling ──────────────────────────────────────────────
   renderQuiz(lesson);
 
   // Sidebar lesson list
   renderLessonSidebar();
+}
+
+function renderStatus(lesson) {
+  const statusContainer = $('status-container');
+  if (!statusContainer) return;
+
+  const course = state.courses[state.currentCourseIdx];
+  if (!course) return;
+
+  const storageKey = `kf_status_${course.course_slug}_${lesson.title.replace(/\s+/g, '_')}`;
+  const currentStatus = localStorage.getItem(storageKey) || '';
+
+  statusContainer.innerHTML = `
+    <div class="status-widget animate-in">
+      <h4 class="status-widget-title">Bagaimana pemahaman Anda tentang materi ini?</h4>
+      <div class="status-buttons-row">
+        <button class="status-btn btn-mengerti${currentStatus === 'mengerti' ? ' active' : ''}" data-status="mengerti">
+          <span class="status-btn-icon">🟢</span> Mengerti
+        </button>
+        <button class="status-btn btn-ragu${currentStatus === 'ragu' ? ' active' : ''}" data-status="ragu">
+          <span class="status-btn-icon">🟡</span> Ragu-ragu
+        </button>
+        <button class="status-btn btn-tidak${currentStatus === 'tidak' ? ' active' : ''}" data-status="tidak">
+          <span class="status-btn-icon">🔴</span> Belum Paham
+        </button>
+      </div>
+    </div>
+  `;
+
+  statusContainer.querySelectorAll('.status-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const selectedStatus = btn.dataset.status;
+      
+      if (btn.classList.contains('active')) {
+        localStorage.removeItem(storageKey);
+        btn.classList.remove('active');
+      } else {
+        localStorage.setItem(storageKey, selectedStatus);
+        statusContainer.querySelectorAll('.status-btn').forEach(b => b.classList.toggle('active', b === btn));
+      }
+
+      // Re-render indicators dynamically
+      renderLessonSidebar();
+      const courseObj = state.courses[state.currentCourseIdx];
+      renderCourse(courseObj, state.currentCourseIdx);
+    });
+  });
 }
 
 function renderQuiz(lesson) {
@@ -868,6 +933,7 @@ function renderLessonSidebar() {
   const container = $('lesson-list-sidebar');
   container.innerHTML = '';
   const flat = state.currentLessonFlat;
+  const course = state.courses[state.currentCourseIdx];
   let lastModule = null;
 
   flat.forEach((item, i) => {
@@ -881,7 +947,26 @@ function renderLessonSidebar() {
 
     const el = document.createElement('div');
     el.className = 'sidebar-lesson-item' + (i === state.currentLessonFlatIdx ? ' active' : '');
-    el.innerHTML = `<span class="sidebar-lesson-num">${i + 1}</span><span>${escapeHtml(item.lesson.title)}</span>`;
+    
+    // Check status
+    let indicatorHtml = '';
+    if (course) {
+      const storageKey = `kf_status_${course.course_slug}_${item.lesson.title.replace(/\s+/g, '_')}`;
+      const status = localStorage.getItem(storageKey);
+      if (status === 'mengerti') {
+        indicatorHtml = `<span class="lesson-status-dot mengerti" title="Mengerti"></span>`;
+      } else if (status === 'ragu') {
+        indicatorHtml = `<span class="lesson-status-dot ragu" title="Ragu-ragu"></span>`;
+      } else if (status === 'tidak') {
+        indicatorHtml = `<span class="lesson-status-dot tidak" title="Belum Paham"></span>`;
+      }
+    }
+
+    el.innerHTML = `
+      <span class="sidebar-lesson-num">${i + 1}</span>
+      <span class="sidebar-lesson-text" style="flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${escapeHtml(item.lesson.title)}</span>
+      ${indicatorHtml}
+    `;
     el.addEventListener('click', () => goToLesson(i));
     container.appendChild(el);
   });
