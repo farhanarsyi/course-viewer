@@ -24,6 +24,71 @@ const state = {
   topView: 'home',
 };
 
+// ── Lesson Understanding Tags — localStorage persistence ────────
+// Key format: `understanding_${courseSlug}_${lessonTitle_hash}`
+// Values: 'mengerti' | 'ragu' | 'belum' | null
+
+function getLessonKey(courseIdx, flatIdx) {
+  const course = state.courses[courseIdx];
+  const item = state.currentLessonFlat[flatIdx];
+  if (!course || !item) return null;
+  const slug = course.course_slug || courseIdx;
+  const lessonId = `${item.moduleIdx}_${item.lessonIdx}`;
+  return `understanding_${slug}_${lessonId}`;
+}
+
+function getLessonUnderstanding(courseIdx, flatIdx) {
+  const key = getLessonKey(courseIdx, flatIdx);
+  if (!key) return null;
+  return localStorage.getItem(key) || null;
+}
+
+function setLessonUnderstanding(courseIdx, flatIdx, value) {
+  const key = getLessonKey(courseIdx, flatIdx);
+  if (!key) return;
+  if (value) {
+    localStorage.setItem(key, value);
+  } else {
+    localStorage.removeItem(key);
+  }
+}
+
+// ── Quiz Results — localStorage persistence ─────────────────────
+// Key: `quiz_result_${courseSlug}_${lessonKey}`
+function getQuizResultKey(courseIdx, flatIdx) {
+  const course = state.courses[courseIdx];
+  const item = state.currentLessonFlat[flatIdx];
+  if (!course || !item) return null;
+  const slug = course.course_slug || courseIdx;
+  return `quiz_result_${slug}_${item.moduleIdx}_${item.lessonIdx}`;
+}
+
+function saveQuizResult(courseIdx, flatIdx, answers, submitted, started) {
+  const key = getQuizResultKey(courseIdx, flatIdx);
+  if (!key) return;
+  localStorage.setItem(key, JSON.stringify({ answers, submitted, started }));
+}
+
+function loadQuizResult(courseIdx, flatIdx) {
+  const key = getQuizResultKey(courseIdx, flatIdx);
+  if (!key) return null;
+  try {
+    const raw = localStorage.getItem(key);
+    return raw ? JSON.parse(raw) : null;
+  } catch (e) { return null; }
+}
+
+// ── Understanding Tag Meta ──────────────────────────────────────
+const UNDERSTANDING_TAGS = [
+  { value: 'mengerti', label: 'Mengerti', icon: '✅', color: '#30d158', bg: 'rgba(48,209,88,0.12)', border: 'rgba(48,209,88,0.4)' },
+  { value: 'ragu',     label: 'Ragu-ragu', icon: '⚠️', color: '#ff9f0a', bg: 'rgba(255,159,10,0.12)', border: 'rgba(255,159,10,0.4)' },
+  { value: 'belum',    label: 'Belum Paham', icon: '❌', color: '#ff375f', bg: 'rgba(255,55,95,0.12)', border: 'rgba(255,55,95,0.4)' },
+];
+
+function getTagMeta(value) {
+  return UNDERSTANDING_TAGS.find(t => t.value === value) || null;
+}
+
 // ── Card accent colors (cycling) ───────────────────────────────
 const CARD_ACCENTS = [
   'linear-gradient(90deg,#0071e3,#6c37c9)',
@@ -756,10 +821,19 @@ function goToLesson(flatIdx) {
   if (flatIdx < 0 || flatIdx >= state.currentLessonFlat.length) return;
   state.currentLessonFlatIdx = flatIdx;
   state.currentVideoIdx = 0;
-  // Reset quiz state
-  state.currentQuizAnswers = {};
-  state.currentQuizSubmitted = false;
-  state.currentQuizStarted = false;
+
+  // Restore saved quiz state for this lesson
+  const saved = loadQuizResult(state.currentCourseIdx, flatIdx);
+  if (saved) {
+    state.currentQuizAnswers = saved.answers || {};
+    state.currentQuizSubmitted = saved.submitted || false;
+    state.currentQuizStarted = saved.started || false;
+  } else {
+    state.currentQuizAnswers = {};
+    state.currentQuizSubmitted = false;
+    state.currentQuizStarted = false;
+  }
+
   renderLesson();
   showView('lesson');
   updateBreadcrumb('lesson');
@@ -786,6 +860,9 @@ function renderLesson() {
   const quizContainer = $('quiz-container');
   const videoContainer = $('video-container');
   const videoSection = $('video-section');
+
+  // Render understanding tag widget
+  renderUnderstandingTag(flatIdx);
 
   if (lesson.quiz_data) {
     lessonTextEl.style.display = 'none';
@@ -937,9 +1014,17 @@ function renderLessonSidebar() {
         lastModule = item.moduleName;
       }
 
+      // Get understanding tag for this lesson
+      const understanding = getLessonUnderstanding(state.currentCourseIdx, i);
+      const tagMeta = getTagMeta(understanding);
+
       const el = document.createElement('div');
       el.className = 'sidebar-lesson-item' + (i === state.currentLessonFlatIdx ? ' active' : '');
-      el.innerHTML = `<span class="sidebar-lesson-num">${i + 1}</span><span>${escapeHtml(item.lesson.title)}</span>`;
+      el.innerHTML = `
+        <span class="sidebar-lesson-num">${i + 1}</span>
+        <span class="sidebar-lesson-title">${escapeHtml(item.lesson.title)}</span>
+        ${tagMeta ? `<span class="sidebar-tag-dot" style="background:${tagMeta.color}" title="${tagMeta.label}"></span>` : '<span class="sidebar-tag-dot empty"></span>'}
+      `;
       el.addEventListener('click', () => {
         goToLesson(i);
         closeMobileSheet();
@@ -954,6 +1039,41 @@ function renderLessonSidebar() {
 
   renderToList(sidebarContainer);
   renderToList(sheetContainer);
+}
+
+// ── Understanding Tag Widget ────────────────────────────────────
+function renderUnderstandingTag(flatIdx) {
+  let container = $('understanding-tag-widget');
+  if (!container) return;
+
+  const current = getLessonUnderstanding(state.currentCourseIdx, flatIdx);
+
+  container.innerHTML = `
+    <div class="utag-header">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <span>Pemahaman Materi</span>
+    </div>
+    <div class="utag-buttons">
+      ${UNDERSTANDING_TAGS.map(tag => `
+        <button class="utag-btn${current === tag.value ? ' active' : ''}" data-value="${tag.value}"
+          style="${current === tag.value ? `background:${tag.bg};border-color:${tag.border};color:${tag.color};` : ''}">
+          <span class="utag-icon">${tag.icon}</span>
+          <span class="utag-label">${tag.label}</span>
+        </button>
+      `).join('')}
+    </div>
+  `;
+
+  container.querySelectorAll('.utag-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const val = btn.dataset.value;
+      const prevVal = getLessonUnderstanding(state.currentCourseIdx, flatIdx);
+      // Toggle off if same
+      setLessonUnderstanding(state.currentCourseIdx, flatIdx, val === prevVal ? null : val);
+      renderUnderstandingTag(flatIdx);
+      renderLessonSidebar(); // Update sidebar dots
+    });
+  });
 }
 
 // ── Breadcrumb ─────────────────────────────────────────────────
@@ -1277,6 +1397,14 @@ function renderQuiz(quiz, container) {
     if (submitBtn) {
       submitBtn.addEventListener('click', () => {
         state.currentQuizSubmitted = true;
+        // Persist quiz result to localStorage
+        saveQuizResult(
+          state.currentCourseIdx,
+          state.currentLessonFlatIdx,
+          state.currentQuizAnswers,
+          true,
+          true
+        );
         renderQuiz(quiz, container);
         container.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
@@ -1288,6 +1416,12 @@ function renderQuiz(quiz, container) {
         state.currentQuizAnswers = {};
         state.currentQuizSubmitted = false;
         state.currentQuizStarted = false;
+        // Clear saved quiz result so user can retake
+        saveQuizResult(
+          state.currentCourseIdx,
+          state.currentLessonFlatIdx,
+          {}, false, false
+        );
         renderQuiz(quiz, container);
       });
     }

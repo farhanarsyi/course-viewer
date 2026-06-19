@@ -937,6 +937,28 @@ body {
 }
 .sidebar-lesson-item.active .sidebar-lesson-num { color: var(--accent); }
 
+.sidebar-lesson-title {
+  flex: 1;
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: var(--text-secondary);
+}
+.sidebar-lesson-item:hover .sidebar-lesson-title { color: var(--text-primary); }
+.sidebar-lesson-item.active .sidebar-lesson-title { color: var(--accent); }
+
+.sidebar-tag-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 3px;
+  transition: all var(--transition);
+}
+.sidebar-tag-dot.empty {
+  background: transparent;
+  border: 1.5px solid var(--border);
+}
+
 /* ============================================================
    OVERLAY (mobile)
    ============================================================ */
@@ -2408,4 +2430,77 @@ body {
     font-size: 13px;
   }
 }
+
+/* ============================================================
+   UNDERSTANDING TAG WIDGET
+   ============================================================ */
+.understanding-tag-widget {
+  margin: 0 0 20px;
+  padding: 14px 16px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.utag-header {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.utag-header svg {
+  color: var(--text-tertiary);
+  flex-shrink: 0;
+}
+
+.utag-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.utag-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: inherit;
+}
+
+.utag-btn:hover {
+  border-color: var(--text-secondary);
+  background: var(--bg);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.utag-btn.active {
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+.utag-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.utag-label {
+  line-height: 1;
+}
+
 
