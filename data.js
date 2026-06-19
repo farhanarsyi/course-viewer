@@ -4860,5 +4860,1065 @@ const COURSE_DATA = [
                 ]
             }
         ]
+    },
+    {
+        "course_title": "Membangun Website Modern dengan Vue.js 2",
+        "course_slug": "belajar-cepat-vue",
+        "course_url": "https://www.codepolitan.com/dashboard/learn/courses/detail/belajar-cepat-vue",
+        "course_description": "Dalam course ini kamu akan belajar memahami dan menggunakan framework JavaScript Vue.js 2.181 Siswa 4.7 (350) Penilaian Level Beginner",
+        "about_course": "Dalam kelas online ini kamu akan belajar secara cepat dan sistematis bagaimana menggunakan framework Vue.js dalam web development.\n\nTujuan Umum dan Khusus Pelatihan\n\nDi akhir pelatihan, peserta dapat mengenal langkah-langkah membuat website menggunakan framework Vue.Js\nDapat mempraktikan dasar-dasar membuat website menggunakan framework Vue.Js\nDapat merangkumkan cara membuat website menggunakan framework Vue.Js\n\nSilabus\n\nTopik 1: Pembukaan\nTopik 2: Perkenalan Vue.Js\nTopik 3: Bekerja dengan Template\nTopik 4: Mengatur Style CSS\nTopik 5: Mendalami Vue.Js\nTopik 6: Mendalami Component pada Vue.js\nTopik 7: Membangun Project dengan Vue CLI\nTopik 8: Implementasi Project dengan Vue CLI\nTopik 9: Implementasi VueRouter\n\nJenis Pekerjaan Kelas ditujukan bagi siapa saja yang ingin berkarir menjadi seorang programmer\n\nMetode Ajar\n\nOnline Self-paced Learning\nSiswa dapat menentukan sendiri waktu belajarnya\n\nFasilitas Pengajaran\n\nMateri disediakan berupa video\nForum tanya jawab: Forum digunakan apabila siswa mendapatkan kendala saat belajar, dan akan dibalas oleh tim support CodePolitan\nGrup telegram: Berisi member CodePolitan Evaluasi pembelajaran: Ujian di akhir modul dan ujian di akhir kelas Sertifikat kelulusan\n\nPeralatan Belajar Siswa\n\nSiswa wajib memiliki akses internet melalui komputer yang menggunakan Windows/Mac/Linux\nSpesifikasi minimal komputer milik siswa: Sistem operasi : Windows, Linux, atau MacOS. Prosesor : Intel Dual Core (Rekomendasi Core i3 ke atas). RAM : 1GB (Rekomendasi 2GB). Resolusi layar : 1366 x 768 (Rekomendasi Full HD 1920 x 1080)\nSoftware: Browser (tidak ada preferensi khusus)",
+        "mentors": [
+            "Ahmad Hakim"
+        ],
+        "modules": [
+            {
+                "module_title": "Pembukaan",
+                "lessons": [
+                    {
+                        "title": "Perkenalan Materi",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1086",
+                        "text_content": "<p>File project pendukung course ini dapat diunduh di <a href=\"https://github.com/idstck/vue-basic\">https://github.com/idstck/vue-basic</a></p>",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609837_ddbf00a54bff7ee3e23a/480p/1728609837_ddbf00a54bff7ee3e23a.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609837_ddbf00a54bff7ee3e23a/1080p/1728609837_ddbf00a54bff7ee3e23a.m3u8"
+                        ],
+                        "youtube_urls": []
+                    }
+                ]
+            },
+            {
+                "module_title": "Perkenalan VueJs",
+                "lessons": [
+                    {
+                        "title": "Cara Install VueJS",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1087",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609847_b63928f4d68612481754/480p/1728609847_b63928f4d68612481754.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609847_b63928f4d68612481754/1080p/1728609847_b63928f4d68612481754.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengenal Reactive Data pada VueJS",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1088",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609885_4d50921fc608a6df8af2/480p/1728609885_4d50921fc608a6df8af2.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609885_4d50921fc608a6df8af2/1080p/1728609885_4d50921fc608a6df8af2.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Binding Data ke dalam Attribute HTML",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1089",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609891_0b3028593766f5cf1554/480p/1728609891_0b3028593766f5cf1554.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609891_0b3028593766f5cf1554/1080p/1728609891_0b3028593766f5cf1554.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Perulangan di dalam VueJS",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1090",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609800_510afaea2dc30a97a4b2/480p/1728609800_510afaea2dc30a97a4b2.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609800_510afaea2dc30a97a4b2/1080p/1728609800_510afaea2dc30a97a4b2.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Fungsi Kondisi di dalam VueJS",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1091",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609814_950ca1b2f604a67b6682/480p/1728609814_950ca1b2f604a67b6682.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609814_950ca1b2f604a67b6682/1080p/1728609814_950ca1b2f604a67b6682.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menangani Input Data dari User",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1092",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609834_e9fdc318cff29befd547/480p/1728609834_e9fdc318cff29befd547.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609834_e9fdc318cff29befd547/1080p/1728609834_e9fdc318cff29befd547.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengenal Lifecyle Hooks VueJS",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1093",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609836_91e0cbe9f390de6b847c/480p/1728609836_91e0cbe9f390de6b847c.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609836_91e0cbe9f390de6b847c/1080p/1728609836_91e0cbe9f390de6b847c.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengenal Event dan Method di dalam VueJS",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1094",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609914_c493a6a746c70220f672/480p/1728609914_c493a6a746c70220f672.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609914_c493a6a746c70220f672/1080p/1728609914_c493a6a746c70220f672.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Kuis - Belajar Cepat Vue.js - Topik 1",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/4790",
+                        "text_content": "<p>Sysntax else pada Vue.js adalah...</p>",
+                        "video_urls": [],
+                        "youtube_urls": []
+                    }
+                ]
+            },
+            {
+                "module_title": "Bekerja Dengan Template",
+                "lessons": [
+                    {
+                        "title": "Interpolation Template",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1095",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609845_321b0f255cf6724396c8/480p/1728609845_321b0f255cf6724396c8.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609845_321b0f255cf6724396c8/1080p/1728609845_321b0f255cf6724396c8.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Berbagai Cara Penggunaan Data Binding",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1096",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609863_15cb5ea791fc6f402501/480p/1728609863_15cb5ea791fc6f402501.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609863_15cb5ea791fc6f402501/1080p/1728609863_15cb5ea791fc6f402501.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengenal Computed Property",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1097",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609905_7738653e2279a32c9997/480p/1728609905_7738653e2279a32c9997.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609905_7738653e2279a32c9997/1080p/1728609905_7738653e2279a32c9997.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Perbedaan Methods dan Computed Property",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1098",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609807_f91ff8c8bc89eaf76689/480p/1728609807_f91ff8c8bc89eaf76689.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609807_f91ff8c8bc89eaf76689/1080p/1728609807_f91ff8c8bc89eaf76689.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Kuis - Belajar Cepat Vue.js - Topik 2",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/4791",
+                        "text_content": "<p>Kita juga dapat memanipulasi atau me-overide value dari v-bind dengan cara menaruh attribute nya pada file...</p>",
+                        "video_urls": [],
+                        "youtube_urls": []
+                    }
+                ]
+            },
+            {
+                "module_title": "Mengatur Style CSS",
+                "lessons": [
+                    {
+                        "title": "Binding Attribute dengan Array dan Object",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1099",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609841_9c6ed529b40a6e7433de/480p/1728609841_9c6ed529b40a6e7433de.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609841_9c6ed529b40a6e7433de/1080p/1728609841_9c6ed529b40a6e7433de.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Styling Secara Terprogram dengan Vue",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1100",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609890_cc6eb61eaeb2993df63f/480p/1728609890_cc6eb61eaeb2993df63f.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609890_cc6eb61eaeb2993df63f/1080p/1728609890_cc6eb61eaeb2993df63f.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Toggle UI dengan Computed Property",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1101",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609903_a634777d3c4f38a6803f/480p/1728609903_a634777d3c4f38a6803f.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609903_a634777d3c4f38a6803f/1080p/1728609903_a634777d3c4f38a6803f.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Efek Transisi dengan Vuejs",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1102",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609788_18bbb7e5d4c17c3d8ac9/480p/1728609788_18bbb7e5d4c17c3d8ac9.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609788_18bbb7e5d4c17c3d8ac9/1080p/1728609788_18bbb7e5d4c17c3d8ac9.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menggunakan Animation Library",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1103",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609819_4b256a1d895f87edd0f8/480p/1728609819_4b256a1d895f87edd0f8.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609819_4b256a1d895f87edd0f8/1080p/1728609819_4b256a1d895f87edd0f8.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Memahami Transition Group pada Vuejs",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1104",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609922_1e4ee23cc54527b6f0e8/480p/1728609922_1e4ee23cc54527b6f0e8.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609922_1e4ee23cc54527b6f0e8/1080p/1728609922_1e4ee23cc54527b6f0e8.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengatur Style dengan JavaScript",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1105",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609913_6ad926c80ff650d70540/480p/1728609913_6ad926c80ff650d70540.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609913_6ad926c80ff650d70540/1080p/1728609913_6ad926c80ff650d70540.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Kuis - Belajar Cepat Vue.js - Topik 3",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/4792",
+                        "text_content": "<p>Selain animasi bawaan Vue.js kita bisa menambahkan banyak animasi lainnya dengan library...</p>",
+                        "video_urls": [],
+                        "youtube_urls": []
+                    }
+                ]
+            },
+            {
+                "module_title": "Mendalami VueJS",
+                "lessons": [
+                    {
+                        "title": "Mengenal Properti Filters",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1106",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609858_f7730c1a1fff2549bd58/480p/1728609858_f7730c1a1fff2549bd58.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609858_f7730c1a1fff2549bd58/1080p/1728609858_f7730c1a1fff2549bd58.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Memuat Data pada Toggle Element",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1107",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609879_917e62c2d929d1665504/480p/1728609879_917e62c2d929d1665504.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609879_917e62c2d929d1665504/1080p/1728609879_917e62c2d929d1665504.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Pengkategorian Data Array",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1108",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609782_bf728cfd3abefe88c109/480p/1728609782_bf728cfd3abefe88c109.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609782_bf728cfd3abefe88c109/1080p/1728609782_bf728cfd3abefe88c109.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Fungsi Total dengan Computed",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1109",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609794_78b96da68bfe427a1953/480p/1728609794_78b96da68bfe427a1953.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609794_78b96da68bfe427a1953/1080p/1728609794_78b96da68bfe427a1953.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Delete Item dalam Array",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1110",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609813_6db97fc5ad44b6cc66c3/480p/1728609813_6db97fc5ad44b6cc66c3.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609813_6db97fc5ad44b6cc66c3/1080p/1728609813_6db97fc5ad44b6cc66c3.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Kuis - Belajar Cepat Vue.js - Topik 4",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/4793",
+                        "text_content": "<p>synstax untuk menghapus item dalam array yang tepat adalah...</p>",
+                        "video_urls": [],
+                        "youtube_urls": []
+                    }
+                ]
+            },
+            {
+                "module_title": "Mendalami Component pada VueJs",
+                "lessons": [
+                    {
+                        "title": "Membuat Component Sederhana di Vue",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1111",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609851_3a549eab21c5d4b2cef8/480p/1728609851_3a549eab21c5d4b2cef8.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609851_3a549eab21c5d4b2cef8/1080p/1728609851_3a549eab21c5d4b2cef8.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menggunakan Props pada Vuejs",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1112",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609886_5e08833c4dceb7240544/480p/1728609886_5e08833c4dceb7240544.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609886_5e08833c4dceb7240544/1080p/1728609886_5e08833c4dceb7240544.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menambahkan Default Value pada Props",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1113",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609902_57d19d5784111311e44d/480p/1728609902_57d19d5784111311e44d.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609902_57d19d5784111311e44d/1080p/1728609902_57d19d5784111311e44d.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Component Lebih Kompleks",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1114",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609791_176ba693999a0ee9d716/480p/1728609791_176ba693999a0ee9d716.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609791_176ba693999a0ee9d716/1080p/1728609791_176ba693999a0ee9d716.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menggunakan Event Method dari Parent Component",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1115",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609827_beeeaad8aa5eddc8afd0/480p/1728609827_beeeaad8aa5eddc8afd0.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609827_beeeaad8aa5eddc8afd0/1080p/1728609827_beeeaad8aa5eddc8afd0.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Kuis - Belajar Cepat Vue.js - Topik 5",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/4794",
+                        "text_content": "<p>Template pada component berfungsi untuk...</p>",
+                        "video_urls": [],
+                        "youtube_urls": []
+                    }
+                ]
+            },
+            {
+                "module_title": "Membangun Project dengan Vue CLI",
+                "lessons": [
+                    {
+                        "title": "Installasi Project dengan Vue CLI",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1116",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609841_9ed94b7c43fa59782487/480p/1728609841_9ed94b7c43fa59782487.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609841_9ed94b7c43fa59782487/1080p/1728609841_9ed94b7c43fa59782487.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Memahami Struktur Folder Vue CLI",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1117",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609869_49c162944bf499829e6f/480p/1728609869_49c162944bf499829e6f.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609869_49c162944bf499829e6f/1080p/1728609869_49c162944bf499829e6f.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Install Modul di Vuejs",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1118",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609898_c59d78fffceb0d8afe1f/480p/1728609898_c59d78fffceb0d8afe1f.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609898_c59d78fffceb0d8afe1f/1080p/1728609898_c59d78fffceb0d8afe1f.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Implementasi Modul di Vuejs",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1119",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609781_79a214eb61e41aa18bb0/480p/1728609781_79a214eb61e41aa18bb0.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609781_79a214eb61e41aa18bb0/1080p/1728609781_79a214eb61e41aa18bb0.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Kuis - Belajar Cepat Vue.js - Topik 6",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/4795",
+                        "text_content": "<p>Bagaimana cara kita untuk mengimplementasikan modul di vuejs...</p>",
+                        "video_urls": [],
+                        "youtube_urls": []
+                    }
+                ]
+            },
+            {
+                "module_title": "Implementasi Project dengan Vue CLI",
+                "lessons": [
+                    {
+                        "title": "Membuat Component Price",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1120",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609852_9daef29d1ac5e2536957/480p/1728609852_9daef29d1ac5e2536957.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609852_9daef29d1ac5e2536957/1080p/1728609852_9daef29d1ac5e2536957.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Component ProductList",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1121",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609879_bf22d613c34efe3f190b/480p/1728609879_bf22d613c34efe3f190b.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609879_bf22d613c34efe3f190b/1080p/1728609879_bf22d613c34efe3f190b.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Method Add Item",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1122",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609898_68b86297fb7ebf2e7be8/480p/1728609898_68b86297fb7ebf2e7be8.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609898_68b86297fb7ebf2e7be8/1080p/1728609898_68b86297fb7ebf2e7be8.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Price Slider Component",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1123",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609804_cc4a37e8f3b110e33ec8/480p/1728609804_cc4a37e8f3b110e33ec8.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609804_cc4a37e8f3b110e33ec8/1080p/1728609804_cc4a37e8f3b110e33ec8.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Navbar Component",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1124",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609826_20a7499934e828aae53f/480p/1728609826_20a7499934e828aae53f.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609826_20a7499934e828aae53f/1080p/1728609826_20a7499934e828aae53f.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Fungsi Delete Item",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1125",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609920_f3b04157d5a2f647660c/480p/1728609920_f3b04157d5a2f647660c.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609920_f3b04157d5a2f647660c/1080p/1728609920_f3b04157d5a2f647660c.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Kuis - Belajar Cepat Vue.js - Topik 7",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/4796",
+                        "text_content": "<p>Untuk menyimpkn gambar, logo dan lain sebagainya kita letakan pada folder...</p>",
+                        "video_urls": [],
+                        "youtube_urls": []
+                    }
+                ]
+            },
+            {
+                "module_title": "Implementasi VueRouter",
+                "lessons": [
+                    {
+                        "title": "Mengubah Struktur Project",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1126",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609863_f53a9f1aa68ce5582a71/480p/1728609863_f53a9f1aa68ce5582a71.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609863_f53a9f1aa68ce5582a71/1080p/1728609863_f53a9f1aa68ce5582a71.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Checkout Component",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1127",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609872_8e3b28880b2b28b0374e/480p/1728609872_8e3b28880b2b28b0374e.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609872_8e3b28880b2b28b0374e/1080p/1728609872_8e3b28880b2b28b0374e.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menggunakan VueRouter untuk Components",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1128",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609907_c738b9192ce90944be14/480p/1728609907_c738b9192ce90944be14.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609907_c738b9192ce90944be14/1080p/1728609907_c738b9192ce90944be14.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Link Antar Component",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/1129",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728609799_e695cacc3d9cd63e9e7d/480p/1728609799_e695cacc3d9cd63e9e7d.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728609799_e695cacc3d9cd63e9e7d/1080p/1728609799_e695cacc3d9cd63e9e7d.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Kuis - Belajar Cepat Vue.js - Topik 8",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-cepat-vue/lessons/4797",
+                        "text_content": "<p>Pada file apa kita memanggil library VueRouter...</p>",
+                        "video_urls": [],
+                        "youtube_urls": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "course_title": "Membangun Website Reaktif dengan Vue.js 3",
+        "course_slug": "belajar-vue-3",
+        "course_url": "https://www.codepolitan.com/dashboard/learn/courses/detail/belajar-vue-3",
+        "course_description": "Dalam kelas \"Belajar Vue 3,\" kamu akan mempelajari dasar-dasar framework JavaScript Vue.js versi terbaru. Kelas ini dirancang untuk membantu kamu menguasai Vue 3, mulai dari konsep dasar hingga penerapannya dalam pengembangan aplikasi web modern. 34 Siswa 4.7 (25) Penilaian Level Beginner",
+        "about_course": "Kelas online \"Belajar Vue 3\" adalah kursus intensif yang dirancang untuk memberikan pemahaman mendalam tentang Vue.js, framework JavaScript yang sangat populer untuk membangun antarmuka pengguna. Dalam kelas ini, kamu akan belajar cara menggunakan Vue 3 untuk membuat aplikasi web yang dinamis, interaktif, dan mudah dikelola.\n\nTujuan Umum dan Khusus Pelatihan\n\nMemahami konsep dasar Vue.js dan fitur-fitur terbaru di Vue 3.\nMenguasai teknik pengembangan aplikasi web menggunakan Vue 3.\nMampu membuat dan mengelola komponen Vue dengan baik.\n\nSilabus\n\nPengenalan Vue.js: Memahami dasar-dasar dan keunggulan menggunakan Vue.js.\nFitur Baru di Vue 3: Eksplorasi fitur-fitur terbaru yang ditawarkan oleh Vue 3.\nRouter : Menggunakan Vue Router untuk navigasi.\n\nMetode Ajar\n\nPembelajaran Mandiri Online: Kamu dapat menentukan sendiri waktu belajarmu.\nMateri Berupa Video: Materi pembelajaran disajikan dalam bentuk video yang mudah dipahami.\nForum Tanya Jawab: Fasilitas untuk berdiskusi dan bertanya mengenai materi pelajaran.\n\nPeralatan Belajar Peserta\n\nKomputer dengan Akses Internet: Pastikan kamu memiliki komputer dan koneksi internet yang stabil.\nSoftware: Browser terkini untuk mengakses materi pembelajaran dan software editor teks untuk mengembangkan aplikasi web.\n\nKelas ini cocok untuk siapa saja yang tertarik dalam pengembangan aplikasi web dan ingin mempelajari Vue 3. Dengan mengikuti kelas ini, kamu akan memperoleh keterampilan yang diperlukan untuk membangun aplikasi web yang modern dan interaktif menggunakan Vue.js.",
+        "mentors": [
+            "Ahmad Hakim"
+        ],
+        "modules": [
+            {
+                "module_title": "Belajar Vue 3",
+                "lessons": [
+                    {
+                        "title": "Mengenal Vue.Js",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10334",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731696_1ef031f1bd1747ce4eff/480p/1726731696_1ef031f1bd1747ce4eff.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731696_1ef031f1bd1747ce4eff/1080p/1726731696_1ef031f1bd1747ce4eff.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Software Dan Tools Yang Diperlukan",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10335",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731695_e9f131cca614e4dd34e2/480p/1726731695_e9f131cca614e4dd34e2.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731695_e9f131cca614e4dd34e2/1080p/1726731695_e9f131cca614e4dd34e2.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Template Counter",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10336",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732143_d907283d295f68f1ee2d/480p/1726732143_d907283d295f68f1ee2d.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732143_d907283d295f68f1ee2d/1080p/1726732143_d907283d295f68f1ee2d.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mempercantik Halaman Counter",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10337",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732153_b50e5537253b5ed2c416/480p/1726732153_b50e5537253b5ed2c416.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732153_b50e5537253b5ed2c416/1080p/1726732153_b50e5537253b5ed2c416.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Buat Project Counter Ini Agar Berfungsi",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10338",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731708_449280769b3fb9f38186/480p/1726731708_449280769b3fb9f38186.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731708_449280769b3fb9f38186/1080p/1726731708_449280769b3fb9f38186.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Install Vue Dan Pelajari Konfigurasinya",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10339",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731713_11e51709f2caa636453b/480p/1726731713_11e51709f2caa636453b.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731713_11e51709f2caa636453b/1080p/1726731713_11e51709f2caa636453b.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Jelajahi Struktur Project Vue 3 Dan Cara Kerjanya",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10340",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731745_589fc5cddc6014010763/480p/1726731745_589fc5cddc6014010763.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731745_589fc5cddc6014010763/1080p/1726731745_589fc5cddc6014010763.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membangun Kembali Project Counter Dengan Vue",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10341",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731732_39ebe72cdc30bd545c76/480p/1726731732_39ebe72cdc30bd545c76.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731732_39ebe72cdc30bd545c76/1080p/1726731732_39ebe72cdc30bd545c76.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Perbandingan Menggunakan Vanilla Javascript Dan Vue",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10342",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731754_142dcf34f7574a8c2439/480p/1726731754_142dcf34f7574a8c2439.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731754_142dcf34f7574a8c2439/1080p/1726731754_142dcf34f7574a8c2439.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengenal Options Api Dan Composition Api",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10343",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731774_b0f1b8b9153db073a0a6/480p/1726731774_b0f1b8b9153db073a0a6.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731774_b0f1b8b9153db073a0a6/1080p/1726731774_b0f1b8b9153db073a0a6.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Counter App Versi Options Api",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10344",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731767_39f7e29cfd6e70bfc464/480p/1726731767_39f7e29cfd6e70bfc464.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731767_39f7e29cfd6e70bfc464/1080p/1726731767_39f7e29cfd6e70bfc464.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Counter App Versi Composition Api",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10345",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731789_8a97ce2947324e8d1b22/480p/1726731789_8a97ce2947324e8d1b22.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731789_8a97ce2947324e8d1b22/1080p/1726731789_8a97ce2947324e8d1b22.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Persiapan Project Membahas Vue Directive",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10346",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731785_a731457fdc627d51a9b3/480p/1726731785_a731457fdc627d51a9b3.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731785_a731457fdc627d51a9b3/1080p/1726731785_a731457fdc627d51a9b3.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Ui Memo Bagian Header",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10347",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731800_953f18394bfe63d0630b/480p/1726731800_953f18394bfe63d0630b.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731800_953f18394bfe63d0630b/1080p/1726731800_953f18394bfe63d0630b.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Ui Bagian Memo",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10348",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731809_01340bff31581cf5b994/480p/1726731809_01340bff31581cf5b994.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731809_01340bff31581cf5b994/1080p/1726731809_01340bff31581cf5b994.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Ui Bagian Form Modal",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10349",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731820_7e42c407d4245bad0d6e/480p/1726731820_7e42c407d4245bad0d6e.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731820_7e42c407d4245bad0d6e/1080p/1726731820_7e42c407d4245bad0d6e.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menampilkan Dan Menyembunyikan Form Dengan Directive If",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10350",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731826_2810e6af97b158c25be8/480p/1726731826_2810e6af97b158c25be8.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731826_2810e6af97b158c25be8/1080p/1726731826_2810e6af97b158c25be8.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menangkap Data Yang Diinputkan Secara Realtime Dengan Directive Model",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10351",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731837_80a50d84946eae23a5cb/480p/1726731837_80a50d84946eae23a5cb.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731837_80a50d84946eae23a5cb/1080p/1726731837_80a50d84946eae23a5cb.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Event Handler Untuk Menyimpan Data",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10352",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731848_9d715699a09db06d2ae1/480p/1726731848_9d715699a09db06d2ae1.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731848_9d715699a09db06d2ae1/1080p/1726731848_9d715699a09db06d2ae1.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menampikan Daftar Data Menggunakan Perulangan Directive For",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10353",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731859_0702cc21d3fa295b68d8/480p/1726731859_0702cc21d3fa295b68d8.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731859_0702cc21d3fa295b68d8/1080p/1726731859_0702cc21d3fa295b68d8.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Penting Menggunakan Attribute Key Untuk Perulangan",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10354",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731866_8f70a4ee5e5d41db3ca6/480p/1726731866_8f70a4ee5e5d41db3ca6.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731866_8f70a4ee5e5d41db3ca6/1080p/1726731866_8f70a4ee5e5d41db3ca6.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Contoh Form Validasi Dan Error Handlernya",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10355",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731883_b05f2b7c5a5cf0e072af/480p/1726731883_b05f2b7c5a5cf0e072af.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731883_b05f2b7c5a5cf0e072af/1080p/1726731883_b05f2b7c5a5cf0e072af.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Event Handler Untuk Hapus Data By Id",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10356",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731882_470024252024402b33c5/480p/1726731882_470024252024402b33c5.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731882_470024252024402b33c5/1080p/1726731882_470024252024402b33c5.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Persiapan Project Untuk Pelajari Component Dan Props",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10357",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731906_61e5ba3c09dfdfcfc782/480p/1726731906_61e5ba3c09dfdfcfc782.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731906_61e5ba3c09dfdfcfc782/1080p/1726731906_61e5ba3c09dfdfcfc782.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Ui Daftar Quiz",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10358",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731900_3cc42c0f552da55fbff4/480p/1726731900_3cc42c0f552da55fbff4.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731900_3cc42c0f552da55fbff4/1080p/1726731900_3cc42c0f552da55fbff4.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menampilkan Daftar Data Dari File Json",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10359",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731925_ad28ebd535c70ab25422/480p/1726731925_ad28ebd535c70ab25422.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731925_ad28ebd535c70ab25422/1080p/1726731925_ad28ebd535c70ab25422.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menjalankan Logic Berdasarkan Perubahan State Atau Data Dengan Watch",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10360",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731925_e1518112c3475613f814/480p/1726731925_e1518112c3475613f814.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731925_e1518112c3475613f814/1080p/1726731925_e1518112c3475613f814.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Memisahkan Element Ke Component Sendiri",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10361",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731956_0a237bae1d134f58afd1/480p/1726731956_0a237bae1d134f58afd1.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731956_0a237bae1d134f58afd1/1080p/1726731956_0a237bae1d134f58afd1.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengirimkan Data Antara Component Dengan Props",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10362",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731969_84e019532daec81d488e/480p/1726731969_84e019532daec81d488e.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731969_84e019532daec81d488e/1080p/1726731969_84e019532daec81d488e.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Persiapan Pelajari Multiple Page Di Project Vue",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10363",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731973_aa66f5a113ff159d82e2/480p/1726731973_aa66f5a113ff159d82e2.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731973_aa66f5a113ff159d82e2/1080p/1726731973_aa66f5a113ff159d82e2.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menentukan Path Url Untuk View Dengan Vue Router",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10364",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731989_282020f2b1034ee9c500/480p/1726731989_282020f2b1034ee9c500.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731989_282020f2b1034ee9c500/1080p/1726731989_282020f2b1034ee9c500.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menggunakan Routerlink Untuk Berpindah Halaman",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10365",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731998_6a761437a23812db5db4/480p/1726731998_6a761437a23812db5db4.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731998_6a761437a23812db5db4/1080p/1726731998_6a761437a23812db5db4.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Memberikan Styling Pada Routerlink Active Yang Dipilih",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10366",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731996_895d7947ccf56e35c4f9/480p/1726731996_895d7947ccf56e35c4f9.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731996_895d7947ccf56e35c4f9/1080p/1726731996_895d7947ccf56e35c4f9.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuka Halaman Dengan Url Path Dinamis",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10367",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732013_468b292230bfc6b6ae46/480p/1726732013_468b292230bfc6b6ae46.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732013_468b292230bfc6b6ae46/1080p/1726732013_468b292230bfc6b6ae46.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Ekstrak Dan Mendapatkan Data Dari Route",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10368",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732020_2ba00387a4a7cd8a3e79/480p/1726732020_2ba00387a4a7cd8a3e79.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732020_2ba00387a4a7cd8a3e79/1080p/1726732020_2ba00387a4a7cd8a3e79.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Nested Component Dengan Router",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10369",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732031_e99835f09965ab05c1ef/480p/1726732031_e99835f09965ab05c1ef.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732031_e99835f09965ab05c1ef/1080p/1726732031_e99835f09965ab05c1ef.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengubah Route Melalui Kode Program",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10370",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732037_6a078e7dcb77bf81b6e5/480p/1726732037_6a078e7dcb77bf81b6e5.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732037_6a078e7dcb77bf81b6e5/1080p/1726732037_6a078e7dcb77bf81b6e5.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengatasi Halaman Tidak Ditemukan",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10384",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731704_25306091aa68df73874f/480p/1726731704_25306091aa68df73874f.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731704_25306091aa68df73874f/1080p/1726731704_25306091aa68df73874f.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Melakukan Redirect Halaman",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10385",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731701_bace9b3fbbd97ba5b62f/480p/1726731701_bace9b3fbbd97ba5b62f.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731701_bace9b3fbbd97ba5b62f/1080p/1726731701_bace9b3fbbd97ba5b62f.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Implementasi Vue Router Di Project Quiz",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10386",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732047_f4d42f43f3f886d9ddd8/480p/1726732047_f4d42f43f3f886d9ddd8.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732047_f4d42f43f3f886d9ddd8/1080p/1726732047_f4d42f43f3f886d9ddd8.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengarahkan Ke Halaman Daftar Pertanyaan",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10387",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732049_afdc1b93d31806122dfa/480p/1726732049_afdc1b93d31806122dfa.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732049_afdc1b93d31806122dfa/1080p/1726732049_afdc1b93d31806122dfa.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mendesain Halaman Quiz",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10388",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732087_7658421b8fcd8dec5fe9/480p/1726732087_7658421b8fcd8dec5fe9.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732087_7658421b8fcd8dec5fe9/1080p/1726732087_7658421b8fcd8dec5fe9.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Kenapa Harus Memisahkan Component Pada Halaman Quiz",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10389",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732064_476054dfd0be7a570225/480p/1726732064_476054dfd0be7a570225.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732064_476054dfd0be7a570225/1080p/1726732064_476054dfd0be7a570225.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menampilkan Daftar Pertanyaan Dan Pilihan Ganda",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10390",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732089_81b4b1a9cd5b90905bf8/480p/1726732089_81b4b1a9cd5b90905bf8.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732089_81b4b1a9cd5b90905bf8/1080p/1726732089_81b4b1a9cd5b90905bf8.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Dinamis Nomor Halaman Pertanyaan",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10391",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732110_f5698c8a1325165b7ce3/480p/1726732110_f5698c8a1325165b7ce3.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732110_f5698c8a1325165b7ce3/1080p/1726732110_f5698c8a1325165b7ce3.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mendapatkan Nilai Dari Perubahan State Dengan Computed",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10392",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732110_a6a996e822be141010de/480p/1726732110_a6a996e822be141010de.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732110_a6a996e822be141010de/1080p/1726732110_a6a996e822be141010de.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Bar Progress Menjadi Dinamis",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10393",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732122_52c166005d3e94600161/480p/1726732122_52c166005d3e94600161.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732122_52c166005d3e94600161/1080p/1726732122_52c166005d3e94600161.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Mengirimkan Data Dari Child Component Ke Parent Component",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10394",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732130_f4c98b980b8a0fb34a5c/480p/1726732130_f4c98b980b8a0fb34a5c.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732130_f4c98b980b8a0fb34a5c/1080p/1726732130_f4c98b980b8a0fb34a5c.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menampilkan Nilai Akhir Dari Quiz",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3/lessons/10395",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732143_e85353bd1de1b2ead2d4/480p/1726732143_e85353bd1de1b2ead2d4.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732143_e85353bd1de1b2ead2d4/1080p/1726732143_e85353bd1de1b2ead2d4.m3u8"
+                        ],
+                        "youtube_urls": []
+                    }
+                ]
+            }
+        ]
     }
 ];
