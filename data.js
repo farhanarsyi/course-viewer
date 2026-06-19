@@ -5920,5 +5920,122 @@ const COURSE_DATA = [
                 ]
             }
         ]
+    },
+    {
+        "course_title": "Belajar Animasi Di Vue.js 3",
+        "course_slug": "belajar-animasi-di-vue-3",
+        "course_url": "https://www.codepolitan.com/dashboard/learn/courses/detail/belajar-animasi-di-vue-3",
+        "course_description": "Dalam kelas \"Belajar Animasi di Vue 3,\" kamu akan mempelajari cara membuat animasi yang menarik dan interaktif menggunakan Vue.js versi terbaru. Kelas ini dirancang untuk membantu kamu memahami konsep dasar animasi di Vue 3 dan mengaplikasikannya dalam pengembangan aplikasi web yang dinamis. 18 Siswa 4.5 (17) Penilaian Level Beginner",
+        "about_course": "Kelas online \"Belajar Animasi di Vue 3\" adalah kursus komprehensif yang dirancang untuk memberikan pemahaman mendalam tentang bagaimana membuat animasi menggunakan Vue.js. Dalam kelas ini, kamu akan mempelajari berbagai teknik animasi yang dapat meningkatkan pengalaman pengguna dalam aplikasi web yang kamu buat.\n\nTujuan Umum dan Khusus Pelatihan\n\nMemahami prinsip dasar animasi di Vue.js.\nMenguasai teknik-teknik dasar dan lanjutan dalam membuat animasi di Vue 3.\nMampu mengimplementasikan animasi yang efektif dan menarik dalam aplikasi web.\n\nSilabus\n\nPengenalan Animasi di Vue.js: Memahami dasar-dasar animasi dan mengapa animasi penting dalam pengembangan web.\nFitur Animasi di Vue 3: Eksplorasi fitur-fitur animasi yang tersedia di Vue 3.\nTransition dan Animation: Mempelajari cara menggunakan transition dan animation di Vue.js.\nKeyframe Animations: Menerapkan animasi keyframe untuk efek yang lebih kompleks.\n\nMetode Ajar\n\nPembelajaran Mandiri Online: Kamu dapat menentukan sendiri waktu belajarmu.\nMateri Berupa Video: Materi pembelajaran disajikan dalam bentuk video yang jelas dan mudah dipahami.\nForum Tanya Jawab: Fasilitas untuk berdiskusi dan bertanya mengenai materi pelajaran dengan instruktur dan peserta lainnya.\n\nPeralatan Belajar Peserta\n\nKomputer dengan Akses Internet: Pastikan kamu memiliki komputer dan koneksi internet yang stabil.\nSoftware: Browser terkini untuk mengakses materi pembelajaran dan software editor teks untuk mengembangkan aplikasi web.\n\nKelas ini sangat cocok untuk pengembang web yang ingin meningkatkan keterampilan mereka dalam membuat aplikasi yang lebih interaktif dan menarik menggunakan animasi di Vue.js. Dengan mengikuti kelas ini, kamu akan memperoleh pengetahuan dan keterampilan yang diperlukan untuk membuat animasi yang efektif dan estetis dalam aplikasi web.",
+        "mentors": [
+            "Ahmad Hakim"
+        ],
+        "modules": [
+            {
+                "module_title": "Belajar Animasi Di Vue 3",
+                "lessons": [
+                    {
+                        "title": "Mengenal Transition Component Dan Menggunakannya",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-animasi-di-vue-3/lessons/10397",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731731_81c176b24d570242ac5d/480p/1726731731_81c176b24d570242ac5d.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731731_81c176b24d570242ac5d/1080p/1726731731_81c176b24d570242ac5d.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Animasi Transisi Masuk Dan Transisi Keluar",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-animasi-di-vue-3/lessons/10398",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731729_064149284f1e04ac5521/480p/1726731729_064149284f1e04ac5521.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731729_064149284f1e04ac5521/1080p/1726731729_064149284f1e04ac5521.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menggunakan Kondisi Dalam Komponen Transition",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-animasi-di-vue-3/lessons/10399",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731742_1a26c31254e4e329415f/480p/1726731742_1a26c31254e4e329415f.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731742_1a26c31254e4e329415f/1080p/1726731742_1a26c31254e4e329415f.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Persiapan Buat Todo App Dengan Animasi",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-animasi-di-vue-3/lessons/10400",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731756_85974e9e914fdc4f24c5/480p/1726731756_85974e9e914fdc4f24c5.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731756_85974e9e914fdc4f24c5/1080p/1726731756_85974e9e914fdc4f24c5.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Fungsi Create Read Delete Data Task",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-animasi-di-vue-3/lessons/10401",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731760_6717e4c7c79141d21b13/480p/1726731760_6717e4c7c79141d21b13.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731760_6717e4c7c79141d21b13/1080p/1726731760_6717e4c7c79141d21b13.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Transisi Masuk Dengan Transition group",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-animasi-di-vue-3/lessons/10402",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731770_4a960ec5cd5988189461/480p/1726731770_4a960ec5cd5988189461.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731770_4a960ec5cd5988189461/1080p/1726731770_4a960ec5cd5988189461.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Animasi Transisi Keluar Dengan Transitiongroup Dan Transisi Move",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-animasi-di-vue-3/lessons/10403",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731783_cd85d88ff025c5d70abe/480p/1726731783_cd85d88ff025c5d70abe.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731783_cd85d88ff025c5d70abe/1080p/1726731783_cd85d88ff025c5d70abe.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Animasi Transisi Antar Route",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-animasi-di-vue-3/lessons/10404",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731789_159ed4f0f799f6b050f6/480p/1726731789_159ed4f0f799f6b050f6.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731789_159ed4f0f799f6b050f6/1080p/1726731789_159ed4f0f799f6b050f6.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menggunakan Lifecycle Dari Transition Component",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-animasi-di-vue-3/lessons/10405",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731798_6e2126ed2c3882f28fbe/480p/1726731798_6e2126ed2c3882f28fbe.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731798_6e2126ed2c3882f28fbe/1080p/1726731798_6e2126ed2c3882f28fbe.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengubah Style Animasi Di Lifecycle Hook",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-animasi-di-vue-3/lessons/10406",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731804_7dd085eff6fc17556743/480p/1726731804_7dd085eff6fc17556743.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731804_7dd085eff6fc17556743/1080p/1726731804_7dd085eff6fc17556743.m3u8"
+                        ],
+                        "youtube_urls": []
+                    }
+                ]
+            }
+        ]
     }
 ];
