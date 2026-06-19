@@ -823,13 +823,7 @@ async function init() {
       state.courses = COURSE_DATA;
     } else {
       showFatalError(
-        'Gagal memuat data kursus',
-        `<strong>Error:</strong> ${err.message}<br/><br/>
-         Pastikan XAMPP berjalan dan file<br/>
-         <code style="background:#1c1c1e;padding:2px 6px;border-radius:4px;color:#30d158">
-           C:/Farhan C/kelas-fullstack/scraped_roadmap.json
-         </code><br/>
-         dapat diakses oleh PHP.`
+        'hai`
       );
       return;
     }
