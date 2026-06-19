@@ -2073,3 +2073,339 @@ body {
   padding: 8px 0 20px;
 }
 
+/* ============================================================
+   NEW CUSTOM DESIGNS FROM REFERENSI
+   ============================================================ */
+
+/* Update Log Section */
+.update-log-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin: 0 auto 32px;
+  max-width: 1000px;
+  box-shadow: var(--shadow-sm);
+  width: calc(100% - 64px);
+}
+
+.update-log-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.update-log-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  list-style: none;
+}
+
+.update-log-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-left: 12px;
+  border-left: 2px solid var(--accent);
+}
+
+.update-log-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.update-log-date {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg);
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.update-log-link {
+  font-size: 12.5px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.update-log-link:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.update-log-text {
+  font-size: 13.5px;
+  color: var(--text-primary);
+  line-height: 1.5;
+  margin-left: 0;
+}
+
+/* Roadmap Section Styles on Homepage */
+.rm-sections-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 32px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+
+/* Timeline vertical line */
+.rm-sections-container::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 40px;
+  left: 51px; /* Center of the step bubble */
+  width: 2px;
+  background: var(--border);
+  z-index: 0;
+}
+
+.rm-section {
+  position: relative;
+  z-index: 1;
+}
+
+.rm-section-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  user-select: none;
+  transition: background var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.rm-section-header:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(0, 113, 227, 0.2);
+  box-shadow: var(--shadow-sm);
+}
+
+.rm-section-step {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--step-color, var(--accent));
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 2;
+}
+
+.rm-section-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.rm-section-title {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rm-section-emoji {
+  font-size: 18px;
+}
+
+.rm-section-desc {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  margin-top: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rm-section-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rm-section-count {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+  border-radius: 100px;
+}
+
+.rm-section-chevron {
+  color: var(--text-tertiary);
+  transition: transform var(--transition);
+  display: flex;
+  align-items: center;
+}
+
+.rm-section-chevron svg {
+  transition: transform var(--transition);
+  display: block;
+}
+
+.rm-section.collapsed .rm-section-chevron svg {
+  transform: rotate(-90deg);
+}
+
+.rm-section-body {
+  margin-top: 14px;
+  padding-left: 54px; /* Align with the timeline structure */
+  transition: all var(--transition);
+}
+
+.rm-section.collapsed .rm-section-body {
+  display: none;
+}
+
+/* Course card inside timeline grid */
+.rm-section-body .course-grid {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  padding: 0;
+}
+
+/* Premium Course Card Overrides & Additions */
+.course-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0 !important; /* Reset padding to allow cover image to be full width */
+  overflow: hidden;
+  height: 100%;
+}
+
+.card-cover {
+  width: 100%;
+  height: 145px;
+  position: relative;
+  overflow: hidden;
+  background: #f0f0f2;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.card-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+
+.course-card:hover .card-cover img {
+  transform: scale(1.04);
+}
+
+.card-cover-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  background: linear-gradient(135deg, var(--bg) 0%, var(--border-subtle) 100%);
+}
+
+.card-content {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-tags {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.card-tag-badge {
+  font-size: 10px;
+  font-weight: 500;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid rgba(0, 113, 227, 0.15);
+  font-family: inherit;
+}
+
+.course-card .card-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 12px;
+}
+
+.card-meta-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.meta-info-item {
+  font-size: 11.5px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.meta-info-item svg {
+  color: var(--text-tertiary);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .update-log-card {
+    margin: 0 16px 24px;
+    width: calc(100% - 32px);
+    padding: 18px;
+  }
+  .rm-sections-container {
+    padding: 0 16px 30px;
+  }
+  .rm-sections-container::before {
+    left: 35px; /* Center of smaller step bubble */
+  }
+  .rm-section-body {
+    padding-left: 38px;
+  }
+  .rm-section-step {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+  }
+}
+

@@ -36,100 +36,57 @@ const CARD_ACCENTS = [
   'linear-gradient(90deg,#30d158,#6c37c9)',
 ];
 
-// ── Roadmap Groups (for roadmap view & sidebar) ───────────────
-const ROADMAP_GROUPS = [
-  { id: 'g-foundation',  label: 'Foundation & Setup',       emoji: '🧱', color: '#7c3aed', slugs: ['panduan-member','intro-to-programming','algoritma','text-editor','terminal','cmd','git-pemula','git-dasar'] },
-  { id: 'g-design',     label: 'UI/UX Design',              emoji: '🎨', color: '#db2777', slugs: ['figma','uiux','developer-desain'] },
-  { id: 'g-fe-basic',   label: 'Frontend Basics',           emoji: '🌐', color: '#2563eb', slugs: ['dasar-html','dasar-css','belajar-bootstrap-css-framework','kelas-javascript','oop-di-javascript','javascript-asynchronous','javascript-dom','ajax','jquery','bootstrap-4'] },
-  { id: 'g-css-fw',     label: 'CSS Frameworks',            emoji: '💅', color: '#0891b2', slugs: ['tailwind','sass','landing-page','ewallet','crowd-funding','portofolio-menggunakan-tailwind'] },
-  { id: 'g-vue',        label: 'Vue.js & Nuxt',             emoji: '💚', color: '#059669', slugs: ['vue','nuxt','alpine','astro'] },
-  { id: 'g-react',      label: 'React.js & Next',           emoji: '⚛️', color: '#0284c7', slugs: ['react','nextjs'] },
-  { id: 'g-php',        label: 'PHP & MySQL',               emoji: '🐘', color: '#7c3aed', slugs: ['php','mysql','pengenalan-database','berorientasi-objek'] },
-  { id: 'g-laravel',    label: 'Laravel & CodeIgniter',     emoji: '🔴', color: '#dc2626', slugs: ['laravel','codeigniter','filament','security-for-developer'] },
-  { id: 'g-nodejs',     label: 'Node.js & Backend',         emoji: '🟩', color: '#16a34a', slugs: ['nodejs','expressjs','express','mongodb','nestjs','adonis','fullstack-tutorial','implementasi','manajemen','belajar-restful','belajar-konsep-auth','directory-listing','event-management','belajar-dasar-expressjs','belajar-mongodb'] },
-  { id: 'g-testing',   label: 'Testing',                   emoji: '🧪', color: '#d97706', slugs: ['selenium'] },
-  { id: 'g-devops',    label: 'DevOps & Deployment',       emoji: '🚀', color: '#0f766e', slugs: ['vps','nginx','shared-hosting','netlify','deploy','firebase-hosting','github-pages','vercel','cli-di-linux','revolusi-deployment','devops'] },
-  { id: 'g-career',    label: 'Karir & Soft Skills',       emoji: '💼', color: '#4f46e5', slugs: ['kode-etik','personal-branding','dunia-kerja','strategi-karir','freelance','english','interview','live-class','english-for-developer','belajar-interview','belajar-freelance','berbagi-ilmu','membangun-personal'] },
-];
+// ── Roadmap Groups and Categories (dynamic from COURSE_META) ───
+let ROADMAP_GROUPS = [];
+let CATEGORIES = [];
 
-function getCourseGroup(course) {
+const CATEGORY_DESCS = {
+  'g-panduan': 'Baca terlebih dahulu panduan ini sebelum memulai belajar',
+  'g-intro': 'Materi seputar pengenalan pemrograman, profesi, manajemen kode, sampai kepada algoritma dasar',
+  'g-uiux': 'Belajar konsep dasar desain antarmuka dan pengalaman pengguna (UI/UX)',
+  'g-febasic': 'Belajar dasar-dasar ilmu frontend web development. Terkait dengan antarmuka pengguna aplikasi.',
+  'g-feintermediate': 'Belajar berbagai framework terkait frontend development, serta studi kasusnya',
+  'g-bebasic-php': 'Belajar dasar-dasar ilmu backend web development. Terkait dengan kode pada sisi server.',
+  'g-beintermediate-php': 'Lanjutan backend, belajar framework dan studi kasus khusus sisi server.',
+  'g-bebasic-js': 'Belajar backend murni menggunakan teknologi Javascript',
+  'g-beintermediate-js': 'Kumpulan kelas Javascript dengan materi Expert',
+  'g-testing': 'Mempelajari pengujian software (Software Testing) untuk memastikan kualitas kode',
+  'g-deployment': 'Langkah-langkah menaruh aplikasi di server internet agar bisa diakses oleh publik',
+  'g-career': 'Persiapan karir, CV, portfolio, interview, dan tips berkarir di industri IT',
+  'g-bonus': 'Bonus kelas spesial untuk persiapan kamu terjun ke industri sebenarnya.'
+};
+
+function getCourseMeta(course) {
   const slug = course.course_slug || '';
-  for (const g of ROADMAP_GROUPS) {
-    if (g.slugs.some(s => slug.includes(s))) return g;
-  }
-  return ROADMAP_GROUPS[0];
+  return COURSE_META.courses[slug] || {
+    categoryId: 'g-bonus',
+    imgSrc: '',
+    tags: [],
+    duration: '1 Jam'
+  };
 }
-
-// ── Roadmap Categories ─────────────────────────────────────────
-const CATEGORIES = [
-  { id: 'all',          label: 'Semua Kursus',       emoji: '🗂️'  },
-  { id: 'fundamental',  label: 'Fundamental',         emoji: '📚'  },
-  { id: 'design',       label: 'Design & Figma',      emoji: '🎨'  },
-  { id: 'html-css',     label: 'HTML & CSS',          emoji: '🌐'  },
-  { id: 'javascript',   label: 'JavaScript',          emoji: '⚡'  },
-  { id: 'css-framework',label: 'CSS Framework',       emoji: '💅'  },
-  { id: 'vue',          label: 'Vue.js',              emoji: '💚'  },
-  { id: 'react',        label: 'React & Others',      emoji: '⚛️'  },
-  { id: 'php-mysql',    label: 'PHP & MySQL',         emoji: '🐘'  },
-  { id: 'laravel',      label: 'Laravel & CI',        emoji: '🔴'  },
-  { id: 'nodejs',       label: 'Node.js & Backend',   emoji: '🟢'  },
-  { id: 'deployment',   label: 'Deployment & VPS',    emoji: '🚀'  },
-  { id: 'career',       label: 'Career & DevOps',     emoji: '💼'  },
-];
 
 function getCourseCategory(course) {
-  const slug = course.course_slug || '';
-  if (!slug || slug === 'panduan-member-kelasfullstackid' ||
-      slug.includes('intro-to-programming') || slug.includes('algoritma') ||
-      slug.includes('text-editor') || slug.includes('terminal') ||
-      slug.includes('cmd') || slug.includes('git-pemula') || slug.includes('git-dasar'))
-    return 'fundamental';
-  if (slug.includes('figma') || (slug.includes('uiux') && !slug.includes('alpine')) ||
-      slug.includes('developer-desain'))
-    return 'design';
-  if (slug.includes('dasar-html') || slug.includes('dasar-css') ||
-      slug === 'belajar-bootstrap-css-framework')
-    return 'html-css';
-  if (slug.includes('javascript') || slug.includes('jquery') || slug.includes('ajax'))
-    return 'javascript';
-  if (slug.includes('tailwind') || slug.includes('sass') ||
-      slug.includes('landing-page') || slug.includes('ewallet') ||
-      slug.includes('crowd-funding') || slug.includes('portofolio-menggunakan-tailwind') ||
-      slug.includes('bootstrap-4'))
-    return 'css-framework';
-  if (slug.includes('vue') || slug.includes('nuxt'))
-    return 'vue';
-  if (slug.includes('reactjs') || slug.includes('react') ||
-      slug.includes('nextjs') || slug.includes('alpine') || slug.includes('astro'))
-    return 'react';
-  if (slug.includes('php') || slug.includes('mysql') ||
-      slug.includes('database-mysql') || slug.includes('pengenalan-database') ||
-      slug.includes('berorientasi-objek-di-php') || slug.includes('berorientasi-objek-php'))
-    return 'php-mysql';
-  if (slug.includes('laravel') || slug.includes('codeigniter') ||
-      slug.includes('filament') || slug.includes('security-for-developer'))
-    return 'laravel';
-  if (slug.includes('nodejs') || slug.includes('expressjs') ||
-      slug.includes('express') || slug.includes('mongodb') ||
-      slug.includes('nestjs') || slug.includes('adonis') ||
-      slug.includes('fullstack-tutorial') || slug.includes('implementasi') ||
-      slug.includes('manajemen-hot') || slug.includes('manajemen-route') ||
-      slug.includes('belajar-restful') || slug.includes('belajar-konsep-auth') ||
-      slug.includes('directory-listing') || slug.includes('event-management'))
-    return 'nodejs';
-  if (slug.includes('vps') || slug.includes('nginx') || slug.includes('shared-hosting') ||
-      slug.includes('netlify') || slug.includes('deploy') ||
-      slug.includes('firebase-hosting') || slug.includes('github-pages') ||
-      slug.includes('vercel') || slug.includes('selenium') ||
-      slug.includes('cli-di-linux') || slug.includes('revolusi-deployment'))
-    return 'deployment';
-  if (slug.includes('devops') || slug.includes('kode-etik') ||
-      slug.includes('personal-branding') || slug.includes('dunia-kerja') ||
-      slug.includes('strategi-karir') || slug.includes('freelance') ||
-      slug.includes('english') || slug.includes('interview') || slug.includes('live-class'))
-    return 'career';
-  return 'fundamental';
+  const meta = getCourseMeta(course);
+  return meta.categoryId || 'g-bonus';
 }
+
+function getCourseGroup(course) {
+  const catId = getCourseCategory(course);
+  return ROADMAP_GROUPS.find(c => c.id === catId) || ROADMAP_GROUPS[0];
+}
+
+function getCourseThumbnailSrc(course) {
+  const meta = getCourseMeta(course);
+  if (meta.imgSrc) return meta.imgSrc;
+  return getCourseThumb(course) || '';
+}
+
+function getCatEmoji(catId) {
+  const cat = ROADMAP_GROUPS.find(c => c.id === catId);
+  return cat ? cat.emoji : '📚';
+}
+
 
 function getCourseThumb(course, quality = 'hqdefault') {
   for (const mod of (course.modules || [])) {
@@ -381,6 +338,62 @@ function renderNav(filter = '') {
 
 searchInput.addEventListener('input', () => renderNav(searchInput.value));
 
+// ── Update Log Data & Renderer ─────────────────────────────────
+const UPDATE_LOG = [
+  { date: '18 Juni 2026', text: 'NodeJS Mastery from Zero to Hero' },
+  { date: '27 April 2026', text: 'Create an Event Management Platform Like Goers with ExpressJS + Xendit' },
+  { date: '9 Februari 2026', text: 'Introduction to DevOps Fundamentals: Building Your First Automation Path' },
+  { date: '8 Desember 2025', text: 'Security For Developer (Build your application to be super tough)' },
+  { date: '21 Oktober 2025', text: 'Learn PHP for Beginners : Concept and Practice [Enhanced]' },
+  { date: '10 September 2025', text: 'PHP Native & MySQL : Building an OLX Clone Website with AI Assist Windsurf' },
+  { date: '24 Juli 2025', text: 'Developing a QR-based Restaurant Application with Laravel 12' },
+  { date: '16 Juni 2025', text: 'Tailwind Basics - Modern High-Speed Web Design' },
+  { date: '05 Mei 2025', text: 'Filament for Beginners: Laravel Admin Without the Headache' },
+  { date: '23 April 2025', text: 'Developing an HRIS System Like Talenta Using Laravel 12' },
+  { date: '25 Februari 2025', text: 'Developing a Streaming System Like Netflix Using Laravel 11' },
+  { date: '17 Februari 2025', text: 'Laravel 11 : Creating a Social Media Application Backend with REST API' },
+  { date: '14 Januari 2025', text: 'Developer & Design: Building a Solid UI/UX Foundation' }
+];
+
+let showAllUpdates = false;
+
+function renderUpdateLog() {
+  const logEl = $('update-log-card');
+  if (!logEl) return;
+
+  const visibleUpdates = showAllUpdates ? UPDATE_LOG : UPDATE_LOG.slice(0, 5);
+
+  logEl.innerHTML = `
+    <div class="update-log-title">
+      <span>📢 Log Pembaruan</span>
+    </div>
+    <ul class="update-log-list">
+      ${visibleUpdates.map(item => `
+        <li class="update-log-item">
+          <div class="update-log-header">
+            <span class="update-log-date">${escapeHtml(item.date)}</span>
+          </div>
+          <div class="update-log-text">${escapeHtml(item.text)}</div>
+        </li>
+      `).join('')}
+    </ul>
+    ${UPDATE_LOG.length > 5 ? `
+      <button class="about-toggle-btn" id="update-log-toggle-btn" style="margin-top: 16px; font-weight: 600;">
+        ${showAllUpdates ? 'Lihat Lebih Sedikit' : 'Lihat Semua Pembaruan'}
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transform: ${showAllUpdates ? 'rotate(180deg)' : 'none'}"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+    ` : ''}
+  `;
+
+  const toggleBtn = logEl.querySelector('#update-log-toggle-btn');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      showAllUpdates = !showAllUpdates;
+      renderUpdateLog();
+    });
+  }
+}
+
 // ── Render Home ────────────────────────────────────────────────
 function renderHome() {
   // Stats
@@ -397,14 +410,25 @@ function renderHome() {
     <div class="stat-item"><div class="stat-num">${totalLessons}</div><div class="stat-label">Pelajaran</div></div>
   `;
 
+  // ── Render Update Log at the top ───────────────────────────
+  let logEl = $('update-log-card');
+  if (!logEl) {
+    logEl = document.createElement('div');
+    logEl.id = 'update-log-card';
+    logEl.className = 'update-log-card animate-in';
+    const hero = document.querySelector('.hero');
+    if (hero) hero.parentNode.insertBefore(logEl, hero.nextSibling);
+  }
+  renderUpdateLog();
+
   // ── Category filter chips ──────────────────────────────────
   let filterBar = $('cat-filter-bar');
   if (!filterBar) {
     filterBar = document.createElement('div');
     filterBar.id = 'cat-filter-bar';
     filterBar.className = 'cat-filter-bar';
-    const grid = $('course-grid');
-    grid.parentNode.insertBefore(filterBar, grid);
+    const oldGrid = $('course-grid');
+    if (oldGrid) oldGrid.parentNode.insertBefore(filterBar, oldGrid);
   }
   filterBar.innerHTML = CATEGORIES.map(cat => `
     <button class="cat-chip${state.activeCategory === cat.id ? ' active' : ''}" data-cat="${cat.id}">
@@ -412,72 +436,161 @@ function renderHome() {
       ${cat.label}
     </button>
   `).join('');
+  
   filterBar.querySelectorAll('.cat-chip').forEach(btn => {
     btn.addEventListener('click', () => {
       state.activeCategory = btn.dataset.cat;
       applyCategoryFilter();
-      // Update chip states
       filterBar.querySelectorAll('.cat-chip').forEach(b =>
         b.classList.toggle('active', b.dataset.cat === state.activeCategory));
-      // Sync sidebar
       renderNav();
     });
   });
 
-  // ── Course grid ─────────────────────────────────────────────
-  const grid = $('course-grid');
-  grid.innerHTML = '';
+  // ── Roadmap Sections Container ──────────────────────────────
+  let roadmapContainer = $('roadmap-sections-container');
+  if (!roadmapContainer) {
+    roadmapContainer = document.createElement('div');
+    roadmapContainer.id = 'roadmap-sections-container';
+    roadmapContainer.className = 'rm-sections-container';
+    const oldGrid = $('course-grid');
+    if (oldGrid) {
+      oldGrid.style.display = 'none'; // Hide flat grid
+      oldGrid.parentNode.insertBefore(roadmapContainer, oldGrid.nextSibling);
+    }
+  }
+
+  // Group courses by category ID
+  const coursesByCategory = {};
+  ROADMAP_GROUPS.forEach(cat => {
+    coursesByCategory[cat.id] = [];
+  });
+  
   state.courses.forEach((course, idx) => {
     const catId = getCourseCategory(course);
-    const thumb = getCourseThumb(course);
-    const catEmoji = getCatEmoji(catId);
-    const totalL = course.modules.reduce((s, m) => s + m.lessons.length, 0);
-    const hasVideo = course.modules.some(m => m.lessons.some(l => l.youtube_urls?.length || l.video_urls?.length));
-    const mentorsHtml = course.mentors?.length
-      ? `<span class="card-pill">${escapeHtml(course.mentors.slice(0,2).join(', '))}${course.mentors.length>2?` +${course.mentors.length-2}`:''}</span>`
-      : '';
+    if (!coursesByCategory[catId]) {
+      coursesByCategory[catId] = [];
+    }
+    coursesByCategory[catId].push({ idx, course });
+  });
 
-    const card = document.createElement('div');
-    card.className = 'course-card animate-in';
-    card.dataset.category = catId;
-    card.style.setProperty('--card-accent', CARD_ACCENTS[idx % CARD_ACCENTS.length]);
-    card.style.animationDelay = `${idx * 35}ms`;
-    card.innerHTML = `
-      <div class="card-thumb">
-        ${thumb ? `<img src="${thumb}" loading="lazy" alt="" decoding="async" onerror="this.style.display='none'">` : ''}
-        <div class="card-thumb-placeholder">${catEmoji}</div>
-      </div>
-      <div class="card-body">
-        <div class="card-number">KURSUS ${idx + 1} • ${escapeHtml(CATEGORIES.find(c=>c.id===catId)?.label||'')}</div>
-        <div class="card-title">${escapeHtml(course.course_title)}</div>
-        <div class="card-desc">${escapeHtml(course.about_course || course.course_description || '')}</div>
-        <div class="card-footer">
-          <div class="card-pills">
-            <span class="card-pill accent">${totalL} pelajaran</span>
-            ${hasVideo ? '<span class="card-pill">🎬 Video</span>' : ''}
-            ${mentorsHtml}
+  roadmapContainer.innerHTML = '';
+  ROADMAP_GROUPS.forEach((group, groupIdx) => {
+    const items = coursesByCategory[group.id] || [];
+    if (items.length === 0) return; // Skip empty categories
+
+    const isCollapsed = state.categoryCollapsed[group.id] === true;
+    const desc = CATEGORY_DESCS[group.id] || '';
+
+    const sectionEl = document.createElement('div');
+    sectionEl.className = 'rm-section animate-in' + (isCollapsed ? ' collapsed' : '');
+    sectionEl.dataset.category = group.id;
+    sectionEl.style.animationDelay = `${groupIdx * 40}ms`;
+
+    sectionEl.innerHTML = `
+      <div class="rm-section-header" style="--step-color: ${group.color}">
+        <div class="rm-section-step">${groupIdx + 1}</div>
+        <div class="rm-section-info">
+          <div class="rm-section-title">
+            <span class="rm-section-emoji">${group.emoji}</span>
+            <span>${escapeHtml(group.label)}</span>
           </div>
-          <div class="card-arrow">
+          ${desc ? `<div class="rm-section-desc">${escapeHtml(desc)}</div>` : ''}
+        </div>
+        <div class="rm-section-meta">
+          <span class="rm-section-count">${items.length} Kursus</span>
+          <span class="rm-section-chevron">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 18 15 12 9 6"></polyline>
+              <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
-          </div>
+          </span>
         </div>
       </div>
+      <div class="rm-section-body">
+        <div class="course-grid"></div>
+      </div>
     `;
-    card.addEventListener('click', () => goToCourse(idx));
-    grid.appendChild(card);
+
+    // Click header to toggle collapse
+    const header = sectionEl.querySelector('.rm-section-header');
+    header.addEventListener('click', () => {
+      const isCol = sectionEl.classList.toggle('collapsed');
+      state.categoryCollapsed[group.id] = isCol;
+    });
+
+    const grid = sectionEl.querySelector('.course-grid');
+    items.forEach(({ idx, course }) => {
+      const meta = getCourseMeta(course);
+      const thumb = getCourseThumbnailSrc(course);
+      const catEmoji = getCatEmoji(meta.categoryId);
+      const totalL = course.modules.reduce((s, m) => s + m.lessons.length, 0);
+      
+      const card = document.createElement('div');
+      card.className = 'course-card';
+      card.style.setProperty('--card-accent', CARD_ACCENTS[idx % CARD_ACCENTS.length]);
+      card.innerHTML = `
+        <div class="card-cover">
+          ${thumb ? `<img src="${thumb}" loading="lazy" alt="" onerror="this.style.display='none'">` : ''}
+          <div class="card-cover-placeholder">${catEmoji}</div>
+        </div>
+        <div class="card-content">
+          <div class="card-number">KURSUS ${idx + 1}</div>
+          <div class="card-title">${escapeHtml(course.course_title)}</div>
+          <div class="card-desc">${escapeHtml(course.about_course || course.course_description || '')}</div>
+          
+          ${meta.tags && meta.tags.length > 0 ? `
+            <div class="card-tags">
+              ${meta.tags.slice(0, 3).map(tag => `<span class="card-tag-badge">${escapeHtml(tag)}</span>`).join('')}
+            </div>
+          ` : ''}
+
+          <div class="card-footer">
+            <div class="card-meta-info">
+              <div class="meta-info-item">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>${escapeHtml(meta.duration || '1 Jam')}</span>
+              </div>
+              <div class="meta-info-item">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span>${totalL} Materi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      card.addEventListener('click', () => goToCourse(idx));
+      grid.appendChild(card);
+    });
+
+    roadmapContainer.appendChild(sectionEl);
   });
 
   applyCategoryFilter();
 }
 
 function applyCategoryFilter() {
-  const grid = $('course-grid');
-  if (!grid) return;
-  grid.querySelectorAll('.course-card').forEach(card => {
-    const match = state.activeCategory === 'all' || card.dataset.category === state.activeCategory;
-    card.classList.toggle('cat-hidden', !match);
+  const container = $('roadmap-sections-container');
+  if (!container) return;
+  
+  const sections = container.querySelectorAll('.rm-section');
+  sections.forEach(section => {
+    const catId = section.dataset.category;
+    if (state.activeCategory === 'all') {
+      section.style.display = '';
+      const isCollapsed = state.categoryCollapsed[catId] === true;
+      section.classList.toggle('collapsed', isCollapsed);
+    } else {
+      if (catId === state.activeCategory) {
+        section.style.display = '';
+        section.classList.remove('collapsed');
+      } else {
+        section.style.display = 'none';
+      }
+    }
   });
 }
 
@@ -846,7 +959,9 @@ function renderLessonSidebar() {
 // ── Breadcrumb ─────────────────────────────────────────────────
 function updateBreadcrumb(view) {
   let html = `<span class="breadcrumb-home" id="bc-home">Home</span>`;
-  if (view === 'course' || view === 'lesson') {
+  if (view === 'roadmap') {
+    html += `<span class="breadcrumb-sep">›</span><span class="breadcrumb-lesson">Roadmap</span>`;
+  } else if (view === 'course' || view === 'lesson') {
     const course = state.courses[state.currentCourseIdx];
     html += `<span class="breadcrumb-sep">›</span><span class="breadcrumb-course" id="bc-course">${escapeHtml(course.course_title)}</span>`;
   }
@@ -872,12 +987,22 @@ function toggleAbout() {
 
 function goHome() {
   state.topView = 'home';
+  state.activeCategory = 'all';
   state.currentCourseIdx = null;
   state.currentLessonFlatIdx = null;
   renderNav();
+  renderHome();
   showView('home');
   updateBreadcrumb('home');
   $('lesson-counter').textContent = '';
+  closeMobileSidebar();
+}
+
+function goRoadmap() {
+  state.topView = 'roadmap';
+  renderRoadmapView();
+  showView('roadmap');
+  updateBreadcrumb('roadmap');
   closeMobileSidebar();
 }
 
@@ -937,7 +1062,7 @@ function renderRoadmapView() {
     grid.className = 'rm-cards-grid';
 
     items.forEach(({ idx, course }) => {
-      const thumb = getCourseThumb(course, 'mqdefault');
+      const thumb = getCourseThumbnailSrc(course);
       const totalL = course.modules.reduce((s, m) => s + m.lessons.length, 0);
       const hasVideo = course.modules.some(m => m.lessons.some(l => l.youtube_urls?.length || l.video_urls?.length));
       const deprecated = course.course_title?.includes('[Deprecated]') || course.course_slug?.includes('deprecated');
@@ -1185,6 +1310,23 @@ function closeMobileSheet() {
 
 // ── Init ───────────────────────────────────────────────────────
 function init() {
+  // Populate groups and categories dynamically from COURSE_META
+  if (typeof COURSE_META !== 'undefined' && COURSE_META.categories) {
+    ROADMAP_GROUPS = COURSE_META.categories;
+    CATEGORIES = [
+      { id: 'all', label: 'Semua Kursus', emoji: '🗂️' },
+      ...COURSE_META.categories
+    ];
+  } else {
+    ROADMAP_GROUPS = [
+      { id: 'g-panduan', label: 'Panduan Member', emoji: '📚', color: '#3b82f6' }
+    ];
+    CATEGORIES = [
+      { id: 'all', label: 'Semua Kursus', emoji: '🗂️' },
+      { id: 'g-panduan', label: 'Panduan Member', emoji: '📚' }
+    ];
+  }
+
   // COURSE_DATA is injected from data.js (works without a server)
   if (typeof COURSE_DATA !== 'undefined' && Array.isArray(COURSE_DATA)) {
     state.courses = COURSE_DATA;
