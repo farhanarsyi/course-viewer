@@ -10602,5 +10602,382 @@
                 ]
             }
         ]
+    },
+    {
+        "course_title": "PHP Native & MySQL : Membangun Website OLX Clone dengan AI Assist Windsurf",
+        "course_slug": "php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf",
+        "course_url": "https://www.codepolitan.com/dashboard/learn/courses/detail/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf",
+        "course_description": "Di kelas ini kamu akan belajar step by step membangun website OLX Clone menggunakan PHP 8 dan MySQL, mulai dari konsep dasar hingga sistem yang benar-benar bisa online. Bedanya, kamu akan dibantu dengan AI Assist Windsurf, sebuah teknologi yang bisa mempercepat proses coding, memberi rekomendasi, dan membantu debugging. Jadi kamu nggak cuma belajar bikin website, tapi juga bagaimana memanfaatkan AI untuk meningkatkan produktivitas sebagai programmer. 60 Siswa 4.9 (9) Penilaian Level Beginner",
+        "about_course": "Tentang Kelas\n\nDi kelas ini kamu akan belajar step by step membangun website OLX Clone menggunakan PHP 8 dan MySQL, mulai dari konsep dasar hingga sistem yang benar-benar bisa online. Bedanya, kamu akan dibantu dengan AI Assist Windsurf, sebuah teknologi yang bisa mempercepat proses coding, memberi rekomendasi, dan membantu debugging. Jadi kamu nggak cuma belajar bikin website, tapi juga bagaimana memanfaatkan AI untuk meningkatkan produktivitas sebagai programmer.\n\nMateri yang Akan Dipelajari\nMengapa Harus Belajar AI\nApakah AI Menggantikan Programmer?\nSkenario Sistem yang Akan Dibuat\nTools yang Dibutuhkan\nSekilas tentang Windsurf\nApa Itu Database dan Kenapa Diperlukan?\nMembuat Tampilan Beranda (HTML)\nMembuat Form Register (HTML)\nMembuat Form Login (HTML)\nMembuat Form Pasang Iklan (HTML)\nMembuat Halaman Detail Iklan\nDetail Database: users & ads\nKoneksi Database dengan PHP\nProses Register ke Database\nProses Login - Session\nLogout User\nSimpan Iklan ke Database\nTampilkan Semua Iklan di Beranda\nMenampilkan Detail Iklan Dinamis\nValidasi Pasang Iklan Harus Login\nValidasi Gambar Upload\nTampilkan Nama User Pemilik Iklan\nNavigasi Dinamis (Header/Navbar)\nResponsive Design Mobile\nFinal Testing & Review\nDeploy ke layanan hosting\nTarget Peserta\nKamu yang baru belajar PHP & MySQL dan ingin langsung praktik bikin website nyata.\nKamu yang penasaran gimana cara kerja website iklan baris seperti OLX.\nKamu yang ingin tahu cara memanfaatkan AI untuk membantu coding lebih cepat.\nKamu yang ingin punya portfolio real project untuk kebutuhan kuliah, kerja, atau freelance.\nHasil yang Diharapkan\n\nSetelah mengikuti kelas ini, kamu akan:\n\nPaham dasar-dasar PHP, MySQL, dan cara membangun website dinamis.\nBisa membuat sistem OLX Clone lengkap dengan login, register, upload iklan, dan halaman detail.\nTerbiasa menggunakan AI Assist Windsurf untuk mempercepat pengembangan aplikasi.\nMampu melakukan deploy ke hosting sehingga websitenya bisa diakses online.\nPunya portfolio proyek nyata yang bisa ditunjukkan ke klien, dosen, atau recruiter.",
+        "mentors": [
+            "Bahrul Rozak"
+        ],
+        "modules": [
+            {
+                "module_title": "PHP Native & MySQL : Membangun Website OLX Clone dengan AI Assist Windsurf",
+                "lessons": [
+                    {
+                        "title": "Introduction",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11760",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757389015_bd316efb65f457f8d6e2/480p/1757389015_bd316efb65f457f8d6e2.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757389015_bd316efb65f457f8d6e2/1080p/1757389015_bd316efb65f457f8d6e2.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengapa AI",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11761",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757388896_b603da4c0495757a0ca2/480p/1757388896_b603da4c0495757a0ca2.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757388896_b603da4c0495757a0ca2/1080p/1757388896_b603da4c0495757a0ca2.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Apakah AI Akan Menggantikan Programmer",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11762",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757389092_d04f14f0c2c62555044f/480p/1757389092_d04f14f0c2c62555044f.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757389092_d04f14f0c2c62555044f/1080p/1757389092_d04f14f0c2c62555044f.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Skenario Yang Akan Dibuat",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11763",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757389163_cde1482bc6ccce969e84/480p/1757389163_cde1482bc6ccce969e84.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757389163_cde1482bc6ccce969e84/1080p/1757389163_cde1482bc6ccce969e84.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Tools yang dibutuhkan apa saja",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11764",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757389175_19e12d8592c42768331c/480p/1757389175_19e12d8592c42768331c.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757389175_19e12d8592c42768331c/1080p/1757389175_19e12d8592c42768331c.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Sekilas Tentang Agentic IDE",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11765",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757389247_64778689b0363ef071ef/480p/1757389247_64778689b0363ef071ef.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757389247_64778689b0363ef071ef/1080p/1757389247_64778689b0363ef071ef.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Apa Itu Database",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11766",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757389261_456783f80a0b75fd44a2/480p/1757389261_456783f80a0b75fd44a2.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757389261_456783f80a0b75fd44a2/1080p/1757389261_456783f80a0b75fd44a2.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Instalasi Windsurf Editor",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11767",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757389317_987d1a8fbcaf0e5faa87/480p/1757389317_987d1a8fbcaf0e5faa87.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757389317_987d1a8fbcaf0e5faa87/1080p/1757389317_987d1a8fbcaf0e5faa87.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Instalasi XAMPP",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11768",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757389346_fe60b191c781375d8b4f/480p/1757389346_fe60b191c781375d8b4f.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757389346_fe60b191c781375d8b4f/1080p/1757389346_fe60b191c781375d8b4f.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "User Persona",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11769",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757389422_4ac3d6610c0632893b24/480p/1757389422_4ac3d6610c0632893b24.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757389422_4ac3d6610c0632893b24/1080p/1757389422_4ac3d6610c0632893b24.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Merancang Database",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11770",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757389426_92d4f3b472220080db72/480p/1757389426_92d4f3b472220080db72.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757389426_92d4f3b472220080db72/1080p/1757389426_92d4f3b472220080db72.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Konfigurasi Dulu",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11771",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757389522_29b53cb3cf807fbee96d/480p/1757389522_29b53cb3cf807fbee96d.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757389522_29b53cb3cf807fbee96d/1080p/1757389522_29b53cb3cf807fbee96d.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Relasi dan Table",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11772",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757389758_d9b40f5057ff5fcffc0b/480p/1757389758_d9b40f5057ff5fcffc0b.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757389758_d9b40f5057ff5fcffc0b/1080p/1757389758_d9b40f5057ff5fcffc0b.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Halaman Utama",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11773",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757389802_cd56fcfa820e42141f68/480p/1757389802_cd56fcfa820e42141f68.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757389802_cd56fcfa820e42141f68/1080p/1757389802_cd56fcfa820e42141f68.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Halaman Detail",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11774",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757389907_c54043937d7f0b7e265b/480p/1757389907_c54043937d7f0b7e265b.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757389907_c54043937d7f0b7e265b/1080p/1757389907_c54043937d7f0b7e265b.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Halaman Login dan Register",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11775",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757389939_883a266c6cba8584d7b4/480p/1757389939_883a266c6cba8584d7b4.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757389939_883a266c6cba8584d7b4/1080p/1757389939_883a266c6cba8584d7b4.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Halaman Pasang Iklan",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11776",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757390208_fe0703f375bb0e18268e/480p/1757390208_fe0703f375bb0e18268e.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757390208_fe0703f375bb0e18268e/1080p/1757390208_fe0703f375bb0e18268e.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Konfigurasi Awal",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11777",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757390298_c2ddb8bcd4b3e4c37f94/480p/1757390298_c2ddb8bcd4b3e4c37f94.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757390298_c2ddb8bcd4b3e4c37f94/1080p/1757390298_c2ddb8bcd4b3e4c37f94.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Skema Register",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11778",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757390468_04bbbf711c7272e1a63e/480p/1757390468_04bbbf711c7272e1a63e.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757390468_04bbbf711c7272e1a63e/1080p/1757390468_04bbbf711c7272e1a63e.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Skema Login",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11779",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757390659_2e36b865cba5fde37a81/480p/1757390659_2e36b865cba5fde37a81.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757390659_2e36b865cba5fde37a81/1080p/1757390659_2e36b865cba5fde37a81.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Kategori dinamis pada post ad",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11780",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757390789_f46c62afd24dc4fef297/480p/1757390789_f46c62afd24dc4fef297.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757390789_f46c62afd24dc4fef297/1080p/1757390789_f46c62afd24dc4fef297.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Location dinamis pada post ad",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11781",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757390933_d34752e7f8b1c090a93d/480p/1757390933_d34752e7f8b1c090a93d.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757390933_d34752e7f8b1c090a93d/1080p/1757390933_d34752e7f8b1c090a93d.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Post ad bagian 1",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11782",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757391231_bb21edb4d199469626da/480p/1757391231_bb21edb4d199469626da.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757391231_bb21edb4d199469626da/1080p/1757391231_bb21edb4d199469626da.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Post ad bagian 2",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11783",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757391092_8558ad00df0620449114/480p/1757391092_8558ad00df0620449114.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757391092_8558ad00df0620449114/1080p/1757391092_8558ad00df0620449114.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Testing pasang iklan",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11784",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757391235_5e4c2a2846377cb5d34b/480p/1757391235_5e4c2a2846377cb5d34b.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757391235_5e4c2a2846377cb5d34b/1080p/1757391235_5e4c2a2846377cb5d34b.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Skenario Halaman Beranda",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11785",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757391596_c429cb347ed7b345a3f4/480p/1757391596_c429cb347ed7b345a3f4.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757391596_c429cb347ed7b345a3f4/1080p/1757391596_c429cb347ed7b345a3f4.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Skenario Halaman Detail",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11786",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757391482_586b45c634e0234806ae/480p/1757391482_586b45c634e0234806ae.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757391482_586b45c634e0234806ae/1080p/1757391482_586b45c634e0234806ae.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Percantik Halaman Detail",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11787",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757391658_09b332e595e3b06b1f75/480p/1757391658_09b332e595e3b06b1f75.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757391658_09b332e595e3b06b1f75/1080p/1757391658_09b332e595e3b06b1f75.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Halaman Iklan Saya",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11788",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757391735_2d28ca672f34ff84da29/480p/1757391735_2d28ca672f34ff84da29.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757391735_2d28ca672f34ff84da29/1080p/1757391735_2d28ca672f34ff84da29.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Fitur Edit dan Hapus Iklan Saya",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11789",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757392032_9573663357340a4264eb/480p/1757392032_9573663357340a4264eb.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757392032_9573663357340a4264eb/1080p/1757392032_9573663357340a4264eb.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Session Notice dan Logout",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11790",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757391823_14e77788f980d216a1b7/480p/1757391823_14e77788f980d216a1b7.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757391823_14e77788f980d216a1b7/1080p/1757391823_14e77788f980d216a1b7.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Halaman Edit Profile",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11791",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757392112_d37603950765dece906e/480p/1757392112_d37603950765dece906e.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757392112_d37603950765dece906e/1080p/1757392112_d37603950765dece906e.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Testing Semua Fitur",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11792",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757392239_ba8b1a9ad725a2ad2d3b/480p/1757392239_ba8b1a9ad725a2ad2d3b.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757392239_ba8b1a9ad725a2ad2d3b/1080p/1757392239_ba8b1a9ad725a2ad2d3b.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Persiapan Launch Market",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11793",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757392191_fd235a88ef0f2772cf77/480p/1757392191_fd235a88ef0f2772cf77.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757392191_fd235a88ef0f2772cf77/1080p/1757392191_fd235a88ef0f2772cf77.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Hosting Bagian 1",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11794",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757392459_24ca2b71662e19c80bbc/480p/1757392459_24ca2b71662e19c80bbc.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757392459_24ca2b71662e19c80bbc/1080p/1757392459_24ca2b71662e19c80bbc.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Hosting Lanjutan dan Final Testing",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/php-native-mysql-membangun-website-olx-clone-dengan-ai-assist-windsurf/lessons/11795",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1757392378_7b8c241de943feb025fc/480p/1757392378_7b8c241de943feb025fc.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1757392378_7b8c241de943feb025fc/1080p/1757392378_7b8c241de943feb025fc.m3u8"
+                        ],
+                        "youtube_urls": []
+                    }
+                ]
+            }
+        ]
     }
 ]
