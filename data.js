@@ -6939,5 +6939,1444 @@ const COURSE_DATA = [
                 ]
             }
         ]
+    },
+    {
+        "course_title": "React.js 101 - Membuat dan Menggunakan Komponen dengan Berbagai Studi Kasus",
+        "course_slug": "reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs",
+        "course_url": "https://www.codepolitan.com/dashboard/learn/courses/detail/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs",
+        "course_description": "Kelas \"React.js 101\" adalah panduan lengkap bagi pemula yang ingin memahami dan menguasai dasar-dasar React.js. Fokus utama kelas ini adalah pembuatan dan penggunaan komponen dalam pengembangan aplikasi React.js. 65 Siswa 4.8 (41) Penilaian Level Beginner",
+        "about_course": "Dalam kelas \"React.js 101 - Membuat dan Menggunakan Komponen dalam Aplikasi Berbasis React.js,\" peserta akan diajak dalam perjalanan mendalam ke dunia React.js. Melalui materi yang terstruktur, peserta akan memahami cara membuat dan mengelola komponen, elemen kunci dalam pengembangan aplikasi React.js.\n\nTarget dan Sasaran Peserta:\n\nKelas ini cocok untuk pemula yang ingin memahami dasar-dasar React.js.\nPeserta diharapkan dapat belajar secara mandiri, sehingga dapat mengatur jadwal belajar mereka sendiri.\n\nTujuan Umum dan Khusus Pelatihan:\n\nTujuan Umum: Peserta akan memiliki pemahaman menyeluruh tentang penggunaan komponen dalam React.js.\nTujuan Khusus:\nMempelajari konsep dasar React.js dan pentingnya komponen.\nPraktik langsung dalam membuat dan menggunakan komponen dalam proyek React.js.\n\nSilabus:\n\nPengenalan React.js dan Komponen\nKonsep dasar React.js.\nPeran dan struktur komponen dalam aplikasi React.js.\nMembuat Komponen React\nLangkah-langkah praktis dalam membuat komponen.\nContoh penggunaan komponen dalam pengembangan aplikasi.\n\nMetode Pembelajaran:\n\nPembelajaran Mandiri Online Peserta dapat belajar sesuai dengan kecepatan dan waktu yang mereka tentukan sendiri.\n\nFasilitas Pembelajaran:\n\nMateri Pembelajaran\nVideo tutorial dan materi pembelajaran akan tersedia.\nForum Tanya Jawab\nPeserta dapat berinteraksi dan bertanya melalui forum khusus.\n\nPeralatan Pembelajaran Peserta:\n\nAkses Internet Peserta membutuhkan akses internet melalui komputer dengan sistem operasi Windows, Mac, atau Linux.\nSpesifikasi Minimum Komputer Peserta:\nSistem Operasi: Windows, Linux, atau MacOS.\nProsesor: Intel Dual Core (Disarankan Core i3 ke atas).\nRAM: 1GB (Disarankan 2GB).\nResolusi Layar: 1366 x 768 (Disarankan Full HD 1920 x 1080).\nPerangkat Lunak: Browser (Tanpa preferensi khusus).",
+        "mentors": [
+            "Ahmad Hakim"
+        ],
+        "modules": [
+            {
+                "module_title": "Membuat dan Menggunakan Komponen dalam Aplikasi Berbasis React.js",
+                "lessons": [
+                    {
+                        "title": "Mengenal React.Js Dengan Membuat Quote Generator",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9905",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730915_7a8b5e0ad8f66eeceddf/480p/1726730915_7a8b5e0ad8f66eeceddf.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730915_7a8b5e0ad8f66eeceddf/1080p/1726730915_7a8b5e0ad8f66eeceddf.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membandingkan Yang Sudah Dibuat Di React.Js Dengan Vanilla Javascript",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9906",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730915_4e784664df0d52b75d0d/480p/1726730915_4e784664df0d52b75d0d.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730915_4e784664df0d52b75d0d/1080p/1726730915_4e784664df0d52b75d0d.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Jadi React.Js Itu Apa",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9907",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730922_96c449cc5167dc0f8f3d/480p/1726730922_96c449cc5167dc0f8f3d.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730922_96c449cc5167dc0f8f3d/1080p/1726730922_96c449cc5167dc0f8f3d.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Persiapan Untuk Membuat Project React.Js",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9908",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730925_72557828b1b7c8919b57/480p/1726730925_72557828b1b7c8919b57.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730925_72557828b1b7c8919b57/1080p/1726730925_72557828b1b7c8919b57.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menjalankan React Langsung Di Html",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9909",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730951_9e53824fe57a1ce5697e/480p/1726730951_9e53824fe57a1ce5697e.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730951_9e53824fe57a1ce5697e/1080p/1726730951_9e53824fe57a1ce5697e.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengenal Tools Untuk Menginstall React.Js",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9910",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730939_f2b35a7306389017e05b/480p/1726730939_f2b35a7306389017e05b.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730939_f2b35a7306389017e05b/1080p/1726730939_f2b35a7306389017e05b.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menginstall React.Js Dan Pahami Strukturnya",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9911",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730961_bf6c328deff94032a600/480p/1726730961_bf6c328deff94032a600.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730961_bf6c328deff94032a600/1080p/1726730961_bf6c328deff94032a600.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menyiapkan Project React.Js Dari Awal",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9912",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730963_314d500e4361db52a837/480p/1726730963_314d500e4361db52a837.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730963_314d500e4361db52a837/1080p/1726730963_314d500e4361db52a837.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Apa Itu Component Dan Cara Kerjanya",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9913",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730967_e0f25e41bc39c3aeba68/480p/1726730967_e0f25e41bc39c3aeba68.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730967_e0f25e41bc39c3aeba68/1080p/1726730967_e0f25e41bc39c3aeba68.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Membuat Dan Menggunakan Component Di React.Js",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9914",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730982_9fe94425081f19307e80/480p/1726730982_9fe94425081f19307e80.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730982_9fe94425081f19307e80/1080p/1726730982_9fe94425081f19307e80.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengenal Jsx Di Dalam Component React.Js",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9915",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730982_1aa0969ddddfab457038/480p/1726730982_1aa0969ddddfab457038.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730982_1aa0969ddddfab457038/1080p/1726730982_1aa0969ddddfab457038.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Banyak Component Dan Mengaturnya",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9916",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731005_a9b3d5611157417911a4/480p/1726731005_a9b3d5611157417911a4.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731005_a9b3d5611157417911a4/1080p/1726731005_a9b3d5611157417911a4.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Menjalankan Logic Javascript Di Component",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9917",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730996_bece546aa2f7f4753c27/480p/1726730996_bece546aa2f7f4753c27.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730996_bece546aa2f7f4753c27/1080p/1726730996_bece546aa2f7f4753c27.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cari Tahu Kenapa React Berbasis Component",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9918",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731002_ddff053b525528b6cf19/480p/1726731002_ddff053b525528b6cf19.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731002_ddff053b525528b6cf19/1080p/1726731002_ddff053b525528b6cf19.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Styling Di Component",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9919",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731019_a5583240c4568b9b28db/480p/1726731019_a5583240c4568b9b28db.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731019_a5583240c4568b9b28db/1080p/1726731019_a5583240c4568b9b28db.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengirim Data Antar Component Dengan Props",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9920",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731019_c3d3dfcfe2ba1ed35bec/480p/1726731019_c3d3dfcfe2ba1ed35bec.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731019_c3d3dfcfe2ba1ed35bec/1080p/1726731019_c3d3dfcfe2ba1ed35bec.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Props, Immutable Dan One-Way Data Flow",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9921",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731029_a9a59b3f80fad5c47a92/480p/1726731029_a9a59b3f80fad5c47a92.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731029_a9a59b3f80fad5c47a92/1080p/1726731029_a9a59b3f80fad5c47a92.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Aturan Penulisan Jsx",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9922",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731032_1a58c0254a63ffba9426/480p/1726731032_1a58c0254a63ffba9426.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731032_1a58c0254a63ffba9426/1080p/1726731032_1a58c0254a63ffba9426.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menampilkan Component Secara Dinamis",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9923",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731053_22daee3e193c7b848b54/480p/1726731053_22daee3e193c7b848b54.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731053_22daee3e193c7b848b54/1080p/1726731053_22daee3e193c7b848b54.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Melakukan Render Secara Kondisional Dengan _",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9924",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731051_6afa87d75f9a77600589/480p/1726731051_6afa87d75f9a77600589.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731051_6afa87d75f9a77600589/1080p/1726731051_6afa87d75f9a77600589.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menampilkan Ui Di Jsx Dengan Ternary If",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9925",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731065_ee1b5c3e3c8a8d98adff/480p/1726731065_ee1b5c3e3c8a8d98adff.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731065_ee1b5c3e3c8a8d98adff/1080p/1726731065_ee1b5c3e3c8a8d98adff.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Melakukan Render Jsx Dengan Multi Kondisi",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9926",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731076_c6825eca3c2d843e672c/480p/1726731076_c6825eca3c2d843e672c.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731076_c6825eca3c2d843e672c/1080p/1726731076_c6825eca3c2d843e672c.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Refactor Komponen Khusus Untuk Jsx",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9927",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731087_ba16c4d7f6db52302314/480p/1726731087_ba16c4d7f6db52302314.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731087_ba16c4d7f6db52302314/1080p/1726731087_ba16c4d7f6db52302314.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Memecah Isi Props Dengan Cara Destructing",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9928",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731104_b06efb26685fe0e1baa9/480p/1726731104_b06efb26685fe0e1baa9.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731104_b06efb26685fe0e1baa9/1080p/1726731104_b06efb26685fe0e1baa9.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membungkus Root Element Lebih Dari Satu Dengan React Fragment",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9929",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731114_f0683b1d4d72ecfe0f42/480p/1726731114_f0683b1d4d72ecfe0f42.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731114_f0683b1d4d72ecfe0f42/1080p/1726731114_f0683b1d4d72ecfe0f42.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengatur Nilai Class Dan Text Secara Dinamis",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9930",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731135_b741001a6fb395d8640f/480p/1726731135_b741001a6fb395d8640f.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731135_b741001a6fb395d8640f/1080p/1726731135_b741001a6fb395d8640f.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Rekap Apa Saja Yang Sudah Dipelajari Dan Langkah Selanjutnya",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9931",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731137_c149f265848f43a2ec0f/480p/1726731137_c149f265848f43a2ec0f.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731137_c149f265848f43a2ec0f/1080p/1726731137_c149f265848f43a2ec0f.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Latihan #1 Membuat Kartu Nama Virtual",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9932",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731151_f7efbc3260f71900d184/480p/1726731151_f7efbc3260f71900d184.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731151_f7efbc3260f71900d184/1080p/1726731151_f7efbc3260f71900d184.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Jawaban Latihan #1 Bagian 1",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9933",
+                        "text_content": "<p>Github : <a href=\"https://gist.github.com/lunadiotic/b5bf5e36577a4e375b72132b41cb5662\">https://gist.github.com/lunadiotic/b5bf5e36577a4e375b72132b41cb5662</a></p>",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731179_24779e18f1193400df53/480p/1726731179_24779e18f1193400df53.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731179_24779e18f1193400df53/1080p/1726731179_24779e18f1193400df53.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Jawaban Latihan #1 Bagian 2",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9934",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731185_91dbdd961f5fdf7cb9ec/480p/1726731185_91dbdd961f5fdf7cb9ec.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731185_91dbdd961f5fdf7cb9ec/1080p/1726731185_91dbdd961f5fdf7cb9ec.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Latihan #2 Membuat Kartu Nama Menjadi Dinamis",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9935",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731199_dd21c84e44d6f4b14b03/480p/1726731199_dd21c84e44d6f4b14b03.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731199_dd21c84e44d6f4b14b03/1080p/1726731199_dd21c84e44d6f4b14b03.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Jawaban Latihan #2",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-101-membuat-dan-menggunakan-komponen-dalam-aplikasi-berbasis-reactjs/lessons/9936",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731221_40c48de2229797d89b11/480p/1726731221_40c48de2229797d89b11.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731221_40c48de2229797d89b11/1080p/1726731221_40c48de2229797d89b11.m3u8"
+                        ],
+                        "youtube_urls": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "course_title": "React.js State - Mengelola Perubahan Tampilan dengan Data bersama Event Handler",
+        "course_slug": "reactjs-state-mengelola-perubahan-tampilan-dengan-data-bersama-event-handler",
+        "course_url": "https://www.codepolitan.com/dashboard/learn/courses/detail/reactjs-state-mengelola-perubahan-tampilan-dengan-data-bersama-event-handler",
+        "course_description": "Kelas \"React.js State\" membawa kamu masuk ke dunia dasar-dasar pengembangan web dengan React.js. Di sini, kamu akan mempelajari konsep pengelolaan state, kunci utama dalam ekosistem React, untuk menciptakan tampilan yang dinamis. Temukan cara menyatukan data dengan event handler agar memberikan pengalaman pengguna yang responsif dan efektif. 41 Siswa 4.7 (34) Penilaian Level Beginner",
+        "about_course": "Dalam kelas \"React.js State\", peserta akan mendapatkan pemahaman yang mendalam tentang cara mengelola state dalam pengembangan web menggunakan React.js. Materi kelas mencakup konsep dasar state, cara mengimplementasikannya dalam komponen React, dan strategi terbaik dalam mengelola perubahan data.\n\nPeserta juga akan diajak untuk memahami pentingnya menyatukan data dengan event handler. Dengan memahami keduanya, peserta dapat menciptakan interaksi yang mulus antara pengguna dan aplikasi web, meningkatkan responsivitas dan kegunaan situs.\n\nKelas ini cocok untuk kamu yang ingin memahami cara praktis mengelola state dalam pengembangan React.js. Dengan fokus pada aspek praktis, kamu dapat langsung mengaplikasikan konsep yang dipelajari ke dalam proyek pengembangan webmu.\n\nPanduan Pengelolaan State dalam Aplikasi React.js\n\nTarget dan Sasaran Peserta:\n\nKelas ini ditujukan bagi individu yang ingin memahami dan menguasai pengelolaan state dalam pengembangan aplikasi berbasis React.js.\nPeserta diharapkan memiliki kemampuan belajar mandiri, karena kelas ini memungkinkan peserta untuk mengatur jadwal belajarnya sendiri.\n\nTujuan Umum dan Khusus Pelatihan:\n\nTujuan Umum: Peserta dapat memahami dan mengimplementasikan pengelolaan state secara efektif dalam pengembangan aplikasi React.js.\nTujuan Khusus:\nMempelajari konsep dasar pengelolaan state pada React.js.\nMemahami strategi terbaik untuk mengelola perubahan state.\nPraktek langsung dalam mengimplementasikan pengelolaan state pada proyek React.js.\n\nSilabus:\n\nPengenalan Pengelolaan State\nKonsep dasar state dalam React.js.\nPeran state dalam komponen React.\nStrategi Pengelolaan State\nPembahasan berbagai strategi pengelolaan state.\nKasus penggunaan dan implementasi praktis.\nProyek Praktek\nPanduan langkah-demi-langkah untuk mengimplementasikan pengelolaan state pada proyek React.js.\n\nMetode Pembelajaran:\n\nPembelajaran Mandiri Online\nPeserta dapat menentukan waktu belajarnya sendiri sesuai kenyamanan masing-masing.\n\nFasilitas Pembelajaran:\n\nMateri Pembelajaran\nVideo tutorial dan materi pembelajaran tersedia untuk memandu peserta.\nForum Tanya Jawab\nPeserta dapat berinteraksi dan bertanya melalui forum apabila menghadapi kendala dalam pembelajaran.\nSertifikat Kelulusan\n\nPeralatan Pembelajaran Peserta:\n\nAkses Internet\nPeserta wajib memiliki akses internet melalui komputer dengan sistem operasi Windows, Mac, atau Linux.\nSpesifikasi Minimum Komputer Peserta:\nSistem Operasi: Windows, Linux, atau MacOS.\nProsesor: Intel Dual Core (Disarankan Core i3 ke atas).\nRAM: 1GB (Disarankan 2GB).\nResolusi Layar: 1366 x 768 (Disarankan Full HD 1920 x 1080).\nPerangkat Lunak:\nBrowser (Tanpa preferensi khusus).",
+        "mentors": [
+            "Ahmad Hakim"
+        ],
+        "modules": [
+            {
+                "module_title": "Mengelola Perubahan Tampilan dengan Data bersama Event Handler",
+                "lessons": [
+                    {
+                        "title": "Persiapan Project Steps Form",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-mengelola-perubahan-tampilan-dengan-data-bersama-event-handler/lessons/9937",
+                        "text_content": "<p>Github : <a href=\"https://github.com/lunadiotic/steps-form\">https://github.com/lunadiotic/steps-form</a></p>",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730949_3a8938450f522c6290ab/480p/1726730949_3a8938450f522c6290ab.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730949_3a8938450f522c6290ab/1080p/1726730949_3a8938450f522c6290ab.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menggunakan Event Handler Di Component",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-mengelola-perubahan-tampilan-dengan-data-bersama-event-handler/lessons/9938",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730948_52d1fc92d5b85e80c1ce/480p/1726730948_52d1fc92d5b85e80c1ce.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730948_52d1fc92d5b85e80c1ce/1080p/1726730948_52d1fc92d5b85e80c1ce.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Apa Itu State Dan Hubungannya Dengan Event Di React",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-mengelola-perubahan-tampilan-dengan-data-bersama-event-handler/lessons/9939",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730955_d870119027fe1827b390/480p/1726730955_d870119027fe1827b390.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730955_d870119027fe1827b390/1080p/1726730955_d870119027fe1827b390.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Ui Jadi Dinamis Dengan State Dan Event",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-mengelola-perubahan-tampilan-dengan-data-bersama-event-handler/lessons/9940",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730963_fa95077ac1fc5a9f573e/480p/1726730963_fa95077ac1fc5a9f573e.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730963_fa95077ac1fc5a9f573e/1080p/1726730963_fa95077ac1fc5a9f573e.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Isi Dari Usestate Dan Jangan Mengubah Nilai Secara Langsung",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-mengelola-perubahan-tampilan-dengan-data-bersama-event-handler/lessons/9941",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730965_c9434fc174eeeeb6b7db/480p/1726730965_c9434fc174eeeeb6b7db.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730965_c9434fc174eeeeb6b7db/1080p/1726730965_c9434fc174eeeeb6b7db.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mekanisme State Saat Re-Render View",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-mengelola-perubahan-tampilan-dengan-data-bersama-event-handler/lessons/9942",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730969_136dd40657873b3303da/480p/1726730969_136dd40657873b3303da.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730969_136dd40657873b3303da/1080p/1726730969_136dd40657873b3303da.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Gunakan React Developer Tools",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-mengelola-perubahan-tampilan-dengan-data-bersama-event-handler/lessons/9943",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730982_4ba98d2d264e01dfe2db/480p/1726730982_4ba98d2d264e01dfe2db.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730982_4ba98d2d264e01dfe2db/1080p/1726730982_4ba98d2d264e01dfe2db.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Benar Mengubah Nilai State Dengan State Itu Sendiri",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-mengelola-perubahan-tampilan-dengan-data-bersama-event-handler/lessons/9944",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730987_1e43fa16b4a80d56041d/480p/1726730987_1e43fa16b4a80d56041d.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730987_1e43fa16b4a80d56041d/1080p/1726730987_1e43fa16b4a80d56041d.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Best Practice Kapan Menggunakan State Dan Variabel Biasa",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-mengelola-perubahan-tampilan-dengan-data-bersama-event-handler/lessons/9945",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730994_ce7cb8464c7f3f338a01/480p/1726730994_ce7cb8464c7f3f338a01.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730994_ce7cb8464c7f3f338a01/1080p/1726730994_ce7cb8464c7f3f338a01.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Perbandingan Komponen Yang Sudah Dibuat Dengan Javascript Vanilla",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-mengelola-perubahan-tampilan-dengan-data-bersama-event-handler/lessons/9946",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731010_d77a55dcabef2ceb5b2e/480p/1726731010_d77a55dcabef2ceb5b2e.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731010_d77a55dcabef2ceb5b2e/1080p/1726731010_d77a55dcabef2ceb5b2e.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Setup Project Gocheck",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-mengelola-perubahan-tampilan-dengan-data-bersama-event-handler/lessons/9947",
+                        "text_content": "<p>Github : <a href=\"https://github.com/lunadiotic/gocheck\">https://github.com/lunadiotic/gocheck</a></p>",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731008_a4da16607d6ff5bf86aa/480p/1726731008_a4da16607d6ff5bf86aa.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731008_a4da16607d6ff5bf86aa/1080p/1726731008_a4da16607d6ff5bf86aa.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menampilkan Item Dari Data Dengan Render List",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-mengelola-perubahan-tampilan-dengan-data-bersama-event-handler/lessons/9948",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731020_0e8e3d59dd47c71a207e/480p/1726731020_0e8e3d59dd47c71a207e.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731020_0e8e3d59dd47c71a207e/1080p/1726731020_0e8e3d59dd47c71a207e.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Buat Form Dan Event Handlernya",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-mengelola-perubahan-tampilan-dengan-data-bersama-event-handler/lessons/9949",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731030_94fc2e772eda796cff2e/480p/1726731030_94fc2e772eda796cff2e.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731030_94fc2e772eda796cff2e/1080p/1726731030_94fc2e772eda796cff2e.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mendapatkan Data Dari Atribut Element",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-mengelola-perubahan-tampilan-dengan-data-bersama-event-handler/lessons/9950",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731036_948f5387a6288cef07e2/480p/1726731036_948f5387a6288cef07e2.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731036_948f5387a6288cef07e2/1080p/1726731036_948f5387a6288cef07e2.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Perbedaan Stats Dan Props",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-mengelola-perubahan-tampilan-dengan-data-bersama-event-handler/lessons/9951",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731064_5e4d00d4c62f31022ea7/480p/1726731064_5e4d00d4c62f31022ea7.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731064_5e4d00d4c62f31022ea7/1080p/1726731064_5e4d00d4c62f31022ea7.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Latihan #1 Membuat Todo App Dan Color Generator",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-mengelola-perubahan-tampilan-dengan-data-bersama-event-handler/lessons/9952",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731044_7af6f6e7bc94fa18babe/480p/1726731044_7af6f6e7bc94fa18babe.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731044_7af6f6e7bc94fa18babe/1080p/1726731044_7af6f6e7bc94fa18babe.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Jawaban Latihan #1 - Menyiapkan State Untuk Todo App",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-mengelola-perubahan-tampilan-dengan-data-bersama-event-handler/lessons/9953",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731063_7eb5fa236dd77d71b73f/480p/1726731063_7eb5fa236dd77d71b73f.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731063_7eb5fa236dd77d71b73f/1080p/1726731063_7eb5fa236dd77d71b73f.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Jawaban Latihan #1 - Menggunakan Event Handler Untuk Menyimpan Dan Menghapus Data",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-mengelola-perubahan-tampilan-dengan-data-bersama-event-handler/lessons/9954",
+                        "text_content": "<p>Github : <a href=\"https://codesandbox.io/s/notes-app-22pdz6?file=/src/App.js\">https://codesandbox.io/s/notes-app-22pdz6?file=/src/App.js</a></p>",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731087_27439216a9406742588f/480p/1726731087_27439216a9406742588f.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731087_27439216a9406742588f/1080p/1726731087_27439216a9406742588f.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Jawaban Latihan #1 - Contoh State Dan Even Untuk Generate Warna Hex, Rgb Dan Opacity",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-mengelola-perubahan-tampilan-dengan-data-bersama-event-handler/lessons/9955",
+                        "text_content": "<p>Github : <a href=\"https://codesandbox.io/s/color-generator-r9lczl?file=/src/App.js\">https://codesandbox.io/s/color-generator-r9lczl?file=/src/App.js</a></p>",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731094_bc0b9bce92c0d82245dd/480p/1726731094_bc0b9bce92c0d82245dd.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731094_bc0b9bce92c0d82245dd/1080p/1726731094_bc0b9bce92c0d82245dd.m3u8"
+                        ],
+                        "youtube_urls": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "course_title": "React.js State Management - Panduan Menggunakan State yg Baik",
+        "course_slug": "reactjs-state-management-panduan-menggunakan-state-yg-baik",
+        "course_url": "https://www.codepolitan.com/dashboard/learn/courses/detail/reactjs-state-management-panduan-menggunakan-state-yg-baik",
+        "course_description": "Pelajari cara efektif mengelola state dalam aplikasi React.js Anda dengan kelas \"React.js State Management.\" Dengan panduan langkah demi langkah, tingkatkan keterampilan Anda dalam menggunakan state secara efisien untuk menciptakan aplikasi yang dinamis dan responsif. 26 Siswa 4.8 (40) Penilaian Level Beginner",
+        "about_course": "Dalam kelas online \"React.js State Management - Panduan Menggunakan State yang Baik\", kamu akan dibimbing secara menyeluruh untuk memahami konsep dan penerapan manajemen state dalam pengembangan aplikasi menggunakan React.js. State merupakan komponen krusial dalam ekosistem React, dan memahaminya dengan baik adalah langkah penting dalam membangun aplikasi yang responsif dan efisien.\n\nTujuan Umum dan Khusus Pelatihan:\n\nPada akhir kelas, peserta diharapkan memiliki pemahaman yang kuat mengenai manajemen state dalam React.js.\nMemahami praktik-praktik terbaik dalam menggunakan state untuk mencapai fungsionalitas yang diinginkan.\nPeserta akan diajarkan cara memanfaatkan state secara efektif untuk meningkatkan performa aplikasi React.\n\nSilabus:\n\nKonsep Dasar Manajemen State dalam React.js\nPenggunaan State untuk Mengelola Perubahan Tampilan\nTeknik Pengelolaan State dalam Komponen Fungsional dan Kelas\nPenggunaan Context API untuk Manajemen State yang Kompleks\nPraktik Terbaik: Tips dan Trik dalam Menggunakan State yang Efisien\n\nJenis Pekerjaan: Kelas ini cocok bagi mereka yang ingin mendalami React.js dan mengasah keahlian dalam manajemen state untuk meningkatkan kualitas aplikasi web.\n\nMetode Ajar:\n\nPembelajaran mandiri online yang dapat disesuaikan dengan jadwal masing-masing siswa.\nMateri disajikan melalui video untuk memperjelas konsep dan penerapannya.\nForum tanya jawab akan diawasi oleh tim dukungan CodePolitan untuk membantu siswa mengatasi kendala belajar.\nSertifikat kelulusan akan diberikan sebagai pengakuan atas keberhasilan menyelesaikan kelas.\n\nPeralatan Belajar Siswa:\n\nAkses internet dan komputer dengan sistem operasi Windows/Mac/Linux.\nSpesifikasi minimal komputer: Prosesor Intel Dual Core (disarankan Core i3 ke atas), RAM 1GB (disarankan 2GB), resolusi layar 1366 x 768 (disarankan Full HD 1920 x 1080).\nSoftware yang diperlukan: Browser (tidak ada preferensi khusus) dan Text Editor (tidak ada preferensi khusus).",
+        "mentors": [
+            "Ahmad Hakim"
+        ],
+        "modules": [
+            {
+                "module_title": "React.js State Management - Panduan Menggunakan State yg Baik",
+                "lessons": [
+                    {
+                        "title": "Berpikir Menjadi React.Js Agar Jadi Masternya",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-management-panduan-menggunakan-state-yg-baik/lessons/9993",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730971_fa01cab46a741059c55a/480p/1726730971_fa01cab46a741059c55a.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730971_fa01cab46a741059c55a/1080p/1726730971_fa01cab46a741059c55a.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Hal Dasar Cara Menentukan State Secara Local Atau Global",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-management-panduan-menggunakan-state-yg-baik/lessons/9994",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730982_c87bf45bf27f2bd01e46/480p/1726730982_c87bf45bf27f2bd01e46.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730982_c87bf45bf27f2bd01e46/1080p/1726730982_c87bf45bf27f2bd01e46.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Alternatif Sebelum Pakai Global State",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-management-panduan-menggunakan-state-yg-baik/lessons/9995",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730981_3cdc57535fbb70f5fd98/480p/1726730981_3cdc57535fbb70f5fd98.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730981_3cdc57535fbb70f5fd98/1080p/1726730981_3cdc57535fbb70f5fd98.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Review Kenapa Harus Lifting-Up State",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-management-panduan-menggunakan-state-yg-baik/lessons/9996",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730998_78de812d016711c08301/480p/1726730998_78de812d016711c08301.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730998_78de812d016711c08301/1080p/1726730998_78de812d016711c08301.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Hapus Item Contoh Child-To-Parent Data Flow",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-management-panduan-menggunakan-state-yg-baik/lessons/9997",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726730996_85640673572d326d263a/480p/1726730996_85640673572d326d263a.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726730996_85640673572d326d263a/1080p/1726730996_85640673572d326d263a.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengubah Nilai State Dari Hirarki Component Paling Bawah",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-management-panduan-menggunakan-state-yg-baik/lessons/9998",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731008_66e8f02cd21507372c07/480p/1726731008_66e8f02cd21507372c07.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731008_66e8f02cd21507372c07/1080p/1726731008_66e8f02cd21507372c07.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Benar Memanfaatkan State Pada Kondisi Deriving State",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-management-panduan-menggunakan-state-yg-baik/lessons/9999",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731014_58ee0c29d5ee85874305/480p/1726731014_58ee0c29d5ee85874305.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731014_58ee0c29d5ee85874305/1080p/1726731014_58ee0c29d5ee85874305.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Contoh Implementasi Deriving State",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-management-panduan-menggunakan-state-yg-baik/lessons/10000",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731024_15d0b03ff04faec0c75f/480p/1726731024_15d0b03ff04faec0c75f.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731024_15d0b03ff04faec0c75f/1080p/1726731024_15d0b03ff04faec0c75f.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengurutkan Deret Data Melalui State",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-management-panduan-menggunakan-state-yg-baik/lessons/10001",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731036_25f8e92d11e2bb5f884d/480p/1726731036_25f8e92d11e2bb5f884d.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731036_25f8e92d11e2bb5f884d/1080p/1726731036_25f8e92d11e2bb5f884d.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Menghapus Atau Mengosongkan Nilai State",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-management-panduan-menggunakan-state-yg-baik/lessons/10002",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731036_77c73ca4144597a4bb2d/480p/1726731036_77c73ca4144597a4bb2d.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731036_77c73ca4144597a4bb2d/1080p/1726731036_77c73ca4144597a4bb2d.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Memisahkan Komponen Ke Dalam File Masing-Masing",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-management-panduan-menggunakan-state-yg-baik/lessons/10003",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731056_c9c602455bdbb5b6af44/480p/1726731056_c9c602455bdbb5b6af44.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731056_c9c602455bdbb5b6af44/1080p/1726731056_c9c602455bdbb5b6af44.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Latihan #1 - Membuat Tampilan Accordion Untuk Faq",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-management-panduan-menggunakan-state-yg-baik/lessons/10004",
+                        "text_content": "<p>Source code : <a href=\"https://codesandbox.io/p/sandbox/sweet-elion-43g38p\">https://codesandbox.io/p/sandbox/sweet-elion-43g38p</a></p>",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731062_577014ae47aa91ee3b37/480p/1726731062_577014ae47aa91ee3b37.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731062_577014ae47aa91ee3b37/1080p/1726731062_577014ae47aa91ee3b37.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Latihan #1 - Menambahkan Fungsi Buka Tutup Pada Item Dan Styling",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-management-panduan-menggunakan-state-yg-baik/lessons/10005",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731083_33ef3977327c995a1d01/480p/1726731083_33ef3977327c995a1d01.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731083_33ef3977327c995a1d01/1080p/1726731083_33ef3977327c995a1d01.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Latihan #2 - Pemanfaatan Lift-Up State Untuk Status Open Accordion",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-state-management-panduan-menggunakan-state-yg-baik/lessons/10006",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731087_bbbcea86295b0b80e1c2/480p/1726731087_bbbcea86295b0b80e1c2.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731087_bbbcea86295b0b80e1c2/1080p/1726731087_bbbcea86295b0b80e1c2.m3u8"
+                        ],
+                        "youtube_urls": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "course_title": "Belajar React.js dengan Membuat Aplikasi Split Bill",
+        "course_slug": "belajar-reactjs-dengan-membuat-aplikasi-split-bill",
+        "course_url": "https://www.codepolitan.com/dashboard/learn/courses/detail/belajar-reactjs-dengan-membuat-aplikasi-split-bill",
+        "course_description": "Pelajari React.js dengan cara yang menyenangkan melalui kelas \"Belajar React.js dengan Membuat Aplikasi Split Bill\". Dalam kelas ini, kamu akan diajak untuk memahami dasar-dasar React.js sambil langsung mengaplikasikannya dalam pembuatan aplikasi praktis yang berguna dalam kehidupan sehari-hari. 34 Siswa 4.6 (28) Penilaian Level Beginner",
+        "about_course": "Dalam kelas online \"Belajar React.js dengan Membuat Aplikasi Split Bill\", kamu akan memasuki dunia React.js dengan pendekatan praktis yang langsung terapkan konsep-konsep dasar dalam pembuatan aplikasi nyata. Kamu tidak hanya akan memahami sintaks React.js, tetapi juga melihat bagaimana konsep tersebut dapat diaplikasikan dalam pengembangan aplikasi yang bermanfaat.\n\nTujuan Umum dan Khusus Pelatihan:\n\nPeserta akan mendapatkan pemahaman menyeluruh tentang dasar-dasar React.js.\nDapat mengaplikasikan React.js dalam membangun aplikasi Split Bill yang dapat digunakan dalam kehidupan sehari-hari.\nMempelajari praktik terbaik dalam pengembangan aplikasi dengan menggunakan React.js.\n\nSilabus:\n\nPengenalan dasar-dasar React.js.\nPembuatan struktur proyek untuk aplikasi Split Bill.\nPengelolaan state dalam aplikasi.\nPenggunaan komponen-komponen React dalam menciptakan antarmuka yang responsif.\nImplementasi fitur-fitur khusus aplikasi Split Bill.\n\nJenis Pekerjaan: Kelas ini cocok untuk siapa saja yang ingin memahami React.js melalui pendekatan langsung dengan membuat aplikasi yang berguna.\n\nMetode Ajar:\n\nPembelajaran mandiri online yang dapat disesuaikan dengan jadwal masing-masing siswa.\nMateri disajikan melalui video untuk memperjelas konsep dan penerapannya.\nForum tanya jawab untuk mendapatkan bantuan langsung dari instruktur.\nSertifikat kelulusan akan diberikan sebagai pengakuan atas keberhasilan menyelesaikan kelas.\n\nPeralatan Belajar Siswa:\n\nAkses internet dan komputer dengan sistem operasi Windows/Mac/Linux.\nSpesifikasi minimal komputer: Prosesor Intel Dual Core (disarankan Core i3 ke atas), RAM 1GB (disarankan 2GB), resolusi layar 1366 x 768 (disarankan Full HD 1920 x 1080).\nSoftware yang diperlukan: Browser (tidak ada preferensi khusus) dan Text Editor (tidak ada preferensi khusus).",
+        "mentors": [
+            "Ahmad Hakim"
+        ],
+        "modules": [
+            {
+                "module_title": "Belajar React.js dengan Membuat Aplikasi Split Bill",
+                "lessons": [
+                    {
+                        "title": "Demo Dan Persiapan Project Split Bill",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs-dengan-membuat-aplikasi-split-bill/lessons/10007",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731025_0c4e61c69e7c83ef1f75/480p/1726731025_0c4e61c69e7c83ef1f75.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731025_0c4e61c69e7c83ef1f75/1080p/1726731025_0c4e61c69e7c83ef1f75.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Desain Menampilkan Daftar Teman",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs-dengan-membuat-aplikasi-split-bill/lessons/10008",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731036_159eeb7fcde59eb891c4/480p/1726731036_159eeb7fcde59eb891c4.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731036_159eeb7fcde59eb891c4/1080p/1726731036_159eeb7fcde59eb891c4.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menampilkan Form Untuk Tambah Teman Dan Patungan",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs-dengan-membuat-aplikasi-split-bill/lessons/10009",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731072_a284d67d1af82f336fbe/480p/1726731072_a284d67d1af82f336fbe.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731072_a284d67d1af82f336fbe/1080p/1726731072_a284d67d1af82f336fbe.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menampilkan Dan Menyembunyikan Form Tambah Teman",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs-dengan-membuat-aplikasi-split-bill/lessons/10010",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731048_241f533910fa883b051f/480p/1726731048_241f533910fa883b051f.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731048_241f533910fa883b051f/1080p/1726731048_241f533910fa883b051f.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menyiapkan State Untuk Menambah Data Teman",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs-dengan-membuat-aplikasi-split-bill/lessons/10011",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731076_4bd0e50772171a9bef25/480p/1726731076_4bd0e50772171a9bef25.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731076_4bd0e50772171a9bef25/1080p/1726731076_4bd0e50772171a9bef25.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Event Handler Untuk Membuat Data Object Teman",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs-dengan-membuat-aplikasi-split-bill/lessons/10012",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731092_d8b5f02012b36b7dfabc/480p/1726731092_d8b5f02012b36b7dfabc.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731092_d8b5f02012b36b7dfabc/1080p/1726731092_d8b5f02012b36b7dfabc.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menampilkan Form Patungan Secara Dinamis",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs-dengan-membuat-aplikasi-split-bill/lessons/10013",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731103_2b12cff83c78b4f16961/480p/1726731103_2b12cff83c78b4f16961.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731103_2b12cff83c78b4f16961/1080p/1726731103_2b12cff83c78b4f16961.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menampilkan Data Teman Yg Dipilih Di Dalam Form Patungan",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs-dengan-membuat-aplikasi-split-bill/lessons/10014",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731115_59c234e99e8c569c07b4/480p/1726731115_59c234e99e8c569c07b4.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731115_59c234e99e8c569c07b4/1080p/1726731115_59c234e99e8c569c07b4.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Logic Patungan",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs-dengan-membuat-aplikasi-split-bill/lessons/10015",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731133_6dcfe77d20a3eaaf0e13/480p/1726731133_6dcfe77d20a3eaaf0e13.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731133_6dcfe77d20a3eaaf0e13/1080p/1726731133_6dcfe77d20a3eaaf0e13.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menghitung Balance Dari Siapa Yang Bayar Dan Yang Hutang",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs-dengan-membuat-aplikasi-split-bill/lessons/10016",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731145_c76c141b1a9a2565f947/480p/1726731145_c76c141b1a9a2565f947.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731145_c76c141b1a9a2565f947/1080p/1726731145_c76c141b1a9a2565f947.m3u8"
+                        ],
+                        "youtube_urls": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "course_title": "React.js - Belajar Lebih Dalam Tentang Component dan Jenisnya",
+        "course_slug": "reactjs-belajar-lebih-dalam-tentang-component-dan-jenisnya",
+        "course_url": "https://www.codepolitan.com/dashboard/learn/courses/detail/reactjs-belajar-lebih-dalam-tentang-component-dan-jenisnya",
+        "course_description": "Pelajari React.js secara lebih mendalam tentang komponen dan jenisnya melalui kelas \"React.js - Belajar Lebih Dalam Tentang Component dan Jenisnya\". Dapatkan pemahaman yang komprehensif tentang pengelolaan komponen dan aplikasikan pengetahuan tersebut dalam pengembangan aplikasi React yang canggih. 18 Siswa 3.9 (17) Penilaian Level Beginner",
+        "about_course": "Dalam kelas online \"React.js - Belajar Lebih Dalam Tentang Component dan Jenisnya\", kamu akan melangkah lebih jauh dalam memahami dunia React.js dengan fokus pada komponen dan jenis-jenisnya. Kelas ini dirancang untuk memberikan pemahaman yang mendalam tentang konsep-konsep ini, yang merupakan fondasi utama dalam pengembangan aplikasi React yang canggih.\n\nTujuan Umum dan Khusus Pelatihan:\n\nPeserta akan mendapatkan pemahaman mendalam tentang pengelolaan komponen dalam React.js.\nDapat mengidentifikasi berbagai jenis komponen dan memahami kapan dan bagaimana menggunakan masing-masing jenis.\nMampu mengimplementasikan pengetahuan tersebut dalam pengembangan aplikasi React yang kompleks.\n\nSilabus:\n\nPengenalan konsep dasar komponen dalam React.js.\nMemahami berbagai jenis komponen seperti Class Components, Functional Components, dan lainnya.\nPengelolaan state dan props dalam berbagai jenis komponen.\nStudi kasus penggunaan berbagai jenis komponen dalam pengembangan aplikasi React.\n\nJenis Pekerjaan: Kelas ini cocok untuk mereka yang ingin menguasai pengelolaan komponen dalam pengembangan aplikasi React dan menggali lebih dalam ke dalam jenis-jenis komponen yang ada.\n\nMetode Ajar:\n\nPembelajaran mandiri online yang dapat disesuaikan dengan jadwal masing-masing siswa.\nMateri disampaikan melalui video untuk mendemonstrasikan konsep-konsep yang diajarkan.\nForum tanya jawab tersedia untuk mendapatkan bantuan langsung dari instruktur.\nSertifikat kelulusan akan diberikan sebagai pengakuan atas keberhasilan menyelesaikan kelas.\n\nPeralatan Belajar Siswa:\n\nAkses internet dan komputer dengan sistem operasi Windows/Mac/Linux.\nSpesifikasi minimal komputer: Prosesor Intel Dual Core (disarankan Core i3 ke atas), RAM 1GB (disarankan 2GB), resolusi layar 1366 x 768 (disarankan Full HD 1920 x 1080).\nSoftware yang diperlukan: Browser (tidak ada preferensi khusus) dan Text Editor (tidak ada preferensi khusus).",
+        "mentors": [
+            "Ahmad Hakim"
+        ],
+        "modules": [
+            {
+                "module_title": "React.js - Belajar Lebih Dalam Tentang Component dan Jenisnya",
+                "lessons": [
+                    {
+                        "title": "Persiapan Project",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-lebih-dalam-tentang-component-dan-jenisnya/lessons/10017",
+                        "text_content": "<p>Github</p>\n<p><a href=\"https://github.com/lunadiotic/popmovie-src/tree/prep\">https://github.com/lunadiotic/popmovie-src/tree/prep</a></p>\n<p><a href=\"https://github.com/lunadiotic/popmovie\">https://github.com/lunadiotic/popmovie</a></p>",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731072_737ad3e7e7cfb22a2aa4/480p/1726731072_737ad3e7e7cfb22a2aa4.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731072_737ad3e7e7cfb22a2aa4/1080p/1726731072_737ad3e7e7cfb22a2aa4.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Kriteria Membuat Sebuah Component Di React.Js",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-lebih-dalam-tentang-component-dan-jenisnya/lessons/10018",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731079_7912bf95445cdd71d254/480p/1726731079_7912bf95445cdd71d254.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731079_7912bf95445cdd71d254/1080p/1726731079_7912bf95445cdd71d254.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menentukan Kapan Membuat Component Terpisah",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-lebih-dalam-tentang-component-dan-jenisnya/lessons/10019",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731098_9542e321649e6b21e2df/480p/1726731098_9542e321649e6b21e2df.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731098_9542e321649e6b21e2df/1080p/1726731098_9542e321649e6b21e2df.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Panduan Memisahkan Component Pada Bagian Navbar",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-lebih-dalam-tentang-component-dan-jenisnya/lessons/10020",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731115_ff36f40955ea7f9a1065/480p/1726731115_ff36f40955ea7f9a1065.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731115_ff36f40955ea7f9a1065/1080p/1726731115_ff36f40955ea7f9a1065.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Panduan Memisahkan Component Pada Bagian Main List",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-lebih-dalam-tentang-component-dan-jenisnya/lessons/10021",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731113_03006911bd238d953eea/480p/1726731113_03006911bd238d953eea.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731113_03006911bd238d953eea/1080p/1726731113_03006911bd238d953eea.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Component Hanya Untuk Layout Itu Sah Saja",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-lebih-dalam-tentang-component-dan-jenisnya/lessons/10022",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731130_9c4f9ed51e2b1e8970e4/480p/1726731130_9c4f9ed51e2b1e8970e4.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731130_9c4f9ed51e2b1e8970e4/1080p/1726731130_9c4f9ed51e2b1e8970e4.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengenal Jenis Component Yg Sudah Dibuat",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-lebih-dalam-tentang-component-dan-jenisnya/lessons/10023",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731140_0cb640e976ff44378117/480p/1726731140_0cb640e976ff44378117.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731140_0cb640e976ff44378117/1080p/1726731140_0cb640e976ff44378117.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengenal Prop Drilling - Bisa Dilakukan Tapi Tidak Disarankan",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-lebih-dalam-tentang-component-dan-jenisnya/lessons/10024",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731150_bf6df0ebbcac546ea69d/480p/1726731150_bf6df0ebbcac546ea69d.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731150_bf6df0ebbcac546ea69d/1080p/1726731150_bf6df0ebbcac546ea69d.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Teknik Component Composition",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-lebih-dalam-tentang-component-dan-jenisnya/lessons/10025",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731160_daa56c1767bd8acfd717/480p/1726731160_daa56c1767bd8acfd717.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731160_daa56c1767bd8acfd717/1080p/1726731160_daa56c1767bd8acfd717.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengatasi Prop Drilling Dengan Component Composition",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-lebih-dalam-tentang-component-dan-jenisnya/lessons/10026",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731178_9a1f3363fb04602ae77c/480p/1726731178_9a1f3363fb04602ae77c.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731178_9a1f3363fb04602ae77c/1080p/1726731178_9a1f3363fb04602ae77c.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Memanfaatkan Component Composition Untuk Layouting",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-lebih-dalam-tentang-component-dan-jenisnya/lessons/10027",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731199_04647e8299bea79b97c8/480p/1726731199_04647e8299bea79b97c8.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731199_04647e8299bea79b97c8/1080p/1726731199_04647e8299bea79b97c8.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Memecah Component Lebih Kecil Lagi",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-lebih-dalam-tentang-component-dan-jenisnya/lessons/10028",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731199_58648e758b2b87c29517/480p/1726731199_58648e758b2b87c29517.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731199_58648e758b2b87c29517/1080p/1726731199_58648e758b2b87c29517.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Lain Mengirimkan Component Melalui Prop",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-lebih-dalam-tentang-component-dan-jenisnya/lessons/10029",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731222_e43e7a98358690cd1d01/480p/1726731222_e43e7a98358690cd1d01.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731222_e43e7a98358690cd1d01/1080p/1726731222_e43e7a98358690cd1d01.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Component Bintang Untuk Rating",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-lebih-dalam-tentang-component-dan-jenisnya/lessons/10030",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731226_7749344203841b139890/480p/1726731226_7749344203841b139890.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731226_7749344203841b139890/1080p/1726731226_7749344203841b139890.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menampilkan Icon Bintang Dan Fungsi Klik Untuk Memberikan Nilai",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-lebih-dalam-tentang-component-dan-jenisnya/lessons/10031",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731248_6ba3b1dd4a06a22b02fb/480p/1726731248_6ba3b1dd4a06a22b02fb.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731248_6ba3b1dd4a06a22b02fb/1080p/1726731248_6ba3b1dd4a06a22b02fb.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menampilkan Jumlah Bintang Yg Terisi Sesuai Dengan Nilai Rating",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-lebih-dalam-tentang-component-dan-jenisnya/lessons/10032",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731246_590625546e37e5c0186c/480p/1726731246_590625546e37e5c0186c.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731246_590625546e37e5c0186c/1080p/1726731246_590625546e37e5c0186c.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menampilkan Jumlah Bintang Sesuai Posisi Mouse",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-lebih-dalam-tentang-component-dan-jenisnya/lessons/10033",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731270_9b1a3b4635bb6ae12070/480p/1726731270_9b1a3b4635bb6ae12070.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731270_9b1a3b4635bb6ae12070/1080p/1726731270_9b1a3b4635bb6ae12070.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Memanfaatkan Props Untuk Component Lebih Dinamis",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-lebih-dalam-tentang-component-dan-jenisnya/lessons/10034",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731266_83f02cda629ef51def30/480p/1726731266_83f02cda629ef51def30.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731266_83f02cda629ef51def30/1080p/1726731266_83f02cda629ef51def30.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengenal Proptype Di React",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-lebih-dalam-tentang-component-dan-jenisnya/lessons/10035",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731290_6f6abec8d8bc1fa8a4b7/480p/1726731290_6f6abec8d8bc1fa8a4b7.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731290_6f6abec8d8bc1fa8a4b7/1080p/1726731290_6f6abec8d8bc1fa8a4b7.m3u8"
+                        ],
+                        "youtube_urls": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "course_title": "React.js - Bagaimana React.js Bekerja di Balik Layar",
+        "course_slug": "reactjs-bagaimana-reactjs-bekerja-di-balik-layar",
+        "course_url": "https://www.codepolitan.com/dashboard/learn/courses/detail/reactjs-bagaimana-reactjs-bekerja-di-balik-layar",
+        "course_description": "Pelajari rahasia di balik layar React.js melalui kelas \"React.js - Bagaimana React.js Bekerja di Balik Layar\". Dapatkan wawasan mendalam tentang bagaimana React mengelola state, rendering, dan interaksi komponen, membekali diri Anda dengan pengetahuan yang krusial untuk menjadi pengembang React yang lebih baik. 14 Siswa 4.8 (13) Penilaian Level Beginner",
+        "about_course": "Dalam kelas online \"React.js - Bagaimana React.js Bekerja di Balik Layar\", kita akan menjelajahi kerangka kerja React.js dengan detil, membongkar cara kerja di balik layar yang membuatnya menjadi salah satu alat pengembangan web yang paling kuat saat ini. Kelas ini tidak hanya memberikan pemahaman teoretis tetapi juga membimbing Anda melalui implementasi praktis.\n\nTujuan Umum dan Khusus Pelatihan:\n\nMemahami konsep utama di balik cara React mengelola state.\nMenggali proses rendering dan reconciling di React.js.\nMemahami interaksi antara komponen dan bagaimana data mengalir di seluruh aplikasi React.\n\nSilabus:\n\nKonsep dasar state dan lifecycle dalam React.js.\nProses rendering dan reconciling: Bagaimana React menentukan perubahan apa yang harus diterapkan pada DOM.\nAliran data: Menelusuri cara data mengalir melalui komponen React.\n\nJenis Pekerjaan: Kelas ini direkomendasikan bagi pengembang web yang ingin memahami secara menyeluruh cara kerja React.js dan mengoptimalkan penggunaannya dalam pengembangan aplikasi web.\n\nMetode Ajar:\n\nPembelajaran mandiri online dengan materi video dan penugasan praktis.\nForum tanya jawab untuk mendapatkan bantuan dan klarifikasi langsung dari instruktur.\nSertifikat kelulusan akan diberikan kepada peserta yang menyelesaikan kelas dengan sukses.\n\nPeralatan Belajar Siswa:\n\nKomputer dengan akses internet (Windows/Mac/Linux).\nSpesifikasi minimal komputer: Prosesor Intel Dual Core (disarankan Core i3 ke atas), RAM 1GB (disarankan 2GB), resolusi layar 1366 x 768 (disarankan Full HD 1920 x 1080).\nSoftware yang diperlukan: Browser (tanpa preferensi khusus) dan Text Editor (tanpa preferensi khusus).",
+        "mentors": [
+            "Ahmad Hakim"
+        ],
+        "modules": [
+            {
+                "module_title": "React.js - Bagaimana React.js Bekerja di Balik Layar",
+                "lessons": [
+                    {
+                        "title": "Persiapan Project Yang Akan Dibahas",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-bagaimana-reactjs-bekerja-di-balik-layar/lessons/10036",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731100_1056a9fc4c1c17328777/480p/1726731100_1056a9fc4c1c17328777.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731100_1056a9fc4c1c17328777/1080p/1726731100_1056a9fc4c1c17328777.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Component, Instance Dan Element",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-bagaimana-reactjs-bekerja-di-balik-layar/lessons/10037",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731114_94d632e5a417c26014d1/480p/1726731114_94d632e5a417c26014d1.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731114_94d632e5a417c26014d1/1080p/1726731114_94d632e5a417c26014d1.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Praktek Mengenal Instance Dan Element React",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-bagaimana-reactjs-bekerja-di-balik-layar/lessons/10038",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731125_f36481afbc860002a04f/480p/1726731125_f36481afbc860002a04f.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731125_f36481afbc860002a04f/1080p/1726731125_f36481afbc860002a04f.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Kerja Render Di React - Render Trigger",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-bagaimana-reactjs-bekerja-di-balik-layar/lessons/10039",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731136_16b7008c08df0448fc3e/480p/1726731136_16b7008c08df0448fc3e.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731136_16b7008c08df0448fc3e/1080p/1726731136_16b7008c08df0448fc3e.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Kerja Render Di React - Fase Render",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-bagaimana-reactjs-bekerja-di-balik-layar/lessons/10040",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731147_db1cfab99c93434cef25/480p/1726731147_db1cfab99c93434cef25.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731147_db1cfab99c93434cef25/1080p/1726731147_db1cfab99c93434cef25.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Kerja Render Di React - Fase Commit",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-bagaimana-reactjs-bekerja-di-balik-layar/lessons/10041",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731154_68e13b8a669caae654df/480p/1726731154_68e13b8a669caae654df.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731154_68e13b8a669caae654df/1080p/1726731154_68e13b8a669caae654df.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Apa Itu Diffing Dan Cara Kerjanya",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-bagaimana-reactjs-bekerja-di-balik-layar/lessons/10042",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731168_eae4b8793685edf38ad0/480p/1726731168_eae4b8793685edf38ad0.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731168_eae4b8793685edf38ad0/1080p/1726731168_eae4b8793685edf38ad0.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Contoh Cara Kerja Diffing",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-bagaimana-reactjs-bekerja-di-balik-layar/lessons/10043",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731177_ec97c9d18d4c5e94902e/480p/1726731177_ec97c9d18d4c5e94902e.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731177_ec97c9d18d4c5e94902e/1080p/1726731177_ec97c9d18d4c5e94902e.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengenal Fungsi Prop Key",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-bagaimana-reactjs-bekerja-di-balik-layar/lessons/10044",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731194_e7513b7db79b8333257d/480p/1726731194_e7513b7db79b8333257d.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731194_e7513b7db79b8333257d/1080p/1726731194_e7513b7db79b8333257d.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Praktek Prop Key Dapat Me-Reset State",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-bagaimana-reactjs-bekerja-di-balik-layar/lessons/10045",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731196_f51df5b2242d19dbdf90/480p/1726731196_f51df5b2242d19dbdf90.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731196_f51df5b2242d19dbdf90/1080p/1726731196_f51df5b2242d19dbdf90.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Pemanfaatan Reset State Dengan Key Pada Project",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-bagaimana-reactjs-bekerja-di-balik-layar/lessons/10046",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731207_68cc0f41eee884a6f0d4/480p/1726731207_68cc0f41eee884a6f0d4.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731207_68cc0f41eee884a6f0d4/1080p/1726731207_68cc0f41eee884a6f0d4.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Aturan Render Logic Pada Component",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-bagaimana-reactjs-bekerja-di-balik-layar/lessons/10047",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731221_203fbfe0bb0cf3edf0e7/480p/1726731221_203fbfe0bb0cf3edf0e7.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731221_203fbfe0bb0cf3edf0e7/1080p/1726731221_203fbfe0bb0cf3edf0e7.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Kerja Perbarui State Di Balik Layar",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-bagaimana-reactjs-bekerja-di-balik-layar/lessons/10048",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731230_3c59248dcb36485065b9/480p/1726731230_3c59248dcb36485065b9.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731230_3c59248dcb36485065b9/1080p/1726731230_3c59248dcb36485065b9.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Praktek Update State Secara Bersamaan",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-bagaimana-reactjs-bekerja-di-balik-layar/lessons/10049",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731252_0c809af9f441adfe0ed8/480p/1726731252_0c809af9f441adfe0ed8.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731252_0c809af9f441adfe0ed8/1080p/1726731252_0c809af9f441adfe0ed8.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Menambah Dan Mendapatkan Nilai State Sebelum Render",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-bagaimana-reactjs-bekerja-di-balik-layar/lessons/10050",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731252_c13cb84516a2f28a4063/480p/1726731252_c13cb84516a2f28a4063.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731252_c13cb84516a2f28a4063/1080p/1726731252_c13cb84516a2f28a4063.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Kerja Event Di React",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-bagaimana-reactjs-bekerja-di-balik-layar/lessons/10051",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731270_4ede553c1e30d35ed0b0/480p/1726731270_4ede553c1e30d35ed0b0.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731270_4ede553c1e30d35ed0b0/1080p/1726731270_4ede553c1e30d35ed0b0.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Antara Library Framework Dan React",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-bagaimana-reactjs-bekerja-di-balik-layar/lessons/10052",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731263_ed145d6609886661b081/480p/1726731263_ed145d6609886661b081.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731263_ed145d6609886661b081/1080p/1726731263_ed145d6609886661b081.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Rangkuman Dari Cara Kerja React Di Balik Layar",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-bagaimana-reactjs-bekerja-di-balik-layar/lessons/10053",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731291_1960b00564b662564328/480p/1726731291_1960b00564b662564328.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731291_1960b00564b662564328/1080p/1726731291_1960b00564b662564328.m3u8"
+                        ],
+                        "youtube_urls": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "course_title": "React.js - Belajar Hook Effect dan Data Fetching",
+        "course_slug": "reactjs-belajar-hook-effect-dan-data-fetching",
+        "course_url": "https://www.codepolitan.com/dashboard/learn/courses/detail/reactjs-belajar-hook-effect-dan-data-fetching",
+        "course_description": "Jelajahi kekuatan React.js dalam pengelolaan efek dan pengambilan data dengan kelas \"React.js - Belajar Hook Effect dan Data Fetching.\" Pelajari cara menggunakan Hook Effect untuk menangani efek samping dalam komponen React dan memahami strategi pengambilan data yang efektif untuk aplikasi web Anda. 17 Siswa 5.0 (8) Penilaian Level Beginner",
+        "about_course": "Dalam kelas online \"React.js - Belajar Hook Effect dan Data Fetching\", Anda akan mendalami konsep Hook Effect, alat yang kuat untuk mengelola efek samping dalam komponen React. Kami akan membahas strategi pengambilan data yang efektif menggunakan Hook Effect, memungkinkan aplikasi web Anda berinteraksi dengan data eksternal secara dinamis. Pelajari langkah-langkah praktis dan implementasi dalam lingkungan React yang mendukung kemampuan responsif dan interaktif.\n\nTujuan Umum dan Khusus Pelatihan:\n\nMemahami konsep dasar Hook Effect dan peran utamanya dalam komponen React.\nMenguasai teknik pengambilan data efektif menggunakan Hook Effect.\nMengintegrasikan penggunaan Hook Effect dalam proyek React yang sesungguhnya.\n\nSilabus:\n\nPengenalan Hook Effect: Konsep dan manfaatnya dalam pengembangan React.\nPengambilan Data dengan Efektif: Strategi dan praktik terbaik untuk pengambilan data dinamis.\nImplementasi dalam Proyek React: Menerapkan Hook Effect dalam proyek web React yang nyata.\n\nJenis Pekerjaan: Kelas ini ditujukan bagi pengembang React yang ingin memperdalam pemahaman mereka tentang penggunaan efektif Hook Effect dan teknik pengambilan data di lingkungan React.\n\nMetode Ajar:\n\nPembelajaran mandiri online dengan modul video dan tugas interaktif.\nForum tanya jawab untuk mendapatkan dukungan dan panduan dari instruktur.\nSertifikat kelulusan diberikan kepada peserta yang berhasil menyelesaikan kursus.\n\nPeralatan Belajar Siswa:\n\nKomputer dengan akses internet (Windows/Mac/Linux).\nSpesifikasi minimal komputer: Prosesor Intel Dual Core (disarankan Core i3 ke atas), RAM 1GB (disarankan 2GB), resolusi layar 1366 x 768 (disarankan Full HD 1920 x 1080).\nSoftware yang diperlukan: Browser (tanpa preferensi khusus) dan Text Editor (tanpa preferensi khusus).",
+        "mentors": [
+            "Ahmad Hakim"
+        ],
+        "modules": [
+            {
+                "module_title": "React.js - Belajar Hook Effect dan Data Fetching",
+                "lessons": [
+                    {
+                        "title": "Memahami Component Lifecycle Sebelum Belajar Effect",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-hook-effect-dan-data-fetching/lessons/10054",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731128_f2a3bc0bc130d3894113/480p/1726731128_f2a3bc0bc130d3894113.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731128_f2a3bc0bc130d3894113/1080p/1726731128_f2a3bc0bc130d3894113.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Yang Harus Dihindari Saat Melakukan Fetch Dan Update State",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-hook-effect-dan-data-fetching/lessons/10055",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731141_578674b79974b9112615/480p/1726731141_578674b79974b9112615.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731141_578674b79974b9112615/1080p/1726731141_578674b79974b9112615.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Gunakan Useeffect Untuk Mencegah Infiteloop",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-hook-effect-dan-data-fetching/lessons/10056",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731155_489cfceada2870302823/480p/1726731155_489cfceada2870302823.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731155_489cfceada2870302823/1080p/1726731155_489cfceada2870302823.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengenal Effect Lebih Lanjut",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-hook-effect-dan-data-fetching/lessons/10057",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731160_d23768dcc4baf867c944/480p/1726731160_d23768dcc4baf867c944.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731160_d23768dcc4baf867c944/1080p/1726731160_d23768dcc4baf867c944.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menggunakan Async Function Di React",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-hook-effect-dan-data-fetching/lessons/10058",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731182_d5a2e3ad76d5d876a8c4/480p/1726731182_d5a2e3ad76d5d876a8c4.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731182_d5a2e3ad76d5d876a8c4/1080p/1726731182_d5a2e3ad76d5d876a8c4.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Memanfaatkan State Untuk Loading Progress",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-hook-effect-dan-data-fetching/lessons/10059",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731194_4c3254e71a0ededb9849/480p/1726731194_4c3254e71a0ededb9849.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731194_4c3254e71a0ededb9849/1080p/1726731194_4c3254e71a0ededb9849.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Handle Error Dengan Baik",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-hook-effect-dan-data-fetching/lessons/10060",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731220_86bcec244e85d393af32/480p/1726731220_86bcec244e85d393af32.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731220_86bcec244e85d393af32/1080p/1726731220_86bcec244e85d393af32.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengenal Dependency Array Pada Effect",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-hook-effect-dan-data-fetching/lessons/10061",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731211_6663de9c6becd38eff32/480p/1726731211_6663de9c6becd38eff32.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731211_6663de9c6becd38eff32/1080p/1726731211_6663de9c6becd38eff32.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Contoh Proses Sinkronisasi Useeffect Di React",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-hook-effect-dan-data-fetching/lessons/10062",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731235_bbeadd5b55b9ff2dd264/480p/1726731235_bbeadd5b55b9ff2dd264.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731235_bbeadd5b55b9ff2dd264/1080p/1726731235_bbeadd5b55b9ff2dd264.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Memanfaatkan Dependency Array Untuk Fetch Data",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-hook-effect-dan-data-fetching/lessons/10063",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731241_311970aed8155209fce1/480p/1726731241_311970aed8155209fce1.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731241_311970aed8155209fce1/1080p/1726731241_311970aed8155209fce1.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mendapatkan Id Movie Yang Dipilih",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-hook-effect-dan-data-fetching/lessons/10064",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731254_d541cb6936d8e8dde460/480p/1726731254_d541cb6936d8e8dde460.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731254_d541cb6936d8e8dde460/1080p/1726731254_d541cb6936d8e8dde460.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Component Untuk Melihat Id Movie",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-hook-effect-dan-data-fetching/lessons/10065",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731263_b597e4d628713bb4c02b/480p/1726731263_b597e4d628713bb4c02b.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731263_b597e4d628713bb4c02b/1080p/1726731263_b597e4d628713bb4c02b.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Mendapatkan Detail Movie Melalui Fetch Menggunakan Effect",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-hook-effect-dan-data-fetching/lessons/10066",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731270_6b7e18bbcbe735cdc37a/480p/1726731270_6b7e18bbcbe735cdc37a.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731270_6b7e18bbcbe735cdc37a/1080p/1726731270_6b7e18bbcbe735cdc37a.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menampilkan Detail Movie Di Component Movie Detail",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-hook-effect-dan-data-fetching/lessons/10067",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731282_c79437f42aafdbe9c139/480p/1726731282_c79437f42aafdbe9c139.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731282_c79437f42aafdbe9c139/1080p/1726731282_c79437f42aafdbe9c139.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menambahkan Daftar Tonton Ke Watched List",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-hook-effect-dan-data-fetching/lessons/10068",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731293_af839c33e80199f8cdec/480p/1726731293_af839c33e80199f8cdec.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731293_af839c33e80199f8cdec/1080p/1726731293_af839c33e80199f8cdec.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menyimpan Nilai Rating Saat Tambah Data Movie",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-hook-effect-dan-data-fetching/lessons/10069",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731297_6ae8f90481cdf913fe86/480p/1726731297_6ae8f90481cdf913fe86.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731297_6ae8f90481cdf913fe86/1080p/1726731297_6ae8f90481cdf913fe86.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mendapatkan Kumpulan Nilai User Rating Dan Hapus Daftar Tonton",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-hook-effect-dan-data-fetching/lessons/10070",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731310_cea595f8bca89e118439/480p/1726731310_cea595f8bca89e118439.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731310_cea595f8bca89e118439/1080p/1726731310_cea595f8bca89e118439.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Effect Untuk Membuat Judul Page Dinamis",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-hook-effect-dan-data-fetching/lessons/10071",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731311_92f96712a7aabaad505f/480p/1726731311_92f96712a7aabaad505f.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731311_92f96712a7aabaad505f/1080p/1726731311_92f96712a7aabaad505f.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Memahami Lifecycle Unmount Pada Effect",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-hook-effect-dan-data-fetching/lessons/10072",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731328_032c68ca435f611c4861/480p/1726731328_032c68ca435f611c4861.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731328_032c68ca435f611c4861/1080p/1726731328_032c68ca435f611c4861.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menghindari Fetch Setiap Update State Query",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/reactjs-belajar-hook-effect-dan-data-fetching/lessons/10073",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731331_7d7075ac9c32915a5be7/480p/1726731331_7d7075ac9c32915a5be7.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731331_7d7075ac9c32915a5be7/1080p/1726731331_7d7075ac9c32915a5be7.m3u8"
+                        ],
+                        "youtube_urls": []
+                    }
+                ]
+            }
+        ]
     }
 ];

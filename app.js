@@ -826,17 +826,41 @@ async function init() {
   setLoadingStatus('Menghubungkan ke sumber data...');
 
   try {
-    const res = await fetch('data.php?_=' + Date.now()); // cache-bust
+    let json;
+    let loaded = false;
 
-    if (!res.ok) {
-      throw new Error(`HTTP ${res.status}: ${res.statusText}`);
-    }
-
-    const json = await res.json();
-
-    // data.php returns {error, message} on failure
-    if (json && json.error) {
-      throw new Error(json.message || 'Gagal memuat data dari server.');
+    // 1. Try to fetch from data.php (for local XAMPP / PHP environments)
+    try {
+      const res = await fetch('data.php?_=' + Date.now()); // cache-bust
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+      }
+      
+      const text = await res.text();
+      // Validate if the response is actually HTML/PHP (starts with '<' e.g. <?php or <!DOCTYPE)
+      if (text.trim().startsWith('<')) {
+        throw new Error('Menerima HTML/PHP bukan JSON. Kemungkinan server tidak mendukung PHP.');
+      }
+      
+      json = JSON.parse(text);
+      if (json && json.error) {
+        throw new Error(json.message || 'Gagal memuat data dari server.');
+      }
+      loaded = true;
+    } catch (phpErr) {
+      console.warn('[CourseViewer] data.php gagal, mencoba memuat scraped_roadmap.json secara langsung:', phpErr.message);
+      
+      // 2. Fallback: Try to fetch scraped_roadmap.json directly (useful for GitHub Pages / static hosting)
+      try {
+        const res = await fetch('scraped_roadmap.json?_=' + Date.now());
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+        }
+        json = await res.json();
+        loaded = true;
+      } catch (jsonErr) {
+        throw new Error(`data.php gagal (${phpErr.message}) dan scraped_roadmap.json gagal (${jsonErr.message})`);
+      }
     }
 
     if (!Array.isArray(json) || json.length === 0) {
@@ -849,17 +873,13 @@ async function init() {
   } catch (err) {
     // ── Fallback: try static COURSE_DATA from data.js ──────────
     if (typeof COURSE_DATA !== 'undefined' && Array.isArray(COURSE_DATA) && COURSE_DATA.length > 0) {
-      console.warn('[CourseViewer] data.php gagal, menggunakan COURSE_DATA statis:', err.message);
+      console.warn('[CourseViewer] data.php & scraped_roadmap.json gagal, menggunakan COURSE_DATA statis:', err.message);
       state.courses = COURSE_DATA;
     } else {
       showFatalError(
         'Gagal memuat data kursus',
         `<strong>Error:</strong> ${err.message}<br/><br/>
-         Pastikan XAMPP berjalan dan file<br/>
-         <code style="background:#1c1c1e;padding:2px 6px;border-radius:4px;color:#30d158">
-           scraped_roadmap.json
-         </code><br/>
-         dapat diakses oleh PHP.`
+         Pastikan file <code>scraped_roadmap.json</code> dapat diakses di server.`
       );
       return;
     }
