@@ -210,9 +210,37 @@ function closeMobileSidebar() {
 // ── Render Sidebar Nav ─────────────────────────────────────────
 function renderNav(filter = '') {
   courseNav.innerHTML = '';
-  const filt = filter.toLowerCase();
+  const filt = filter.trim().toLowerCase();
+
   state.courses.forEach((course, idx) => {
-    if (filt && !course.course_title.toLowerCase().includes(filt)) return;
+    // 1. Gather all matching lessons of this course if filter is present
+    const matchingLessons = [];
+    if (filt) {
+      const flatLessons = buildFlatLessons(idx);
+      course.modules.forEach((mod, mIdx) => {
+        mod.lessons.forEach((les, lIdx) => {
+          if (les.title.toLowerCase().includes(filt)) {
+            const flatIdx = flatLessons.findIndex(fl => fl.moduleIdx === mIdx && fl.lessonIdx === lIdx);
+            matchingLessons.push({
+              lesson: les,
+              flatIdx: flatIdx
+            });
+          }
+        });
+      });
+    }
+
+    const courseTitleMatches = course.course_title.toLowerCase().includes(filt);
+
+    // If filter is active, skip course if neither the title nor any lesson matches
+    if (filt && !courseTitleMatches && matchingLessons.length === 0) {
+      return;
+    }
+
+    // Create a container/group for the course to contain its sub-list if needed
+    const navGroup = document.createElement('div');
+    navGroup.className = 'nav-group';
+
     const btn = document.createElement('button');
     btn.className = 'nav-item' + (state.currentCourseIdx === idx ? ' active' : '');
     btn.innerHTML = `
@@ -223,7 +251,33 @@ function renderNav(filter = '') {
       goToCourse(idx);
       closeMobileSidebar();
     });
-    courseNav.appendChild(btn);
+    navGroup.appendChild(btn);
+
+    // If there are matching lessons under this course, render them as a nested sub-list
+    if (filt && matchingLessons.length > 0) {
+      const subList = document.createElement('div');
+      subList.className = 'nav-sub-list';
+
+      matchingLessons.forEach(item => {
+        const subBtn = document.createElement('button');
+        const isCurrentLesson = state.currentCourseIdx === idx && state.currentLessonFlatIdx === item.flatIdx;
+        subBtn.className = 'nav-sub-item' + (isCurrentLesson ? ' active' : '');
+        subBtn.innerHTML = `
+          <span class="nav-sub-dot"></span>
+          <span class="nav-sub-text" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${escapeHtml(item.lesson.title)}</span>
+        `;
+        subBtn.addEventListener('click', (e) => {
+          e.stopPropagation(); // Avoid triggering parent course button click
+          goToCourse(idx);
+          goToLesson(item.flatIdx);
+          closeMobileSidebar();
+        });
+        subList.appendChild(subBtn);
+      });
+      navGroup.appendChild(subList);
+    }
+
+    courseNav.appendChild(navGroup);
   });
 }
 
