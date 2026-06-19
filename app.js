@@ -13,6 +13,13 @@ const state = {
   currentVideoIdx: 0,
   sidebarCollapsed: false,
   mobileSidebarOpen: false,
+  // Quiz state
+  currentQuizAnswers: {},  // { questionId: selectedOptionId }
+  currentQuizSubmitted: false,
+  currentQuizStarted: false,
+  // Category state
+  activeCategory: 'all',
+  categoryCollapsed: {},   // { categoryId: true/false }
 };
 
 // ── Card accent colors (cycling) ───────────────────────────────
@@ -27,6 +34,95 @@ const CARD_ACCENTS = [
   'linear-gradient(90deg,#30d158,#6c37c9)',
 ];
 
+// ── Roadmap Categories ─────────────────────────────────────────
+const CATEGORIES = [
+  { id: 'all',          label: 'Semua Kursus',       emoji: '🗂️'  },
+  { id: 'fundamental',  label: 'Fundamental',         emoji: '📚'  },
+  { id: 'design',       label: 'Design & Figma',      emoji: '🎨'  },
+  { id: 'html-css',     label: 'HTML & CSS',          emoji: '🌐'  },
+  { id: 'javascript',   label: 'JavaScript',          emoji: '⚡'  },
+  { id: 'css-framework',label: 'CSS Framework',       emoji: '💅'  },
+  { id: 'vue',          label: 'Vue.js',              emoji: '💚'  },
+  { id: 'react',        label: 'React & Others',      emoji: '⚛️'  },
+  { id: 'php-mysql',    label: 'PHP & MySQL',         emoji: '🐘'  },
+  { id: 'laravel',      label: 'Laravel & CI',        emoji: '🔴'  },
+  { id: 'nodejs',       label: 'Node.js & Backend',   emoji: '🟢'  },
+  { id: 'deployment',   label: 'Deployment & VPS',    emoji: '🚀'  },
+  { id: 'career',       label: 'Career & DevOps',     emoji: '💼'  },
+];
+
+function getCourseCategory(course) {
+  const slug = course.course_slug || '';
+  if (!slug || slug === 'panduan-member-kelasfullstackid' ||
+      slug.includes('intro-to-programming') || slug.includes('algoritma') ||
+      slug.includes('text-editor') || slug.includes('terminal') ||
+      slug.includes('cmd') || slug.includes('git-pemula') || slug.includes('git-dasar'))
+    return 'fundamental';
+  if (slug.includes('figma') || (slug.includes('uiux') && !slug.includes('alpine')) ||
+      slug.includes('developer-desain'))
+    return 'design';
+  if (slug.includes('dasar-html') || slug.includes('dasar-css') ||
+      slug === 'belajar-bootstrap-css-framework')
+    return 'html-css';
+  if (slug.includes('javascript') || slug.includes('jquery') || slug.includes('ajax'))
+    return 'javascript';
+  if (slug.includes('tailwind') || slug.includes('sass') ||
+      slug.includes('landing-page') || slug.includes('ewallet') ||
+      slug.includes('crowd-funding') || slug.includes('portofolio-menggunakan-tailwind') ||
+      slug.includes('bootstrap-4'))
+    return 'css-framework';
+  if (slug.includes('vue') || slug.includes('nuxt'))
+    return 'vue';
+  if (slug.includes('reactjs') || slug.includes('react') ||
+      slug.includes('nextjs') || slug.includes('alpine') || slug.includes('astro'))
+    return 'react';
+  if (slug.includes('php') || slug.includes('mysql') ||
+      slug.includes('database-mysql') || slug.includes('pengenalan-database') ||
+      slug.includes('berorientasi-objek-di-php') || slug.includes('berorientasi-objek-php'))
+    return 'php-mysql';
+  if (slug.includes('laravel') || slug.includes('codeigniter') ||
+      slug.includes('filament') || slug.includes('security-for-developer'))
+    return 'laravel';
+  if (slug.includes('nodejs') || slug.includes('expressjs') ||
+      slug.includes('express') || slug.includes('mongodb') ||
+      slug.includes('nestjs') || slug.includes('adonis') ||
+      slug.includes('fullstack-tutorial') || slug.includes('implementasi') ||
+      slug.includes('manajemen-hot') || slug.includes('manajemen-route') ||
+      slug.includes('belajar-restful') || slug.includes('belajar-konsep-auth') ||
+      slug.includes('directory-listing') || slug.includes('event-management'))
+    return 'nodejs';
+  if (slug.includes('vps') || slug.includes('nginx') || slug.includes('shared-hosting') ||
+      slug.includes('netlify') || slug.includes('deploy') ||
+      slug.includes('firebase-hosting') || slug.includes('github-pages') ||
+      slug.includes('vercel') || slug.includes('selenium') ||
+      slug.includes('cli-di-linux') || slug.includes('revolusi-deployment'))
+    return 'deployment';
+  if (slug.includes('devops') || slug.includes('kode-etik') ||
+      slug.includes('personal-branding') || slug.includes('dunia-kerja') ||
+      slug.includes('strategi-karir') || slug.includes('freelance') ||
+      slug.includes('english') || slug.includes('interview') || slug.includes('live-class'))
+    return 'career';
+  return 'fundamental';
+}
+
+function getCourseThumb(course) {
+  for (const mod of (course.modules || [])) {
+    for (const lesson of (mod.lessons || [])) {
+      const ytUrls = lesson.youtube_urls || [];
+      if (ytUrls.length > 0) {
+        const id = getYoutubeId(ytUrls[0]);
+        if (id) return `https://img.youtube.com/vi/${id}/mqdefault.jpg`;
+      }
+    }
+  }
+  return null;
+}
+
+function getCatEmoji(catId) {
+  const cat = CATEGORIES.find(c => c.id === catId);
+  return cat ? cat.emoji : '📚';
+}
+
 // ── Helpers ────────────────────────────────────────────────────
 function getYoutubeId(url) {
   const m = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([A-Za-z0-9_-]{11})/);
@@ -36,7 +132,7 @@ function getYoutubeId(url) {
 function buildYoutubeEmbed(url) {
   const id = getYoutubeId(url);
   if (!id) return null;
-  return `https://www.youtube.com/embed/${id}?rel=0&modestbranding=1&playsinline=1&enablejsapi=1`;
+  return `https://www.youtube.com/embed/${id}?rel=0&modestbranding=1&playsinline=1`;
 }
 
 function buildYoutubeThumbnail(url) {
@@ -80,19 +176,12 @@ function cleanText(raw = '') {
   return cleaned.join('\n').replace(/\n{3,}/g, '\n\n').trim();
 }
 
-function isHtmlContent(str = '') {
-  // If it contains typical HTML tags, treat as HTML
-  return /<(p|h[1-6]|ul|ol|li|div|img|table|pre|code|blockquote|strong|em|br)[\s>/]/i.test(str);
-}
-
 function formatText(raw = '') {
-  if (!raw || !raw.trim()) return '';
-  if (isHtmlContent(raw)) {
-    // Return HTML as-is; caller will set innerHTML
-    return raw;
+  if (raw.trim().startsWith('<') || /<[a-z][\s\S]*>/i.test(raw)) {
+    return raw.trim();
   }
   const text = cleanText(raw);
-  if (!text) return '';
+  if (!text) return '';   // nothing to show — caller decides whether to render the block
   return text
     .split(/\n\n+/)
     .map(para => {
@@ -138,47 +227,7 @@ function showView(name) {
   else if (name === 'course') courseView.classList.add('active');
   else if (name === 'lesson') lessonView.classList.add('active');
   window.scrollTo({ top: 0, behavior: 'instant' });
-
-  // Hentikan video jika keluar dari tampilan pelajaran
-  if (name !== 'lesson') {
-    stopCurrentVideo();
-  }
 }
-
-function stopCurrentVideo() {
-  const container = $('video-container');
-  if (container) {
-    const videoEl = container.querySelector('video');
-    if (videoEl) {
-      videoEl.pause();
-    }
-    // Hentikan YouTube player dengan menghapus innerHTML kontainer
-    container.innerHTML = '';
-  }
-  const tabsEl = $('video-tabs-row');
-  if (tabsEl) {
-    tabsEl.className = '';
-    tabsEl.innerHTML = '';
-  }
-}
-
-// Hentikan/Jeda video ketika tab browser diganti (tidak aktif)
-document.addEventListener('visibilitychange', () => {
-  if (document.hidden) {
-    const container = $('video-container');
-    if (container) {
-      const videoEl = container.querySelector('video');
-      if (videoEl && !videoEl.paused) {
-        videoEl.pause();
-      }
-      const iframe = container.querySelector('iframe');
-      if (iframe) {
-        iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-      }
-    }
-  }
-});
-
 
 // ── Sidebar toggle ─────────────────────────────────────────────
 sidebarToggle.addEventListener('click', () => {
@@ -188,15 +237,9 @@ sidebarToggle.addEventListener('click', () => {
 });
 
 mobileMenuBtn.addEventListener('click', () => {
-  if (window.innerWidth > 768) {
-    state.sidebarCollapsed = !state.sidebarCollapsed;
-    sidebar.classList.toggle('collapsed', state.sidebarCollapsed);
-    mainContent.classList.toggle('expanded', state.sidebarCollapsed);
-  } else {
-    state.mobileSidebarOpen = true;
-    sidebar.classList.add('mobile-open');
-    overlay.classList.add('active');
-  }
+  state.mobileSidebarOpen = true;
+  sidebar.classList.add('mobile-open');
+  overlay.classList.add('active');
 });
 
 overlay.addEventListener('click', closeMobileSidebar);
@@ -210,74 +253,83 @@ function closeMobileSidebar() {
 // ── Render Sidebar Nav ─────────────────────────────────────────
 function renderNav(filter = '') {
   courseNav.innerHTML = '';
-  const filt = filter.trim().toLowerCase();
+  const filt = filter.toLowerCase();
 
-  state.courses.forEach((course, idx) => {
-    // 1. Gather all matching lessons of this course if filter is present
-    const matchingLessons = [];
-    if (filt) {
-      const flatLessons = buildFlatLessons(idx);
-      course.modules.forEach((mod, mIdx) => {
-        mod.lessons.forEach((les, lIdx) => {
-          if (les.title.toLowerCase().includes(filt)) {
-            const flatIdx = flatLessons.findIndex(fl => fl.moduleIdx === mIdx && fl.lessonIdx === lIdx);
-            matchingLessons.push({
-              lesson: les,
-              flatIdx: flatIdx
-            });
-          }
-        });
-      });
-    }
-
-    const courseTitleMatches = course.course_title.toLowerCase().includes(filt);
-
-    // If filter is active, skip course if neither the title nor any lesson matches
-    if (filt && !courseTitleMatches && matchingLessons.length === 0) {
-      return;
-    }
-
-    // Create a container/group for the course to contain its sub-list if needed
-    const navGroup = document.createElement('div');
-    navGroup.className = 'nav-group';
-
-    const btn = document.createElement('button');
-    btn.className = 'nav-item' + (state.currentCourseIdx === idx ? ' active' : '');
-    btn.innerHTML = `
-      <span class="nav-index">${idx + 1}</span>
-      <span class="nav-text">${escapeHtml(course.course_title)}</span>
-    `;
-    btn.addEventListener('click', () => {
-      goToCourse(idx);
-      closeMobileSidebar();
+  // When searching: flat list across all categories
+  if (filt) {
+    state.courses.forEach((course, idx) => {
+      if (!course.course_title.toLowerCase().includes(filt)) return;
+      const btn = document.createElement('button');
+      btn.className = 'nav-item' + (state.currentCourseIdx === idx ? ' active' : '');
+      btn.innerHTML = `
+        <span class="nav-index">${idx + 1}</span>
+        <span class="nav-text">${escapeHtml(course.course_title)}</span>
+      `;
+      btn.addEventListener('click', () => { goToCourse(idx); closeMobileSidebar(); });
+      courseNav.appendChild(btn);
     });
-    navGroup.appendChild(btn);
+    return;
+  }
 
-    // If there are matching lessons under this course, render them as a nested sub-list
-    if (filt && matchingLessons.length > 0) {
-      const subList = document.createElement('div');
-      subList.className = 'nav-sub-list';
+  // No search: group by category
+  // Build a map: categoryId → [{courseIdx, course}]
+  const catMap = {};
+  CATEGORIES.filter(c => c.id !== 'all').forEach(c => { catMap[c.id] = []; });
+  state.courses.forEach((course, idx) => {
+    const catId = getCourseCategory(course);
+    if (!catMap[catId]) catMap[catId] = [];
+    catMap[catId].push({ idx, course });
+  });
 
-      matchingLessons.forEach(item => {
-        const subBtn = document.createElement('button');
-        const isCurrentLesson = state.currentCourseIdx === idx && state.currentLessonFlatIdx === item.flatIdx;
-        subBtn.className = 'nav-sub-item' + (isCurrentLesson ? ' active' : '');
-        subBtn.innerHTML = `
-          <span class="nav-sub-dot"></span>
-          <span class="nav-sub-text" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${escapeHtml(item.lesson.title)}</span>
-        `;
-        subBtn.addEventListener('click', (e) => {
-          e.stopPropagation(); // Avoid triggering parent course button click
-          goToCourse(idx);
-          goToLesson(item.flatIdx);
-          closeMobileSidebar();
-        });
-        subList.appendChild(subBtn);
-      });
-      navGroup.appendChild(subList);
+  CATEGORIES.filter(c => c.id !== 'all').forEach(cat => {
+    const items = catMap[cat.id] || [];
+    if (!items.length) return;
+
+    const isCollapsed = !!state.categoryCollapsed[cat.id];
+
+    const group = document.createElement('div');
+    group.className = 'cat-group' + (isCollapsed ? ' collapsed' : '');
+    group.dataset.catId = cat.id;
+
+    const hasActive = items.some(it => it.idx === state.currentCourseIdx);
+
+    group.innerHTML = `
+      <button class="cat-header" data-cat="${cat.id}">
+        <span class="cat-emoji">${cat.emoji}</span>
+        <span class="cat-label">${cat.label}</span>
+        <span class="cat-count">${items.length}</span>
+        <span class="cat-chevron">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="cat-body"></div>
+    `;
+
+    const body = group.querySelector('.cat-body');
+    items.forEach(({ idx, course }) => {
+      const btn = document.createElement('button');
+      btn.className = 'nav-item' + (state.currentCourseIdx === idx ? ' active' : '');
+      btn.innerHTML = `
+        <span class="nav-index">${idx + 1}</span>
+        <span class="nav-text">${escapeHtml(course.course_title)}</span>
+      `;
+      btn.addEventListener('click', () => { goToCourse(idx); closeMobileSidebar(); });
+      body.appendChild(btn);
+    });
+
+    // Collapse toggle
+    group.querySelector('.cat-header').addEventListener('click', () => {
+      const col = group.classList.toggle('collapsed');
+      state.categoryCollapsed[cat.id] = col;
+    });
+
+    // Auto-expand if contains active course
+    if (hasActive) {
+      group.classList.remove('collapsed');
+      state.categoryCollapsed[cat.id] = false;
     }
 
-    courseNav.appendChild(navGroup);
+    courseNav.appendChild(group);
   });
 }
 
@@ -299,39 +351,87 @@ function renderHome() {
     <div class="stat-item"><div class="stat-num">${totalLessons}</div><div class="stat-label">Pelajaran</div></div>
   `;
 
-  // Course grid
+  // ── Category filter chips ──────────────────────────────────
+  let filterBar = $('cat-filter-bar');
+  if (!filterBar) {
+    filterBar = document.createElement('div');
+    filterBar.id = 'cat-filter-bar';
+    filterBar.className = 'cat-filter-bar';
+    const grid = $('course-grid');
+    grid.parentNode.insertBefore(filterBar, grid);
+  }
+  filterBar.innerHTML = CATEGORIES.map(cat => `
+    <button class="cat-chip${state.activeCategory === cat.id ? ' active' : ''}" data-cat="${cat.id}">
+      <span class="cat-chip-emoji">${cat.emoji}</span>
+      ${cat.label}
+    </button>
+  `).join('');
+  filterBar.querySelectorAll('.cat-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.activeCategory = btn.dataset.cat;
+      applyCategoryFilter();
+      // Update chip states
+      filterBar.querySelectorAll('.cat-chip').forEach(b =>
+        b.classList.toggle('active', b.dataset.cat === state.activeCategory));
+      // Sync sidebar
+      renderNav();
+    });
+  });
+
+  // ── Course grid ─────────────────────────────────────────────
   const grid = $('course-grid');
   grid.innerHTML = '';
   state.courses.forEach((course, idx) => {
+    const catId = getCourseCategory(course);
+    const thumb = getCourseThumb(course);
+    const catEmoji = getCatEmoji(catId);
     const totalL = course.modules.reduce((s, m) => s + m.lessons.length, 0);
     const hasVideo = course.modules.some(m => m.lessons.some(l => l.youtube_urls?.length || l.video_urls?.length));
     const mentorsHtml = course.mentors?.length
-      ? `<span class="card-pill">${escapeHtml(course.mentors.slice(0, 2).join(', '))}${course.mentors.length > 2 ? ` +${course.mentors.length - 2}` : ''}</span>`
+      ? `<span class="card-pill">${escapeHtml(course.mentors.slice(0,2).join(', '))}${course.mentors.length>2?` +${course.mentors.length-2}`:''}</span>`
       : '';
 
     const card = document.createElement('div');
     card.className = 'course-card animate-in';
+    card.dataset.category = catId;
     card.style.setProperty('--card-accent', CARD_ACCENTS[idx % CARD_ACCENTS.length]);
     card.style.animationDelay = `${idx * 35}ms`;
     card.innerHTML = `
-      <div class="card-number">KURSUS ${idx + 1}</div>
-      <div class="card-title">${escapeHtml(course.course_title)}</div>
-      <div class="card-desc">${escapeHtml(course.about_course || course.course_description || '')}</div>
-      <div class="card-footer">
-        <div class="card-pills">
-          <span class="card-pill accent">${totalL} pelajaran</span>
-          ${hasVideo ? '<span class="card-pill">🎬 Video</span>' : ''}
-          ${mentorsHtml}
-        </div>
-        <div class="card-arrow">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
+      <div class="card-thumb">
+        ${thumb ? `<img src="${thumb}" loading="lazy" alt="" decoding="async" onerror="this.style.display='none'">` : ''}
+        <div class="card-thumb-placeholder">${catEmoji}</div>
+      </div>
+      <div class="card-body">
+        <div class="card-number">KURSUS ${idx + 1} • ${escapeHtml(CATEGORIES.find(c=>c.id===catId)?.label||'')}</div>
+        <div class="card-title">${escapeHtml(course.course_title)}</div>
+        <div class="card-desc">${escapeHtml(course.about_course || course.course_description || '')}</div>
+        <div class="card-footer">
+          <div class="card-pills">
+            <span class="card-pill accent">${totalL} pelajaran</span>
+            ${hasVideo ? '<span class="card-pill">🎬 Video</span>' : ''}
+            ${mentorsHtml}
+          </div>
+          <div class="card-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </div>
         </div>
       </div>
     `;
     card.addEventListener('click', () => goToCourse(idx));
     grid.appendChild(card);
+  });
+
+  applyCategoryFilter();
+}
+
+function applyCategoryFilter() {
+  const grid = $('course-grid');
+  if (!grid) return;
+  grid.querySelectorAll('.course-card').forEach(card => {
+    const match = state.activeCategory === 'all' || card.dataset.category === state.activeCategory;
+    card.classList.toggle('cat-hidden', !match);
   });
 }
 
@@ -343,17 +443,14 @@ function goToCourse(idx) {
   renderCourse(course, idx);
   showView('course');
   updateBreadcrumb('course');
-  // Hide mobile bottom bar when leaving lesson view
-  const mBar = $('mobile-lesson-bar');
-  if (mBar) mBar.style.display = 'none';
 }
 
 function renderCourse(course, idx) {
   $('course-hero-badge').textContent = `Kursus ${idx + 1} dari ${state.courses.length}`;
   $('course-title').textContent = course.course_title;
 
-  const totalL = course.modules.reduce((s, m) => s + m.lessons.length, 0);
-  const totalVideos = course.modules.reduce((s, m) => s + m.lessons.filter(l => l.youtube_urls?.length || l.video_urls?.length).length, 0);
+  const totalL = course.modules.reduce((s,m) => s + m.lessons.length, 0);
+  const totalVideos = course.modules.reduce((s,m) => s + m.lessons.filter(l => l.youtube_urls?.length || l.video_urls?.length).length, 0);
 
   const metaHtml = [
     course.modules.length ? `<div class="meta-item"><span class="meta-dot"></span>${course.modules.length} Modul</div>` : '',
@@ -366,7 +463,7 @@ function renderCourse(course, idx) {
   // ── About Section ──────────────────────────────────────────
   const aboutEl = $('course-about-section');
   const rawAbout = (course.about_course || '').trim();
-  const rawDesc = (course.course_description || '').trim();
+  const rawDesc  = (course.course_description || '').trim();
 
   // Build sections from about_course (may contain embedded headings separated by double newline)
   let aboutHtml = '';
@@ -469,27 +566,12 @@ function renderCourse(course, idx) {
       // Global flat index
       const flatIdx = state.currentLessonFlat.findIndex(fl => fl.moduleIdx === mIdx && fl.lessonIdx === lIdx);
 
-      // Check status
-      let indicatorHtml = '';
-      const storageKey = `kf_status_${course.course_slug}_${lesson.title.replace(/\s+/g, '_')}`;
-      const status = localStorage.getItem(storageKey);
-      if (status === 'mengerti') {
-        indicatorHtml = `<span class="lesson-status-dot mengerti" title="Mengerti"></span>`;
-      } else if (status === 'ragu') {
-        indicatorHtml = `<span class="lesson-status-dot ragu" title="Ragu-ragu"></span>`;
-      } else if (status === 'tidak') {
-        indicatorHtml = `<span class="lesson-status-dot tidak" title="Belum Paham"></span>`;
-      }
-
       const li = document.createElement('li');
       li.className = 'lesson-item';
       li.innerHTML = `
         <span class="lesson-num">${lessonCounter}</span>
         <div class="lesson-info">
-          <div class="lesson-name" style="display:flex; align-items:center; gap:8px;">
-            ${escapeHtml(lesson.title)}
-            ${indicatorHtml}
-          </div>
+          <div class="lesson-name">${escapeHtml(lesson.title)}</div>
           <div class="lesson-badges">
             ${hasYt ? `<span class="lesson-badge yt">▶ YouTube</span>` : ''}
             ${hasVid ? `<span class="lesson-badge video">🎬 Video</span>` : ''}
@@ -515,13 +597,14 @@ function goToLesson(flatIdx) {
   if (flatIdx < 0 || flatIdx >= state.currentLessonFlat.length) return;
   state.currentLessonFlatIdx = flatIdx;
   state.currentVideoIdx = 0;
+  // Reset quiz state
+  state.currentQuizAnswers = {};
+  state.currentQuizSubmitted = false;
+  state.currentQuizStarted = false;
   renderLesson();
   showView('lesson');
   updateBreadcrumb('lesson');
-  const total = state.currentLessonFlat.length;
-  $('lesson-counter').textContent = `${flatIdx + 1} / ${total}`;
-  updateMobileBar(flatIdx, total);
-  closeLessonSheet();
+  $('lesson-counter').textContent = `${flatIdx + 1} / ${state.currentLessonFlat.length}`;
 }
 
 function renderLesson() {
@@ -532,16 +615,49 @@ function renderLesson() {
   // Title
   $('lesson-title').textContent = lesson.title;
 
-  // Text content
-  const rawContent = lesson.text_content || '';
   const lessonTextEl = $('lesson-text');
-  if (rawContent.trim()) {
-    // Render HTML directly; for plain text fall back to paragraph wrapping
-    if (isHtmlContent(rawContent)) {
-      lessonTextEl.innerHTML = rawContent;
-    } else {
-      lessonTextEl.innerHTML = formatText(rawContent);
+  const quizContainer = $('quiz-container');
+  const videoContainer = $('video-container');
+
+  if (lesson.quiz_data) {
+    lessonTextEl.style.display = 'none';
+    videoContainer.style.display = 'none';
+    
+    if (quizContainer) {
+      quizContainer.style.display = '';
+      renderQuiz(lesson.quiz_data, quizContainer);
     }
+    
+    // Nav pills
+    const pills = $('lesson-nav-pills');
+    pills.innerHTML = `
+      <button class="nav-pill-btn" id="prev-lesson-btn" ${flatIdx === 0 ? 'disabled' : ''}>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        Prev
+      </button>
+      <span style="font-size:12px;color:var(--text-tertiary);padding:0 6px;align-self:center">${moduleName}</span>
+      <button class="nav-pill-btn" id="next-lesson-btn" ${flatIdx === total - 1 ? 'disabled' : ''}>
+        Next
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    `;
+    document.getElementById('prev-lesson-btn')?.addEventListener('click', () => goToLesson(flatIdx - 1));
+    document.getElementById('next-lesson-btn')?.addEventListener('click', () => goToLesson(flatIdx + 1));
+    
+    renderLessonSidebar();
+    return;
+  }
+
+  // Hide quiz container if it was shown previously
+  if (quizContainer) {
+    quizContainer.style.display = 'none';
+    quizContainer.innerHTML = '';
+  }
+
+  // Text content
+  const formattedText = formatText(lesson.text_content);
+  if (formattedText) {
+    lessonTextEl.innerHTML = formattedText;
     lessonTextEl.style.display = '';
   } else {
     // No real text — only show if there's also no video
@@ -571,361 +687,64 @@ function renderLesson() {
   document.getElementById('prev-lesson-btn')?.addEventListener('click', () => goToLesson(flatIdx - 1));
   document.getElementById('next-lesson-btn')?.addEventListener('click', () => goToLesson(flatIdx + 1));
 
-  // ── Video ─────────────────────────────────────────────────────
-  // Collect all videos; extract resolution label from URL if present
-  const rawVideos = [];
-  (lesson.youtube_urls || []).forEach(url => {
-    rawVideos.push({ type: 'youtube', url, label: 'YouTube', res: 0 });
+  // Video
+  const allVideos = [];
+  (lesson.youtube_urls || []).forEach((url, i) => {
+    allVideos.push({ type: 'youtube', url, label: lesson.youtube_urls.length > 1 ? `Video ${i+1}` : 'YouTube' });
   });
-  (lesson.video_urls || []).forEach(url => {
-    // detect resolution from URL path segment e.g. /1080p/ or /480p/
-    const resMatch = url.match(/\/(\d{3,4}p)\//i);
-    const resLabel = resMatch ? resMatch[1].toUpperCase() : 'Video';
-    const resNum = resMatch ? parseInt(resMatch[1]) : 0;
-    rawVideos.push({ type: 'direct', url, label: resLabel, res: resNum });
+  (lesson.video_urls || []).forEach((url, i) => {
+    allVideos.push({ type: 'direct', url, label: lesson.video_urls.length > 1 ? `Video ${i+1}` : 'Video' });
   });
 
-  // Sort direct videos: highest resolution first; YouTube stays at front
-  const youtubeVids = rawVideos.filter(v => v.type === 'youtube');
-  const directVids = rawVideos.filter(v => v.type === 'direct').sort((a, b) => b.res - a.res);
-  const allVideos = [...youtubeVids, ...directVids];
-
-  // Always default to first (highest-res direct, or YouTube)
-  if (state.currentVideoIdx >= allVideos.length) state.currentVideoIdx = 0;
-
-  // ── DOM refs ───────────────────────────────────────────────────
-  const videoSection = $('video-section');
   const videoContainer = $('video-container');
+  const videoWrapper = $('video-wrapper');
 
   if (allVideos.length > 0) {
-    videoSection.style.display = '';
+    videoContainer.style.display = '';
 
-    // ── Quality tabs (outside video-container so they're not covered) ──
-    let tabsEl = $('video-tabs-row');
-    if (!tabsEl) {
-      tabsEl = document.createElement('div');
-      tabsEl.id = 'video-tabs-row';
-      videoSection.insertBefore(tabsEl, videoContainer);
-    }
-
+    // Build tab row if multiple
+    let tabsHtml = '';
     if (allVideos.length > 1) {
-      tabsEl.className = 'video-tabs';
-      tabsEl.innerHTML = allVideos.map((v, i) => `
-        <button class="video-tab-btn${i === state.currentVideoIdx ? ' active' : ''}" data-vidx="${i}">
-          <span class="yt-dot"></span>${escapeHtml(v.label)}
-        </button>
-      `).join('');
-      tabsEl.querySelectorAll('.video-tab-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          state.currentVideoIdx = parseInt(btn.dataset.vidx);
-          renderActiveVideo(allVideos);
-          tabsEl.querySelectorAll('.video-tab-btn').forEach(b => b.classList.toggle('active', b === btn));
-        });
-      });
-    } else {
-      tabsEl.className = '';
-      tabsEl.innerHTML = '';
+      tabsHtml = `<div class="video-tabs">` +
+        allVideos.map((v, i) => `
+          <button class="video-tab-btn${i === state.currentVideoIdx ? ' active' : ''}" data-vidx="${i}">
+            <span class="yt-dot"></span>${escapeHtml(v.label)}
+          </button>
+        `).join('') +
+        `</div>`;
     }
 
-    // ── Render the active video into video-container ────────────
-    renderActiveVideo(allVideos);
+    // Inject above video wrapper (inside videoContainer parent we need a flex col)
+    videoContainer.innerHTML = `
+      ${tabsHtml}
+      <div id="video-wrapper" class="video-wrapper">${buildVideoEmbed(allVideos[state.currentVideoIdx])}</div>
+    `;
+
+    // Tab click events
+    videoContainer.querySelectorAll('.video-tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        state.currentVideoIdx = parseInt(btn.dataset.vidx);
+        document.getElementById('video-wrapper').innerHTML = buildVideoEmbed(allVideos[state.currentVideoIdx]);
+        videoContainer.querySelectorAll('.video-tab-btn').forEach(b => b.classList.toggle('active', b === btn));
+      });
+    });
 
   } else {
-    videoSection.style.display = 'none';
-    const tabsEl = $('video-tabs-row');
-    if (tabsEl) { tabsEl.className = ''; tabsEl.innerHTML = ''; }
-    videoContainer.innerHTML = '';
+    videoContainer.style.display = 'none';
+    videoContainer.innerHTML = '<div id="video-wrapper" class="video-wrapper"></div>';
   }
-
-  // ── Status handling ─────────────────────────────────────────────
-  renderStatus(lesson);
-
-  // ── Quiz handling ──────────────────────────────────────────────
-  renderQuiz(lesson);
 
   // Sidebar lesson list
   renderLessonSidebar();
 }
 
-function renderStatus(lesson) {
-  const statusContainer = $('status-container');
-  if (!statusContainer) return;
-
-  const course = state.courses[state.currentCourseIdx];
-  if (!course) return;
-
-  const storageKey = `kf_status_${course.course_slug}_${lesson.title.replace(/\s+/g, '_')}`;
-  const currentStatus = localStorage.getItem(storageKey) || '';
-
-  statusContainer.innerHTML = `
-    <div class="status-widget animate-in">
-      <h4 class="status-widget-title">Bagaimana pemahaman Anda tentang materi ini?</h4>
-      <div class="status-buttons-row">
-        <button class="status-btn btn-mengerti${currentStatus === 'mengerti' ? ' active' : ''}" data-status="mengerti">
-          <span class="status-btn-icon">🟢</span> Mengerti
-        </button>
-        <button class="status-btn btn-ragu${currentStatus === 'ragu' ? ' active' : ''}" data-status="ragu">
-          <span class="status-btn-icon">🟡</span> Ragu-ragu
-        </button>
-        <button class="status-btn btn-tidak${currentStatus === 'tidak' ? ' active' : ''}" data-status="tidak">
-          <span class="status-btn-icon">🔴</span> Belum Paham
-        </button>
-      </div>
-    </div>
-  `;
-
-  statusContainer.querySelectorAll('.status-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const selectedStatus = btn.dataset.status;
-      
-      if (btn.classList.contains('active')) {
-        localStorage.removeItem(storageKey);
-        btn.classList.remove('active');
-      } else {
-        localStorage.setItem(storageKey, selectedStatus);
-        statusContainer.querySelectorAll('.status-btn').forEach(b => b.classList.toggle('active', b === btn));
-      }
-
-      // Re-render indicators dynamically
-      renderLessonSidebar();
-      const courseObj = state.courses[state.currentCourseIdx];
-      renderCourse(courseObj, state.currentCourseIdx);
-    });
-  });
-}
-
-function renderQuiz(lesson) {
-  const quizContainer = $('quiz-container');
-  if (!quizContainer) return;
-
-  if (lesson.quiz_data) {
-    quizContainer.style.display = 'block';
-    const quiz = lesson.quiz_data;
-    const storageKey = `kf_quiz_state_${quiz.detail.id}`;
-    
-    // Load persisted state if exists
-    const savedStateStr = localStorage.getItem(storageKey);
-    const savedState = savedStateStr ? JSON.parse(savedStateStr) : null;
-    
-    quizContainer.innerHTML = `
-      <div class="quiz-card animate-in">
-        <div class="quiz-header">
-          <div class="quiz-meta-badge">📝 KUIS</div>
-          <h2 class="quiz-card-title">${escapeHtml(quiz.detail.title)}</h2>
-          <p class="quiz-card-desc">${escapeHtml(quiz.detail.description || '')}</p>
-          <div class="quiz-limits">
-            <span class="quiz-limit-item">🎯 KKM: <strong>${quiz.detail.kkm}%</strong></span>
-            ${quiz.detail.duration ? `<span class="quiz-limit-item">⏱️ Durasi: <strong>${quiz.detail.duration} menit</strong></span>` : ''}
-          </div>
-        </div>
-        
-        <form id="quiz-form" class="quiz-form">
-          ${quiz.questions.map((q, qIdx) => `
-            <div class="quiz-question-block" data-qid="${q.id}">
-              <div class="quiz-question-num">Pertanyaan ${qIdx + 1} dari ${quiz.questions.length}</div>
-              <div class="quiz-question-content">${q.content}</div>
-              <div class="quiz-options-list">
-                ${q.options.map(opt => {
-                  const isChecked = savedState && savedState.answers && savedState.answers[q.id] === opt.id;
-                  return `
-                    <label class="quiz-option-label" data-optid="${opt.id}">
-                      <input type="radio" name="q-${q.id}" value="${opt.id}" class="quiz-option-input" required ${isChecked ? 'checked' : ''}>
-                      <span class="quiz-option-custom-radio"></span>
-                      <span class="quiz-option-text">${escapeHtml(opt.content)}</span>
-                    </label>
-                  `;
-                }).join('')}
-              </div>
-              <div class="quiz-feedback" style="display:none"></div>
-            </div>
-          `).join('')}
-          
-          <div class="quiz-submit-row">
-            <button type="submit" class="quiz-submit-btn">Kirim Jawaban</button>
-          </div>
-        </form>
-        
-        <div id="quiz-result-card" class="quiz-result-card" style="display:none">
-          <div class="quiz-result-score-circle" id="quiz-score-circle">
-            <span class="quiz-result-score-val" id="quiz-score-val">0</span>
-            <span class="quiz-result-score-max">/100</span>
-          </div>
-          <h3 id="quiz-result-status-title" class="quiz-result-status-title">Status</h3>
-          <p id="quiz-result-status-desc" class="quiz-result-status-desc"></p>
-          <button id="quiz-retry-btn" class="quiz-retry-btn">Coba Lagi</button>
-        </div>
-      </div>
-    `;
-
-    const form = $('quiz-form');
-    const resultCard = $('quiz-result-card');
-    const scoreVal = $('quiz-score-val');
-    const scoreCircle = $('quiz-score-circle');
-    const statusTitle = $('quiz-result-status-title');
-    const statusDesc = $('quiz-result-status-desc');
-    const retryBtn = $('quiz-retry-btn');
-    const submitRow = form.querySelector('.quiz-submit-row');
-
-    // Helper to evaluate and style quiz UI
-    function showSubmittedQuiz(score, answers) {
-      // Disable all inputs
-      form.querySelectorAll('.quiz-option-input').forEach(input => input.disabled = true);
-      
-      // Highlight correct/incorrect options & show feedbacks
-      quiz.questions.forEach((q) => {
-        const questionBlock = form.querySelector(`.quiz-question-block[data-qid="${q.id}"]`);
-        const selectedOptId = answers[q.id];
-        
-        const correctOpt = q.options.find(opt => opt.is_right === 1 || opt.is_right === '1');
-        const correctOptId = correctOpt ? correctOpt.id : null;
-
-        const feedbackEl = questionBlock.querySelector('.quiz-feedback');
-        feedbackEl.style.display = 'block';
-
-        if (selectedOptId === correctOptId) {
-          feedbackEl.className = 'quiz-feedback correct';
-          feedbackEl.innerHTML = `<strong>Benar!</strong> Jawaban Anda tepat.`;
-        } else {
-          feedbackEl.className = 'quiz-feedback incorrect';
-          feedbackEl.innerHTML = `<strong>Salah.</strong> Jawaban yang benar adalah: <em>${escapeHtml(correctOpt ? correctOpt.content : '')}</em>`;
-        }
-
-        q.options.forEach((opt) => {
-          const optLabel = questionBlock.querySelector(`.quiz-option-label[data-optid="${opt.id}"]`);
-          const isCorrect = opt.is_right === 1 || opt.is_right === '1';
-          const isSelected = opt.id === selectedOptId;
-
-          if (isCorrect) {
-            optLabel.classList.add('correct');
-          } else if (isSelected) {
-            optLabel.classList.add('incorrect');
-          }
-        });
-      });
-
-      // Show results
-      scoreVal.textContent = score;
-      resultCard.style.display = 'block';
-      submitRow.style.display = 'none';
-
-      const kkm = quiz.detail.kkm || 60;
-      const passed = score >= kkm;
-
-      if (passed) {
-        scoreCircle.className = 'quiz-result-score-circle passed';
-        statusTitle.textContent = 'Selamat! Anda Lulus Kuis';
-        statusTitle.style.color = '#30d158';
-        statusDesc.textContent = `Anda berhasil mencapai batas nilai kelulusan minimum (KKM ${kkm}%). Pertahankan prestasi Anda!`;
-      } else {
-        scoreCircle.className = 'quiz-result-score-circle failed';
-        statusTitle.textContent = 'Belum Lulus Kuis';
-        statusTitle.style.color = '#ff9f0a';
-        statusDesc.textContent = `Nilai Anda masih di bawah batas kelulusan minimum (KKM ${kkm}%). Silakan pelajari kembali materinya dan coba lagi.`;
-      }
-    }
-
-    // If loaded from localStorage, automatically render score and feedback
-    if (savedState && savedState.submitted) {
-      showSubmittedQuiz(savedState.score, savedState.answers);
-    }
-
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      let correctCount = 0;
-      const totalQuestions = quiz.questions.length;
-      const answers = {};
-
-      quiz.questions.forEach((q) => {
-        const checkedInput = form.querySelector(`input[name="q-${q.id}"]:checked`);
-        const selectedOptId = checkedInput ? parseInt(checkedInput.value) : null;
-        answers[q.id] = selectedOptId;
-        
-        const correctOpt = q.options.find(opt => opt.is_right === 1 || opt.is_right === '1');
-        const correctOptId = correctOpt ? correctOpt.id : null;
-
-        if (selectedOptId === correctOptId) {
-          correctCount++;
-        }
-      });
-
-      const score = Math.round((correctCount / totalQuestions) * 100);
-
-      // Save to localStorage
-      const stateToSave = {
-        submitted: true,
-        score: score,
-        answers: answers
-      };
-      localStorage.setItem(storageKey, JSON.stringify(stateToSave));
-
-      // Style submitted quiz UI
-      showSubmittedQuiz(score, answers);
-
-      resultCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    });
-
-    retryBtn.addEventListener('click', () => {
-      localStorage.removeItem(storageKey);
-      renderQuiz(lesson);
-      quizContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-
-  } else {
-    quizContainer.innerHTML = '';
-    quizContainer.style.display = 'none';
-  }
-}
-
-// ── Render the currently-selected video ────────────────────────
-function renderActiveVideo(allVideos) {
-  const container = $('video-container');
-  const vid = allVideos[state.currentVideoIdx];
-  if (!vid) return;
-
-  if (vid.type === 'youtube') {
-    const embed = buildYoutubeEmbed(vid.url);
-    container.innerHTML = embed
-      ? `<iframe src="${embed}" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>`
-      : `<p style="color:#fff;padding:20px">Tidak dapat memuat video.</p>`;
-    return;
-  }
-
-  // Direct / HLS video
-  const isHLS = vid.url.includes('.m3u8');
-  const videoEl = document.createElement('video');
-  videoEl.controls = true;
-  videoEl.setAttribute('playsinline', '');
-  videoEl.setAttribute('webkit-playsinline', '');
-  videoEl.style.cssText = 'width:100%;height:100%;background:#000;display:block';
-
-  container.innerHTML = '';
-  container.appendChild(videoEl);
-
-  if (isHLS && typeof Hls !== 'undefined' && Hls.isSupported()) {
-    const hls = new Hls({ maxMaxBufferLength: 60 });
-    hls.loadSource(vid.url);
-    hls.attachMedia(videoEl);
-  } else if (videoEl.canPlayType('application/vnd.apple.mpegurl')) {
-    // Safari native HLS
-    videoEl.src = vid.url;
-  } else {
-    // Non-HLS direct video
-    const src = document.createElement('source');
-    src.src = vid.url;
-    videoEl.appendChild(src);
-    const fallback = document.createTextNode('Browser tidak mendukung video ini.');
-    videoEl.appendChild(fallback);
-  }
-}
-
 function buildVideoEmbed(vid) {
-  // kept for compatibility — actual rendering now uses renderActiveVideo
   if (vid.type === 'youtube') {
     const embed = buildYoutubeEmbed(vid.url);
     if (!embed) return `<p style="color:white;padding:20px">Tidak dapat memuat video.</p>`;
     return `<iframe src="${embed}" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>`;
   }
+  // Direct video
   return `<video controls style="width:100%;height:100%;background:#000"><source src="${escapeHtml(vid.url)}">Browser tidak mendukung video ini.</video>`;
 }
 
@@ -933,7 +752,6 @@ function renderLessonSidebar() {
   const container = $('lesson-list-sidebar');
   container.innerHTML = '';
   const flat = state.currentLessonFlat;
-  const course = state.courses[state.currentCourseIdx];
   let lastModule = null;
 
   flat.forEach((item, i) => {
@@ -947,26 +765,7 @@ function renderLessonSidebar() {
 
     const el = document.createElement('div');
     el.className = 'sidebar-lesson-item' + (i === state.currentLessonFlatIdx ? ' active' : '');
-    
-    // Check status
-    let indicatorHtml = '';
-    if (course) {
-      const storageKey = `kf_status_${course.course_slug}_${item.lesson.title.replace(/\s+/g, '_')}`;
-      const status = localStorage.getItem(storageKey);
-      if (status === 'mengerti') {
-        indicatorHtml = `<span class="lesson-status-dot mengerti" title="Mengerti"></span>`;
-      } else if (status === 'ragu') {
-        indicatorHtml = `<span class="lesson-status-dot ragu" title="Ragu-ragu"></span>`;
-      } else if (status === 'tidak') {
-        indicatorHtml = `<span class="lesson-status-dot tidak" title="Belum Paham"></span>`;
-      }
-    }
-
-    el.innerHTML = `
-      <span class="sidebar-lesson-num">${i + 1}</span>
-      <span class="sidebar-lesson-text" style="flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${escapeHtml(item.lesson.title)}</span>
-      ${indicatorHtml}
-    `;
+    el.innerHTML = `<span class="sidebar-lesson-num">${i + 1}</span><span>${escapeHtml(item.lesson.title)}</span>`;
     el.addEventListener('click', () => goToLesson(i));
     container.appendChild(el);
   });
@@ -995,7 +794,7 @@ function updateBreadcrumb(view) {
 
 function toggleAbout() {
   const body = document.getElementById('about-body');
-  const btn = document.getElementById('about-toggle-btn');
+  const btn  = document.getElementById('about-toggle-btn');
   if (!body || !btn) return;
   const isCollapsed = body.classList.toggle('collapsed');
   btn.innerHTML = isCollapsed
@@ -1011,9 +810,6 @@ function goHome() {
   breadcrumb.innerHTML = `<span class="breadcrumb-home" id="bc-home">Home</span>`;
   document.getElementById('bc-home')?.addEventListener('click', goHome);
   $('lesson-counter').textContent = '';
-  // Hide mobile bottom bar
-  const mBar = $('mobile-lesson-bar');
-  if (mBar) mBar.style.display = 'none';
 }
 
 // ── Keyboard shortcuts ─────────────────────────────────────────
@@ -1038,225 +834,200 @@ document.addEventListener('keydown', e => {
   }
 });
 
-// ── Mobile Bottom Bar ──────────────────────────────────────────
-function updateMobileBar(flatIdx, total) {
-  const bar = $('mobile-lesson-bar');
-  const prevBtn = $('mobile-prev-btn');
-  const nextBtn = $('mobile-next-btn');
-  const label = $('mobile-counter-label');
-  if (!bar) return;
-
-  // Only show mobile bar on small screens (where desktop nav pills are hidden)
-  if (window.innerWidth <= 900) {
-    bar.style.display = 'flex';
-  } else {
-    bar.style.display = 'none';
-  }
-  if (prevBtn) prevBtn.disabled = flatIdx === 0;
-  if (nextBtn) nextBtn.disabled = flatIdx === total - 1;
-  if (label) label.textContent = `${flatIdx + 1} / ${total}`;
-}
-
-// Wire up mobile bar buttons once DOM ready
-(function initMobileBar() {
-  const prevBtn = $('mobile-prev-btn');
-  const nextBtn = $('mobile-next-btn');
-  const playlistBtn = $('mobile-playlist-btn');
-
-  prevBtn?.addEventListener('click', () => {
-    if (state.currentLessonFlatIdx > 0) goToLesson(state.currentLessonFlatIdx - 1);
-  });
-  nextBtn?.addEventListener('click', () => {
-    if (state.currentLessonFlatIdx < state.currentLessonFlat.length - 1)
-      goToLesson(state.currentLessonFlatIdx + 1);
-  });
-  playlistBtn?.addEventListener('click', openLessonSheet);
-})();
-
-// Resize: update mobile bar visibility when viewport changes
-window.addEventListener('resize', () => {
-  if (state.currentLessonFlatIdx !== null && lessonView.classList.contains('active')) {
-    updateMobileBar(state.currentLessonFlatIdx, state.currentLessonFlat.length);
-  }
-}, { passive: true });
-
-// ── Mobile Lesson Sheet ────────────────────────────────────────
-const lessonSheet = $('mobile-lesson-sheet');
-const sheetOverlay = $('sheet-overlay');
-const sheetList = $('sheet-lesson-list');
-const sheetCloseBtn = $('sheet-close-btn');
-
-function openLessonSheet() {
-  if (!lessonSheet) return;
-  // Clone lesson list content into sheet
-  const source = $('lesson-list-sidebar');
-  if (source && sheetList) {
-    sheetList.innerHTML = source.innerHTML;
-    // Re-wire click events in sheet
-    sheetList.querySelectorAll('.sidebar-lesson-item').forEach((el, i) => {
-      el.addEventListener('click', () => goToLesson(i));
-    });
-    // Scroll active lesson into view in sheet
-    const active = sheetList.querySelector('.sidebar-lesson-item.active');
-    if (active) setTimeout(() => active.scrollIntoView({ block: 'center', behavior: 'smooth' }), 100);
-  }
-  lessonSheet.classList.add('open');
-  sheetOverlay.classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeLessonSheet() {
-  if (!lessonSheet) return;
-  lessonSheet.classList.remove('open');
-  sheetOverlay.classList.remove('active');
-  document.body.style.overflow = '';
-}
-
-sheetCloseBtn?.addEventListener('click', closeLessonSheet);
-sheetOverlay?.addEventListener('click', closeLessonSheet);
-
-// Close sheet on Escape
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && lessonSheet?.classList.contains('open')) closeLessonSheet();
-});
-
-// ── Swipe gesture (lesson view) ────────────────────────────────
-(function initSwipe() {
-  let startX = 0, startY = 0, moved = false;
-  const threshold = 60;  // px to trigger
-  const restraint = 100; // max vertical drift allowed
-
-  const zone = document.querySelector('.lesson-main');
-  if (!zone) return;
-
-  zone.addEventListener('touchstart', e => {
-    const t = e.touches[0];
-    startX = t.clientX;
-    startY = t.clientY;
-    moved = false;
-  }, { passive: true });
-
-  zone.addEventListener('touchmove', () => { moved = true; }, { passive: true });
-
-  zone.addEventListener('touchend', e => {
-    if (!moved) return;
-    const t = e.changedTouches[0];
-    const dx = t.clientX - startX;
-    const dy = Math.abs(t.clientY - startY);
-    if (dy > restraint) return; // mostly vertical scroll, ignore
-    if (!lessonView.classList.contains('active')) return;
-    if (state.currentLessonFlatIdx === null) return;
-
-    if (dx < -threshold) {
-      // swipe left → next lesson
-      const next = state.currentLessonFlatIdx + 1;
-      if (next < state.currentLessonFlat.length) goToLesson(next);
-    } else if (dx > threshold) {
-      // swipe right → prev lesson
-      const prev = state.currentLessonFlatIdx - 1;
-      if (prev >= 0) goToLesson(prev);
-    }
-  }, { passive: true });
-})();
-
-// ── Loading screen helpers ─────────────────────────────────────
-const loadingScreen = document.getElementById('loading-screen');
-const loadingStatus = document.getElementById('loading-status');
-
-function setLoadingStatus(msg) {
-  if (loadingStatus) loadingStatus.textContent = msg;
-}
-
-function hideLoadingScreen() {
-  if (!loadingScreen) return;
-  loadingScreen.classList.add('fade-out');
-  loadingScreen.addEventListener('transitionend', () => loadingScreen.remove(), { once: true });
-}
-
-function showFatalError(title, detail) {
-  hideLoadingScreen();
-  document.body.insertAdjacentHTML('beforeend', `
-    <div style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;
-      background:var(--bg,#0a0a0f);font-family:Inter,sans-serif;text-align:center;
-      color:#6e6e73;padding:24px;z-index:9999">
-      <div>
-        <div style="font-size:48px;margin-bottom:16px">⚠️</div>
-        <h2 style="color:#f5f5f7;margin-bottom:8px;font-size:22px">${title}</h2>
-        <p style="max-width:420px;line-height:1.6;font-size:14px">${detail}</p>
-        <button onclick="location.reload()" style="margin-top:20px;padding:10px 24px;
-          background:linear-gradient(135deg,#0071e3,#6c37c9);color:#fff;border:none;
-          border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;">
-          Coba Lagi
-        </button>
+// ── Render Quiz ────────────────────────────────────────────────
+function renderQuiz(quiz, container) {
+  if (!state.currentQuizStarted) {
+    // Render splash page
+    const detail = quiz.detail || {};
+    const questions = quiz.questions || [];
+    container.innerHTML = `
+      <div class="quiz-splash-card animate-in">
+        <div class="quiz-splash-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+            <path d="m9 12 2 2 4-4"></path>
+          </svg>
+        </div>
+        <h2 class="quiz-splash-title">${escapeHtml(detail.title || 'Mulai Kuis')}</h2>
+        ${detail.description ? `<p class="quiz-splash-desc">${escapeHtml(detail.description)}</p>` : ''}
+        
+        <div class="quiz-info-grid">
+          <div class="quiz-info-item">
+            <span class="quiz-info-label">Jumlah Soal</span>
+            <span class="quiz-info-value">${questions.length} Soal</span>
+          </div>
+          <div class="quiz-info-item">
+            <span class="quiz-info-label">Durasi</span>
+            <span class="quiz-info-value">${detail.duration || '30'} Menit</span>
+          </div>
+          <div class="quiz-info-item">
+            <span class="quiz-info-label">Passing Grade</span>
+            <span class="quiz-info-value">${detail.kkm || '60'}%</span>
+          </div>
+        </div>
+        
+        <button id="start-quiz-btn" class="quiz-btn primary">Mulai Kuis</button>
       </div>
-    </div>`);
-}
-
-// ── Init (async — fetch live from data.php every page load) ────
-async function init() {
-  setLoadingStatus('Menghubungkan ke sumber data...');
-
-  try {
-    let json;
-    let loaded = false;
-
-    // 1. Try to fetch from data.php (for local XAMPP / PHP environments)
-    try {
-      const res = await fetch('data.php?_=' + Date.now()); // cache-bust
-      if (!res.ok) {
-        throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+    `;
+    
+    document.getElementById('start-quiz-btn').addEventListener('click', () => {
+      state.currentQuizStarted = true;
+      renderQuiz(quiz, container);
+    });
+    return;
+  }
+  
+  // Quiz is started. Render questions list
+  const detail = quiz.detail || {};
+  const questions = quiz.questions || [];
+  
+  let html = '';
+  
+  // If submitted, show result banner at the top
+  if (state.currentQuizSubmitted) {
+    let correctCount = 0;
+    questions.forEach(q => {
+      const selectedOptId = state.currentQuizAnswers[q.id];
+      const correctOpt = q.options.find(o => o.is_right === 1 || o.is_right === '1');
+      if (selectedOptId && correctOpt && Number(selectedOptId) === Number(correctOpt.id)) {
+        correctCount++;
       }
+    });
+    const score = Math.round((correctCount / questions.length) * 100);
+    const kkm = detail.kkm || 60;
+    const isPassed = score >= kkm;
+    
+    html += `
+      <div class="quiz-result-banner ${isPassed ? 'passed' : 'failed'} animate-in">
+        <div class="quiz-result-header">
+          <span class="quiz-result-badge">${isPassed ? 'LULUS' : 'COBA LAGI'}</span>
+          <span class="quiz-result-score">Skor Anda: <strong>${score}%</strong></span>
+        </div>
+        <p class="quiz-result-text">
+          ${isPassed 
+            ? 'Luar biasa! Anda telah berhasil melampaui batas nilai kelulusan (KKM) untuk topik ini.' 
+            : `Nilai Anda masih di bawah batas kelulusan (KKM: ${kkm}%). Silakan pelajari kembali materinya dan coba lagi.`}
+        </p>
+        <div class="quiz-result-stats">
+          <span>Benar: <strong>${correctCount}</strong> dari <strong>${questions.length}</strong></span>
+          <button id="retry-quiz-btn" class="quiz-btn secondary small">Mulai Ulang Kuis</button>
+        </div>
+      </div>
+    `;
+  }
+  
+  // Render questions
+  html += `<div class="quiz-questions-list">`;
+  questions.forEach((q, qIdx) => {
+    html += `
+      <div class="quiz-question-card">
+        <div class="quiz-question-header">
+          <span class="quiz-question-number">SOAL ${qIdx + 1}</span>
+          <div class="quiz-question-body">${q.content}</div>
+        </div>
+        <div class="quiz-options-list" data-qid="${q.id}">
+    `;
+    
+    q.options.forEach(opt => {
+      const isSelected = state.currentQuizAnswers[q.id] === opt.id;
+      const isRightOpt = opt.is_right === 1 || opt.is_right === '1';
       
-      const text = await res.text();
-      // Validate if the response is actually HTML/PHP (starts with '<' e.g. <?php or <!DOCTYPE)
-      if (text.trim().startsWith('<')) {
-        throw new Error('Menerima HTML/PHP bukan JSON. Kemungkinan server tidak mendukung PHP.');
-      }
+      let optClass = '';
+      if (isSelected) optClass += ' selected';
       
-      json = JSON.parse(text);
-      if (json && json.error) {
-        throw new Error(json.message || 'Gagal memuat data dari server.');
-      }
-      loaded = true;
-    } catch (phpErr) {
-      console.warn('[CourseViewer] data.php gagal, mencoba memuat scraped_roadmap.json secara langsung:', phpErr.message);
-      
-      // 2. Fallback: Try to fetch scraped_roadmap.json directly (useful for GitHub Pages / static hosting)
-      try {
-        const res = await fetch('scraped_roadmap.json?_=' + Date.now());
-        if (!res.ok) {
-          throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+      if (state.currentQuizSubmitted) {
+        optClass += ' disabled';
+        if (isRightOpt) {
+          optClass += ' correct';
+        } else if (isSelected) {
+          optClass += ' incorrect';
         }
-        json = await res.json();
-        loaded = true;
-      } catch (jsonErr) {
-        throw new Error(`data.php gagal (${phpErr.message}) dan scraped_roadmap.json gagal (${jsonErr.message})`);
       }
+      
+      html += `
+        <div class="quiz-option-item${optClass}" data-optid="${opt.id}">
+          <div class="quiz-option-radio">
+            <div class="quiz-option-radio-inner"></div>
+          </div>
+          <div class="quiz-option-text">${escapeHtml(opt.content)}</div>
+          ${state.currentQuizSubmitted && isRightOpt ? '<span class="quiz-option-badge correct">Benar</span>' : ''}
+          ${state.currentQuizSubmitted && isSelected && !isRightOpt ? '<span class="quiz-option-badge incorrect">Salah</span>' : ''}
+        </div>
+      `;
+    });
+    
+    html += `
+        </div>
+      </div>
+    `;
+  });
+  html += `</div>`;
+  
+  // Submit button at the bottom if not submitted
+  if (!state.currentQuizSubmitted) {
+    const answeredCount = Object.keys(state.currentQuizAnswers).length;
+    const isAllAnswered = answeredCount === questions.length;
+    
+    html += `
+      <div class="quiz-footer-actions">
+        <span class="quiz-progress-text">${answeredCount} dari ${questions.length} soal dijawab</span>
+        <button id="submit-quiz-btn" class="quiz-btn primary" ${isAllAnswered ? '' : 'disabled'}>Kirim Jawaban</button>
+      </div>
+    `;
+  }
+  
+  container.innerHTML = html;
+  
+  // Bind events
+  if (!state.currentQuizSubmitted) {
+    container.querySelectorAll('.quiz-option-item').forEach(el => {
+      el.addEventListener('click', () => {
+        const optionId = parseInt(el.dataset.optid);
+        const questionId = parseInt(el.closest('.quiz-options-list').dataset.qid);
+        
+        state.currentQuizAnswers[questionId] = optionId;
+        renderQuiz(quiz, container);
+      });
+    });
+    
+    const submitBtn = document.getElementById('submit-quiz-btn');
+    if (submitBtn) {
+      submitBtn.addEventListener('click', () => {
+        state.currentQuizSubmitted = true;
+        renderQuiz(quiz, container);
+        container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
     }
-
-    if (!Array.isArray(json) || json.length === 0) {
-      throw new Error('Format data tidak valid atau file kosong.');
-    }
-
-    setLoadingStatus(`${json.length} kursus ditemukan — menyiapkan tampilan...`);
-    state.courses = json;
-
-  } catch (err) {
-    // ── Fallback: try static COURSE_DATA from data.js ──────────
-    if (typeof COURSE_DATA !== 'undefined' && Array.isArray(COURSE_DATA) && COURSE_DATA.length > 0) {
-      console.warn('[CourseViewer] data.php & scraped_roadmap.json gagal, menggunakan COURSE_DATA statis:', err.message);
-      state.courses = COURSE_DATA;
-    } else {
-      showFatalError(
-        'Gagal memuat data kursus',
-        `<strong>Error:</strong> ${err.message}<br/><br/>
-         Pastikan file <code>scraped_roadmap.json</code> dapat diakses di server.`
-      );
-      return;
+  } else {
+    const retryBtn = document.getElementById('retry-quiz-btn');
+    if (retryBtn) {
+      retryBtn.addEventListener('click', () => {
+        state.currentQuizAnswers = {};
+        state.currentQuizSubmitted = false;
+        state.currentQuizStarted = false;
+        renderQuiz(quiz, container);
+      });
     }
   }
+}
 
-  hideLoadingScreen();
+// ── Init ───────────────────────────────────────────────────────
+function init() {
+  // COURSE_DATA is injected from data.js (works without a server)
+  if (typeof COURSE_DATA !== 'undefined' && Array.isArray(COURSE_DATA)) {
+    state.courses = COURSE_DATA;
+  } else {
+    document.body.innerHTML = `
+      <div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:Inter,sans-serif;text-align:center;color:#6e6e73;padding:20px">
+        <div>
+          <div style="font-size:40px;margin-bottom:12px">⚠️</div>
+          <h2 style="color:#1d1d1f;margin-bottom:8px">Data tidak ditemukan</h2>
+          <p>Pastikan file <code>data.js</code> ada di folder <code>course-viewer/</code>.</p>
+        </div>
+      </div>`;
+    return;
+  }
+
   renderNav();
   renderHome();
   showView('home');
@@ -1264,4 +1035,3 @@ async function init() {
 }
 
 init();
-
