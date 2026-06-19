@@ -188,9 +188,15 @@ sidebarToggle.addEventListener('click', () => {
 });
 
 mobileMenuBtn.addEventListener('click', () => {
-  state.mobileSidebarOpen = true;
-  sidebar.classList.add('mobile-open');
-  overlay.classList.add('active');
+  if (window.innerWidth > 768) {
+    state.sidebarCollapsed = !state.sidebarCollapsed;
+    sidebar.classList.toggle('collapsed', state.sidebarCollapsed);
+    mainContent.classList.toggle('expanded', state.sidebarCollapsed);
+  } else {
+    state.mobileSidebarOpen = true;
+    sidebar.classList.add('mobile-open');
+    overlay.classList.add('active');
+  }
 });
 
 overlay.addEventListener('click', closeMobileSidebar);

@@ -57,7 +57,7 @@ body {
   border-right: 1px solid var(--border);
   display: flex;
   flex-direction: column;
-  z-index: 200;
+  z-index: 320;
   transition: transform var(--transition);
   will-change: transform;
 }
@@ -243,6 +243,9 @@ body {
   transition: background var(--transition);
 }
 .mobile-menu-btn:hover { background: var(--border); }
+.main-content.expanded .mobile-menu-btn {
+  display: flex;
+}
 
 .breadcrumb {
   flex: 1;
@@ -1091,7 +1094,7 @@ body {
   inset: 0;
   background: rgba(0,0,0,0.4);
   backdrop-filter: blur(4px);
-  z-index: 150;
+  z-index: 310;
   opacity: 0;
   pointer-events: none;
   transition: opacity var(--transition);
