@@ -568,8 +568,194 @@ function renderLesson() {
     videoContainer.innerHTML = '';
   }
 
+  // ── Quiz handling ──────────────────────────────────────────────
+  renderQuiz(lesson);
+
   // Sidebar lesson list
   renderLessonSidebar();
+}
+
+function renderQuiz(lesson) {
+  const quizContainer = $('quiz-container');
+  if (!quizContainer) return;
+
+  if (lesson.quiz_data) {
+    quizContainer.style.display = 'block';
+    const quiz = lesson.quiz_data;
+    const storageKey = `kf_quiz_state_${quiz.detail.id}`;
+    
+    // Load persisted state if exists
+    const savedStateStr = localStorage.getItem(storageKey);
+    const savedState = savedStateStr ? JSON.parse(savedStateStr) : null;
+    
+    quizContainer.innerHTML = `
+      <div class="quiz-card animate-in">
+        <div class="quiz-header">
+          <div class="quiz-meta-badge">📝 KUIS</div>
+          <h2 class="quiz-card-title">${escapeHtml(quiz.detail.title)}</h2>
+          <p class="quiz-card-desc">${escapeHtml(quiz.detail.description || '')}</p>
+          <div class="quiz-limits">
+            <span class="quiz-limit-item">🎯 KKM: <strong>${quiz.detail.kkm}%</strong></span>
+            ${quiz.detail.duration ? `<span class="quiz-limit-item">⏱️ Durasi: <strong>${quiz.detail.duration} menit</strong></span>` : ''}
+          </div>
+        </div>
+        
+        <form id="quiz-form" class="quiz-form">
+          ${quiz.questions.map((q, qIdx) => `
+            <div class="quiz-question-block" data-qid="${q.id}">
+              <div class="quiz-question-num">Pertanyaan ${qIdx + 1} dari ${quiz.questions.length}</div>
+              <div class="quiz-question-content">${q.content}</div>
+              <div class="quiz-options-list">
+                ${q.options.map(opt => {
+                  const isChecked = savedState && savedState.answers && savedState.answers[q.id] === opt.id;
+                  return `
+                    <label class="quiz-option-label" data-optid="${opt.id}">
+                      <input type="radio" name="q-${q.id}" value="${opt.id}" class="quiz-option-input" required ${isChecked ? 'checked' : ''}>
+                      <span class="quiz-option-custom-radio"></span>
+                      <span class="quiz-option-text">${escapeHtml(opt.content)}</span>
+                    </label>
+                  `;
+                }).join('')}
+              </div>
+              <div class="quiz-feedback" style="display:none"></div>
+            </div>
+          `).join('')}
+          
+          <div class="quiz-submit-row">
+            <button type="submit" class="quiz-submit-btn">Kirim Jawaban</button>
+          </div>
+        </form>
+        
+        <div id="quiz-result-card" class="quiz-result-card" style="display:none">
+          <div class="quiz-result-score-circle" id="quiz-score-circle">
+            <span class="quiz-result-score-val" id="quiz-score-val">0</span>
+            <span class="quiz-result-score-max">/100</span>
+          </div>
+          <h3 id="quiz-result-status-title" class="quiz-result-status-title">Status</h3>
+          <p id="quiz-result-status-desc" class="quiz-result-status-desc"></p>
+          <button id="quiz-retry-btn" class="quiz-retry-btn">Coba Lagi</button>
+        </div>
+      </div>
+    `;
+
+    const form = $('quiz-form');
+    const resultCard = $('quiz-result-card');
+    const scoreVal = $('quiz-score-val');
+    const scoreCircle = $('quiz-score-circle');
+    const statusTitle = $('quiz-result-status-title');
+    const statusDesc = $('quiz-result-status-desc');
+    const retryBtn = $('quiz-retry-btn');
+    const submitRow = form.querySelector('.quiz-submit-row');
+
+    // Helper to evaluate and style quiz UI
+    function showSubmittedQuiz(score, answers) {
+      // Disable all inputs
+      form.querySelectorAll('.quiz-option-input').forEach(input => input.disabled = true);
+      
+      // Highlight correct/incorrect options & show feedbacks
+      quiz.questions.forEach((q) => {
+        const questionBlock = form.querySelector(`.quiz-question-block[data-qid="${q.id}"]`);
+        const selectedOptId = answers[q.id];
+        
+        const correctOpt = q.options.find(opt => opt.is_right === 1 || opt.is_right === '1');
+        const correctOptId = correctOpt ? correctOpt.id : null;
+
+        const feedbackEl = questionBlock.querySelector('.quiz-feedback');
+        feedbackEl.style.display = 'block';
+
+        if (selectedOptId === correctOptId) {
+          feedbackEl.className = 'quiz-feedback correct';
+          feedbackEl.innerHTML = `<strong>Benar!</strong> Jawaban Anda tepat.`;
+        } else {
+          feedbackEl.className = 'quiz-feedback incorrect';
+          feedbackEl.innerHTML = `<strong>Salah.</strong> Jawaban yang benar adalah: <em>${escapeHtml(correctOpt ? correctOpt.content : '')}</em>`;
+        }
+
+        q.options.forEach((opt) => {
+          const optLabel = questionBlock.querySelector(`.quiz-option-label[data-optid="${opt.id}"]`);
+          const isCorrect = opt.is_right === 1 || opt.is_right === '1';
+          const isSelected = opt.id === selectedOptId;
+
+          if (isCorrect) {
+            optLabel.classList.add('correct');
+          } else if (isSelected) {
+            optLabel.classList.add('incorrect');
+          }
+        });
+      });
+
+      // Show results
+      scoreVal.textContent = score;
+      resultCard.style.display = 'block';
+      submitRow.style.display = 'none';
+
+      const kkm = quiz.detail.kkm || 60;
+      const passed = score >= kkm;
+
+      if (passed) {
+        scoreCircle.className = 'quiz-result-score-circle passed';
+        statusTitle.textContent = 'Selamat! Anda Lulus Kuis';
+        statusTitle.style.color = '#30d158';
+        statusDesc.textContent = `Anda berhasil mencapai batas nilai kelulusan minimum (KKM ${kkm}%). Pertahankan prestasi Anda!`;
+      } else {
+        scoreCircle.className = 'quiz-result-score-circle failed';
+        statusTitle.textContent = 'Belum Lulus Kuis';
+        statusTitle.style.color = '#ff9f0a';
+        statusDesc.textContent = `Nilai Anda masih di bawah batas kelulusan minimum (KKM ${kkm}%). Silakan pelajari kembali materinya dan coba lagi.`;
+      }
+    }
+
+    // If loaded from localStorage, automatically render score and feedback
+    if (savedState && savedState.submitted) {
+      showSubmittedQuiz(savedState.score, savedState.answers);
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      let correctCount = 0;
+      const totalQuestions = quiz.questions.length;
+      const answers = {};
+
+      quiz.questions.forEach((q) => {
+        const checkedInput = form.querySelector(`input[name="q-${q.id}"]:checked`);
+        const selectedOptId = checkedInput ? parseInt(checkedInput.value) : null;
+        answers[q.id] = selectedOptId;
+        
+        const correctOpt = q.options.find(opt => opt.is_right === 1 || opt.is_right === '1');
+        const correctOptId = correctOpt ? correctOpt.id : null;
+
+        if (selectedOptId === correctOptId) {
+          correctCount++;
+        }
+      });
+
+      const score = Math.round((correctCount / totalQuestions) * 100);
+
+      // Save to localStorage
+      const stateToSave = {
+        submitted: true,
+        score: score,
+        answers: answers
+      };
+      localStorage.setItem(storageKey, JSON.stringify(stateToSave));
+
+      // Style submitted quiz UI
+      showSubmittedQuiz(score, answers);
+
+      resultCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+
+    retryBtn.addEventListener('click', () => {
+      localStorage.removeItem(storageKey);
+      renderQuiz(lesson);
+      quizContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+  } else {
+    quizContainer.innerHTML = '';
+    quizContainer.style.display = 'none';
+  }
 }
 
 // ── Render the currently-selected video ────────────────────────
