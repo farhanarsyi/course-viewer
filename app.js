@@ -80,9 +80,19 @@ function cleanText(raw = '') {
   return cleaned.join('\n').replace(/\n{3,}/g, '\n\n').trim();
 }
 
+function isHtmlContent(str = '') {
+  // If it contains typical HTML tags, treat as HTML
+  return /<(p|h[1-6]|ul|ol|li|div|img|table|pre|code|blockquote|strong|em|br)[\s>/]/i.test(str);
+}
+
 function formatText(raw = '') {
+  if (!raw || !raw.trim()) return '';
+  if (isHtmlContent(raw)) {
+    // Return HTML as-is; caller will set innerHTML
+    return raw;
+  }
   const text = cleanText(raw);
-  if (!text) return '';   // nothing to show — caller decides whether to render the block
+  if (!text) return '';
   return text
     .split(/\n\n+/)
     .map(para => {
@@ -233,6 +243,9 @@ function goToCourse(idx) {
   renderCourse(course, idx);
   showView('course');
   updateBreadcrumb('course');
+  // Hide mobile bottom bar when leaving lesson view
+  const mBar = $('mobile-lesson-bar');
+  if (mBar) mBar.style.display = 'none';
 }
 
 function renderCourse(course, idx) {
@@ -405,10 +418,15 @@ function renderLesson() {
   $('lesson-title').textContent = lesson.title;
 
   // Text content
-  const formattedText = formatText(lesson.text_content);
+  const rawContent = lesson.text_content || '';
   const lessonTextEl = $('lesson-text');
-  if (formattedText) {
-    lessonTextEl.innerHTML = formattedText;
+  if (rawContent.trim()) {
+    // Render HTML directly; for plain text fall back to paragraph wrapping
+    if (isHtmlContent(rawContent)) {
+      lessonTextEl.innerHTML = rawContent;
+    } else {
+      lessonTextEl.innerHTML = formatText(rawContent);
+    }
     lessonTextEl.style.display = '';
   } else {
     // No real text — only show if there's also no video
@@ -657,7 +675,12 @@ function updateMobileBar(flatIdx, total) {
   const label  = $('mobile-counter-label');
   if (!bar) return;
 
-  bar.style.display = 'flex';
+  // Only show mobile bar on small screens (where desktop nav pills are hidden)
+  if (window.innerWidth <= 900) {
+    bar.style.display = 'flex';
+  } else {
+    bar.style.display = 'none';
+  }
   if (prevBtn) prevBtn.disabled = flatIdx === 0;
   if (nextBtn) nextBtn.disabled = flatIdx === total - 1;
   if (label)  label.textContent = `${flatIdx + 1} / ${total}`;
@@ -678,6 +701,13 @@ function updateMobileBar(flatIdx, total) {
   });
   playlistBtn?.addEventListener('click', openLessonSheet);
 })();
+
+// Resize: update mobile bar visibility when viewport changes
+window.addEventListener('resize', () => {
+  if (state.currentLessonFlatIdx !== null && lessonView.classList.contains('active')) {
+    updateMobileBar(state.currentLessonFlatIdx, state.currentLessonFlat.length);
+  }
+}, { passive: true });
 
 // ── Mobile Lesson Sheet ────────────────────────────────────────
 const lessonSheet   = $('mobile-lesson-sheet');
