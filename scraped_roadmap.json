@@ -8378,5 +8378,1106 @@
                 ]
             }
         ]
+    },
+    {
+        "course_title": "Membuat UI/UX Modern menggunakan AlpineJs",
+        "course_slug": "membuat-uiux-modern-menggunakan-alpinejs",
+        "course_url": "https://www.codepolitan.com/dashboard/learn/courses/detail/membuat-uiux-modern-menggunakan-alpinejs",
+        "course_description": "Kelas ini dirancang untuk pengembang web yang ingin mempelajari cara menggunakan Alpine.js untuk membuat antarmuka pengguna (UI) dan pengalaman pengguna (UX) yang modern dan interaktif. Peserta akan belajar dasar-dasar Alpine.js, cara mengintegrasikannya dengan proyek web mereka, dan membangun komponen UI dinamis yang responsif. Melalui latihan praktis dan proyek nyata, peserta akan memahami bagaimana Alpine.js dapat digunakan untuk meningkatkan kualitas dan interaktivitas aplikasi web. 21 Siswa 5.0 (2) Penilaian Level Beginner",
+        "about_course": "Kelas \"Membuat UI/UX Modern menggunakan Alpine.js\" ini dirancang untuk pengembang web yang ingin meningkatkan kemampuan mereka dalam menciptakan antarmuka pengguna (UI) dan pengalaman pengguna (UX) yang interaktif dan modern. Alpine.js adalah framework JavaScript minimalis yang memungkinkan pengembang menambahkan interaktivitas ke halaman web mereka dengan mudah tanpa memerlukan library berat seperti React atau Vue.\n\nApa yang Akan Anda Pelajari:\nPengenalan Alpine.js\nDasar-dasar Alpine.js\nMembangun Komponen UI dengan Alpine.js\nProyek 1: Landing Page Interaktif\nProyek 2: Dashboard Aplikasi Web\nMetode Pengajaran:\nTeori dan Konsep: Sesi pembelajaran interaktif yang menjelaskan konsep dasar Alpine.js dan UI/UX.\nLatihan Praktis: Latihan langsung untuk menerapkan apa yang telah dipelajari dalam kode nyata.\nProyek Nyata: Membangun proyek nyata yang menggabungkan konsep Alpine.js dan UI/UX modern.\nDiskusi dan Tanya Jawab: Sesi tanya jawab untuk mengatasi kesulitan dan pertanyaan peserta.\nTarget Peserta:\n\nKelas ini cocok untuk pengembang web pemula hingga menengah yang ingin memahami dan menggunakan Alpine.js untuk membangun antarmuka pengguna yang modern dan interaktif.\n\nHasil yang Diharapkan:\n\nSetelah menyelesaikan kelas ini, peserta diharapkan memiliki kemampuan untuk:\n\nMemahami dan menggunakan Alpine.js untuk membangun antarmuka pengguna interaktif.\nMenerapkan konsep UI/UX modern dalam proyek web mereka.\nMembangun dan mendeploy proyek web yang fungsional dan responsif menggunakan Alpine.js.",
+        "mentors": [
+            "Ahmad Hakim"
+        ],
+        "modules": [
+            {
+                "module_title": "Membuat UI/UX Modern menggunakan AlpineJs",
+                "lessons": [
+                    {
+                        "title": "Apa Itu Alpine.Js",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10623",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731932_0925b96dcd4b00595382/480p/1726731932_0925b96dcd4b00595382.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731932_0925b96dcd4b00595382/1080p/1726731932_0925b96dcd4b00595382.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Install Alpine.Js",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10624",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731944_dd64ae83cb598e7fad66/480p/1726731944_dd64ae83cb598e7fad66.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731944_dd64ae83cb598e7fad66/1080p/1726731944_dd64ae83cb598e7fad66.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Mengolah Data Di Alpine.Js",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10625",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731973_961ead6508694f2c9175/480p/1726731973_961ead6508694f2c9175.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731973_961ead6508694f2c9175/1080p/1726731973_961ead6508694f2c9175.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengenal Attribute Dari Alpine.Js",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10626",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731973_5a834ab2ae3106ab1c72/480p/1726731973_5a834ab2ae3106ab1c72.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731973_5a834ab2ae3106ab1c72/1080p/1726731973_5a834ab2ae3106ab1c72.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengenal Properties Dari Alpine.Js",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10627",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731991_0cd078e92ba876055d1c/480p/1726731991_0cd078e92ba876055d1c.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731991_0cd078e92ba876055d1c/1080p/1726731991_0cd078e92ba876055d1c.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengenal Methods Dari Alpine.Js",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10628",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731991_4d6f79e08728c30e2cb5/480p/1726731991_4d6f79e08728c30e2cb5.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731991_4d6f79e08728c30e2cb5/1080p/1726731991_4d6f79e08728c30e2cb5.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Todo App - Menampilkan Daftar Data",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10629",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732014_a7ffbf3aac7d68866714/480p/1726732014_a7ffbf3aac7d68866714.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732014_a7ffbf3aac7d68866714/1080p/1726732014_a7ffbf3aac7d68866714.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Todo App - Menambahkan Data.",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10630",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732013_60d8b94fb7fca3c16e71/480p/1726732013_60d8b94fb7fca3c16e71.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732013_60d8b94fb7fca3c16e71/1080p/1726732013_60d8b94fb7fca3c16e71.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Todo App - Mengubah Style Secara Dinamis Berdasarkan Data",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10631",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732027_e47ec420f8e761c7fe6a/480p/1726732027_e47ec420f8e761c7fe6a.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732027_e47ec420f8e761c7fe6a/1080p/1726732027_e47ec420f8e761c7fe6a.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Todo App - Menghapus Daftar Data",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10632",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732031_e7a352d8927fdd1f221a/480p/1726732031_e7a352d8927fdd1f221a.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732031_e7a352d8927fdd1f221a/1080p/1726732031_e7a352d8927fdd1f221a.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Alpine.Js Directive - Perbedaan X-Text Dan X-Html",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10633",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732038_ef0590dcb5899b978cec/480p/1726732038_ef0590dcb5899b978cec.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732038_ef0590dcb5899b978cec/1080p/1726732038_ef0590dcb5899b978cec.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Alpine.Js Directive - Cara Kerja X-Model Di Form",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10634",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732056_19a216f7b1f4e3a51cc8/480p/1726732056_19a216f7b1f4e3a51cc8.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732056_19a216f7b1f4e3a51cc8/1080p/1726732056_19a216f7b1f4e3a51cc8.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Alpine.Js Directive - Mendalami Modifier Dari X-Model",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10635",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732068_15d55ba35b31080a1311/480p/1726732068_15d55ba35b31080a1311.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732068_15d55ba35b31080a1311/1080p/1726732068_15d55ba35b31080a1311.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Alpine.Js Directive - Cara Mudah Memilih Element Dengan X-Ref",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10636",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732074_a749c23ea6888da4d4b7/480p/1726732074_a749c23ea6888da4d4b7.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732074_a749c23ea6888da4d4b7/1080p/1726732074_a749c23ea6888da4d4b7.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Alpine.Js Directive - Memahami Cara Kerja X-If Dan X-Show",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10637",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732092_5409fa2bc78b686fc332/480p/1726732092_5409fa2bc78b686fc332.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732092_5409fa2bc78b686fc332/1080p/1726732092_5409fa2bc78b686fc332.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Alpine.Js Directive - Menggunakan Effect Transisi Dengan X-Transition",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10638",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732098_505cf6d31f21c54464b3/480p/1726732098_505cf6d31f21c54464b3.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732098_505cf6d31f21c54464b3/1080p/1726732098_505cf6d31f21c54464b3.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Alpine.Js Directive - Menyiapkan Logic Di Awal Atau Di Akhir Dengan X-Init",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10639",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732105_5b07116d1d24ce954a6d/480p/1726732105_5b07116d1d24ce954a6d.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732105_5b07116d1d24ce954a6d/1080p/1726732105_5b07116d1d24ce954a6d.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Alpine.Js Properties - Cara Kerja $Store Pada Global State",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10640",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732116_411fb996c08b06dba7c2/480p/1726732116_411fb996c08b06dba7c2.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732116_411fb996c08b06dba7c2/1080p/1726732116_411fb996c08b06dba7c2.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Alpine.Js Properties - Cara Kerja $Refs Untuk Memanipulasi Dom",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10641",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732122_01bfe61f40d913f36b0b/480p/1726732122_01bfe61f40d913f36b0b.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732122_01bfe61f40d913f36b0b/1080p/1726732122_01bfe61f40d913f36b0b.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Alpine.Js Properties - Memanggil Event Diluar Componentnya Dengan $Dispatch",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10642",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732130_11ddb1f515b91d17f5e4/480p/1726732130_11ddb1f515b91d17f5e4.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732130_11ddb1f515b91d17f5e4/1080p/1726732130_11ddb1f515b91d17f5e4.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Alpine.Js Properties - Menjalankan Fungsi Ketika Sebuah Data Berubah Dengan $Watch",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10643",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732138_3f27f8d72fde8fe4de2d/480p/1726732138_3f27f8d72fde8fe4de2d.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732138_3f27f8d72fde8fe4de2d/1080p/1726732138_3f27f8d72fde8fe4de2d.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Alpine.Js Plugins - Membuat Inputan Terformat Dengan Masking",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10644",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732143_41c65f5fc9e4b07162f7/480p/1726732143_41c65f5fc9e4b07162f7.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732143_41c65f5fc9e4b07162f7/1080p/1726732143_41c65f5fc9e4b07162f7.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Alpine.Js Plugins - Mengubah Inputan Nominal Mata Uang",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10645",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732149_8fdd219545729537d1ea/480p/1726732149_8fdd219545729537d1ea.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732149_8fdd219545729537d1ea/1080p/1726732149_8fdd219545729537d1ea.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Project Pagination - Membuat Card Daftar Anggota",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10646",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732154_225bfbd242375e44faa0/480p/1726732154_225bfbd242375e44faa0.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732154_225bfbd242375e44faa0/1080p/1726732154_225bfbd242375e44faa0.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Project Pagination - Membuat Ui Untuk Pagination",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10647",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732162_508e2967500c88db53bb/480p/1726732162_508e2967500c88db53bb.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732162_508e2967500c88db53bb/1080p/1726732162_508e2967500c88db53bb.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Project Pagination - Menampilkan Daftar Anggota Dari Alpine.Js",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10648",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732176_873527ea4099dcaba331/480p/1726732176_873527ea4099dcaba331.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732176_873527ea4099dcaba331/1080p/1726732176_873527ea4099dcaba331.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Project Pagination - Mengaktifkan Proses Pagination Dengan Alpine.Js",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10649",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732178_73e94ae9492e15a09831/480p/1726732178_73e94ae9492e15a09831.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732178_73e94ae9492e15a09831/1080p/1726732178_73e94ae9492e15a09831.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Project Pagination - Mendapatkan Data Members Dari Api.Js",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10650",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732188_0672a348a448ea8d49eb/480p/1726732188_0672a348a448ea8d49eb.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732188_0672a348a448ea8d49eb/1080p/1726732188_0672a348a448ea8d49eb.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Project Pagination - Mencari Data Member Berdasrakan Pencarian",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10651",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732206_8e06d7beac618e518835/480p/1726732206_8e06d7beac618e518835.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732206_8e06d7beac618e518835/1080p/1726732206_8e06d7beac618e518835.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Calculator - Membuat Component Calculator",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10652",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732197_6e5c0664edb5d9699330/480p/1726732197_6e5c0664edb5d9699330.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732197_6e5c0664edb5d9699330/1080p/1726732197_6e5c0664edb5d9699330.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Calculator - Percantik Ui Calculator Dengan Tailwindcss",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10653",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732211_c663ac9c5ba199fa00b6/480p/1726732211_c663ac9c5ba199fa00b6.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732211_c663ac9c5ba199fa00b6/1080p/1726732211_c663ac9c5ba199fa00b6.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Calculator - Mendapatkan Nilai Dan Operator Dari Tombol",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10654",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726732226_592d1d6e30f0e620f983/480p/1726732226_592d1d6e30f0e620f983.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726732226_592d1d6e30f0e620f983/1080p/1726732226_592d1d6e30f0e620f983.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Calculator - Mengaktifkan Fungsi Menghitungnya",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10655",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731911_ed5c69793aacf5cb3487/480p/1726731911_ed5c69793aacf5cb3487.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731911_ed5c69793aacf5cb3487/1080p/1726731911_ed5c69793aacf5cb3487.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Calculator - Membuat Perhitungan Dengan Persen",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10656",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731908_1cdc17fc72982442f016/480p/1726731908_1cdc17fc72982442f016.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731908_1cdc17fc72982442f016/1080p/1726731908_1cdc17fc72982442f016.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Calculator - Mengaktifkan Fungsi Calculator Dengan Keyboard",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membuat-uiux-modern-menggunakan-alpinejs/lessons/10657",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731940_303c07b7570d557bc619/480p/1726731940_303c07b7570d557bc619.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731940_303c07b7570d557bc619/1080p/1726731940_303c07b7570d557bc619.m3u8"
+                        ],
+                        "youtube_urls": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "course_title": "Membangun Situs Statis Super Cepat dengan AstroJs",
+        "course_slug": "membangun-situs-statis-super-cepat-dengan-astrojs",
+        "course_url": "https://www.codepolitan.com/dashboard/learn/courses/detail/membangun-situs-statis-super-cepat-dengan-astrojs",
+        "course_description": "Kelas ini dirancang untuk pengembang web yang ingin mempelajari cara membangun situs statis yang modern dan sangat cepat menggunakan Astro.js. Peserta akan belajar dasar-dasar Astro.js, mengintegrasikan komponen dari berbagai framework, serta mengoptimalkan situs untuk performa terbaik. Melalui kelas ini, Anda akan membangun dan mendeploy situs statis yang efisien dan responsif dengan teknologi terkini. 21 Siswa 5.0 (2) Penilaian Level Beginner",
+        "about_course": "Kelas \"Membangun Situs Statis Super Cepat dengan Astro.js\" ini dirancang untuk pengembang web yang ingin mempelajari cara membangun situs statis yang cepat, modern, dan efisien menggunakan Astro.js. Astro.js adalah framework JavaScript yang memungkinkan pengembang membuat situs statis dengan performa tinggi dengan menggabungkan komponen dari berbagai framework seperti React, Vue, dan Svelte, tetapi hanya mengirimkan HTML statis ke pengguna akhir.\n\nApa yang Akan Anda Pelajari:\nPengenalan Astro.js\nMemulai dengan Astro.js\nMembangun Halaman Statis\nOptimasi Performa\nProyek Nyata\nMetode Pengajaran:\nTeori dan Konsep: Sesi pembelajaran interaktif yang menjelaskan konsep dasar dan teknik lanjutan dalam menggunakan Astro.js.\nLatihan Praktis: Latihan langsung untuk menerapkan apa yang telah dipelajari dalam proyek nyata.\nDiskusi dan Tanya Jawab: Sesi tanya jawab untuk mengatasi kesulitan dan pertanyaan peserta.\nTarget Peserta:\n\nKelas ini cocok untuk pengembang web pemula hingga menengah yang ingin membangun situs statis yang cepat dan modern menggunakan teknologi terbaru seperti Astro.js.\n\nHasil yang Diharapkan:\n\nSetelah menyelesaikan kelas ini, peserta diharapkan memiliki kemampuan untuk:\n\nMemahami dan menggunakan Astro.js untuk membangun situs statis.\nMengoptimalkan situs untuk performa maksimal.\nMendeploy situs statis yang efisien dan responsif dengan mudah.\n\nBergabunglah dengan kelas \"Membangun Situs Statis Super Cepat dengan Astro.js\" dan pelajari cara membuat situs web yang cepat dan modern dengan teknologi terbaru!",
+        "mentors": [
+            "Yusuf Fazeri"
+        ],
+        "modules": [
+            {
+                "module_title": "Membangun Situs Statis Super Cepat dengan AstroJs",
+                "lessons": [
+                    {
+                        "title": "Simple Preview",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10690",
+                        "text_content": "<p><a href=\"https://astro-news-portal.vercel.app/\">https://astro-news-portal.vercel.app/</a></p>",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728272610_07e92133f971d6f727b4/480p/1728272610_07e92133f971d6f727b4.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728272610_07e92133f971d6f727b4/1080p/1728272610_07e92133f971d6f727b4.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Install",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10691",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728272461_20d7f579a4a378e01665/480p/1728272461_20d7f579a4a378e01665.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728272461_20d7f579a4a378e01665/1080p/1728272461_20d7f579a4a378e01665.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Persiapan Tools",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10692",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728272502_c6abe94286accd333ae1/480p/1728272502_c6abe94286accd333ae1.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728272502_c6abe94286accd333ae1/1080p/1728272502_c6abe94286accd333ae1.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Konsep Dasar",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10694",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728272586_fa2d11da371f0298ef4a/480p/1728272586_fa2d11da371f0298ef4a.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728272586_fa2d11da371f0298ef4a/1080p/1728272586_fa2d11da371f0298ef4a.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Routing",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10697",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728272641_f61e73bd5b7245268925/480p/1728272641_f61e73bd5b7245268925.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728272641_f61e73bd5b7245268925/1080p/1728272641_f61e73bd5b7245268925.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Dynamic Routing",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10699",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728272676_d850a42de7478fbf45bf/480p/1728272676_d850a42de7478fbf45bf.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728272676_d850a42de7478fbf45bf/1080p/1728272676_d850a42de7478fbf45bf.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Components",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10702",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728272667_4e1725c3e051a3824f63/480p/1728272667_4e1725c3e051a3824f63.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728272667_4e1725c3e051a3824f63/1080p/1728272667_4e1725c3e051a3824f63.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Pages",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10705",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728272865_c2104b78112ada45cb36/480p/1728272865_c2104b78112ada45cb36.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728272865_c2104b78112ada45cb36/1080p/1728272865_c2104b78112ada45cb36.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Layouts",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10708",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728272795_355d6d5bc789fb36f45b/480p/1728272795_355d6d5bc789fb36f45b.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728272795_355d6d5bc789fb36f45b/1080p/1728272795_355d6d5bc789fb36f45b.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "CSS Styles",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10709",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728272963_e4d940052e8ffd619c7a/480p/1728272963_e4d940052e8ffd619c7a.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728272963_e4d940052e8ffd619c7a/1080p/1728272963_e4d940052e8ffd619c7a.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Scripts & Event Handling",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10711",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728273095_d0671fa3f4855d6700d3/480p/1728273095_d0671fa3f4855d6700d3.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728273095_d0671fa3f4855d6700d3/1080p/1728273095_d0671fa3f4855d6700d3.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Studi Kasus News Portal",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10714",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728272999_837bb17eff83c5b34091/480p/1728272999_837bb17eff83c5b34091.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728272999_837bb17eff83c5b34091/1080p/1728272999_837bb17eff83c5b34091.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Data Sample",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10717",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728273102_e9f84961dbb55d808c34/480p/1728273102_e9f84961dbb55d808c34.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728273102_e9f84961dbb55d808c34/1080p/1728273102_e9f84961dbb55d808c34.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Homepage",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10720",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728273252_677ae94598454268f4b7/480p/1728273252_677ae94598454268f4b7.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728273252_677ae94598454268f4b7/1080p/1728273252_677ae94598454268f4b7.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membangun Detail Berita",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10723",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728273350_743e5a7d64490de87873/480p/1728273350_743e5a7d64490de87873.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728273350_743e5a7d64490de87873/1080p/1728273350_743e5a7d64490de87873.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mempercantik Halaman Home",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10725",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728273351_2e7209428c708a9184c4/480p/1728273351_2e7209428c708a9184c4.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728273351_2e7209428c708a9184c4/1080p/1728273351_2e7209428c708a9184c4.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mempercantik Halaman Detail",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10727",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728273410_9c1d7c356eaff1db629d/480p/1728273410_9c1d7c356eaff1db629d.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728273410_9c1d7c356eaff1db629d/1080p/1728273410_9c1d7c356eaff1db629d.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Estimation Reading Time",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10730",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728273402_6199d3090b373d937df9/480p/1728273402_6199d3090b373d937df9.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728273402_6199d3090b373d937df9/1080p/1728273402_6199d3090b373d937df9.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Setting SEO & Social Media Preview",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10731",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728273477_5cd839b82b39be4423ea/480p/1728273477_5cd839b82b39be4423ea.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728273477_5cd839b82b39be4423ea/1080p/1728273477_5cd839b82b39be4423ea.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Integrasi Social Share Button",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10733",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728273437_80f5a72974482f500ab0/480p/1728273437_80f5a72974482f500ab0.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728273437_80f5a72974482f500ab0/1080p/1728273437_80f5a72974482f500ab0.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Integrasi Disqus",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10736",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728273471_e93404c4cf1fb30ae1ba/480p/1728273471_e93404c4cf1fb30ae1ba.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728273471_e93404c4cf1fb30ae1ba/1080p/1728273471_e93404c4cf1fb30ae1ba.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Integrasi Swiper Slider",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10739",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728273509_e33ed4b507a2ec41424e/480p/1728273509_e33ed4b507a2ec41424e.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728273509_e33ed4b507a2ec41424e/1080p/1728273509_e33ed4b507a2ec41424e.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Deployment di Vercel",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10740",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728273508_48ca68e4a3c3271abf5a/480p/1728273508_48ca68e4a3c3271abf5a.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728273508_48ca68e4a3c3271abf5a/1080p/1728273508_48ca68e4a3c3271abf5a.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Penutup",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/membangun-situs-statis-super-cepat-dengan-astrojs/lessons/10741",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728273515_6accdba72928bf0b23df/480p/1728273515_6accdba72928bf0b23df.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728273515_6accdba72928bf0b23df/1080p/1728273515_6accdba72928bf0b23df.m3u8"
+                        ],
+                        "youtube_urls": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "course_title": "Belajar PHP 8 untuk Pemula : Konsep dan Praktik",
+        "course_slug": "belajar-php-untuk-pemula-konsep-dan-praktik",
+        "course_url": "https://www.codepolitan.com/dashboard/learn/courses/detail/belajar-php-untuk-pemula-konsep-dan-praktik",
+        "course_description": "Kelas Dasar Pemrograman PHP dirancang khusus untuk pemula yang ingin memulai perjalanan di dunia pengembangan web. Dengan pendekatan praktis dan proyek akhir berupa aplikasi Todo List sederhana, peserta akan belajar cara membuat halaman web dinamis menggunakan PHP—bahasa pemrograman server-side yang paling populer di dunia. Kelas ini menggunakan lingkungan lokal XAMPP agar peserta bisa belajar secara offline tanpa perlu koneksi internet terus-menerus. 128 Siswa 5.0 (12) Penilaian Level Beginner",
+        "about_course": "Kelas Dasar Pemrograman PHP dirancang khusus untuk pemula yang ingin memulai perjalanan di dunia pengembangan web. Dengan pendekatan praktis dan proyek akhir berupa aplikasi Todo List sederhana, peserta akan belajar cara membuat halaman web dinamis menggunakan PHP—bahasa pemrograman server-side yang paling populer di dunia. Kelas ini menggunakan lingkungan lokal XAMPP agar peserta bisa belajar secara offline tanpa perlu koneksi internet terus-menerus.\n\nTujuan Umum\n\nMemberikan fondasi kuat dalam pemrograman PHP sehingga peserta mampu membangun aplikasi web sederhana secara mandiri.\n\nTujuan Khusus\nMemahami konsep dasar pemrograman PHP dan cara menjalankannya di lingkungan lokal.\nMenguasai struktur dasar PHP seperti variabel, tipe data, fungsi, kondisi, dan perulangan.\nMampu mengolah data dari form HTML menggunakan metode GET dan POST.\nMemahami cara menyimpan dan mengelola data menggunakan file (txt, serialize, JSON).\nMembangun aplikasi web fungsional sederhana (Todo List) sebagai proyek akhir.\nApa Saja yang Dipelajari\n\nInstalasi & Persiapan:\n\nPengenalan PHP dan instalasi XAMPP di Windows\nMenjalankan server lokal dan mengakses PHP via browser\n\nKonsep Dasar Pemrograman:\n\nMenulis program \"Hello World\"\nPenggunaan komentar, variabel, dan integrasi PHP dengan HTML\nMembuat dan memanggil fungsi\n\nVariabel, Tipe Data, dan Array:\n\nInteger, float, string, boolean, dan null\nManipulasi string dan array (indeks, asosiatif, multidimensi)\nFungsi bawaan untuk operasi array dan tanggal\n\nInteraksi dengan Pengguna:\n\nMembuat form HTML\nMengirim dan menerima data via GET dan POST\nUpload file dan validasi form dasar\n\nLogika Program:\n\nStruktur kondisi: if, elseif, else, switch\nOperator logika dan ternary\nIf bersarang untuk logika kompleks\n\nPerulangan:\n\nfor, while, foreach\nbreak dan continue\nMenampilkan data ke tabel HTML\n\nFungsi Lanjutan:\n\nParameter, return value, dan referensi\nScope variabel (global & lokal)\nInclude dan require untuk modularisasi kode\n\nManajemen File:\n\nMembaca dan menulis file\nMenyimpan data dalam format serialize dan JSON\nMembangun aplikasi Todo List lengkap: tambah, tampilkan, tandai selesai, dan hapus tugas\nHasil yang Diharapkan\n\nSetelah menyelesaikan kelas ini, peserta akan:\n\nMampu membuat dan menjalankan skrip PHP di lingkungan lokal\nMemahami logika dasar pemrograman dan menerapkannya dalam konteks web\nBisa membangun halaman web dinamis yang menerima input pengguna dan menampilkannya kembali\nMampu menyimpan dan mengelola data tanpa database (menggunakan file)\nMemiliki portofolio berupa aplikasi Todo List fungsional yang dibangun dari nol\n\nKelas ini menjadi fondasi penting sebelum melangkah ke tahap lanjutan seperti integrasi dengan database (MySQL), framework PHP, atau pengembangan aplikasi web profesional.",
+        "mentors": [
+            "Aditya Fakhri Riansyah"
+        ],
+        "modules": [
+            {
+                "module_title": "Belajar PHP untuk Pemula : Konsep dan Praktik",
+                "lessons": [
+                    {
+                        "title": "Apa itu PHP",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11855",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760092559_dbef93d84fe177bf10dc/480p/1760092559_dbef93d84fe177bf10dc.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760092559_dbef93d84fe177bf10dc/1080p/1760092559_dbef93d84fe177bf10dc.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Instalasi XAMPP dan Laragon di Windows",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11856",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760092519_bb83eed7f770eec6c7a6/480p/1760092519_bb83eed7f770eec6c7a6.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760092519_bb83eed7f770eec6c7a6/1080p/1760092519_bb83eed7f770eec6c7a6.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Hello World",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11857",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760092587_4ce9ddad05e3f85fad0c/480p/1760092587_4ce9ddad05e3f85fad0c.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760092587_4ce9ddad05e3f85fad0c/1080p/1760092587_4ce9ddad05e3f85fad0c.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Komentar",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11858",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760092594_ad01ccbd72052dc98c93/480p/1760092594_ad01ccbd72052dc98c93.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760092594_ad01ccbd72052dc98c93/1080p/1760092594_ad01ccbd72052dc98c93.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Variabel",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11859",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760092654_9e5a56e51731f60fcc5e/480p/1760092654_9e5a56e51731f60fcc5e.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760092654_9e5a56e51731f60fcc5e/1080p/1760092654_9e5a56e51731f60fcc5e.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mix HTML",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11860",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760092668_cd3761b0e710ddd0727a/480p/1760092668_cd3761b0e710ddd0727a.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760092668_cd3761b0e710ddd0727a/1080p/1760092668_cd3761b0e710ddd0727a.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Fungsi",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11861",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760092737_9b9d2206d5d52f15198f/480p/1760092737_9b9d2206d5d52f15198f.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760092737_9b9d2206d5d52f15198f/1080p/1760092737_9b9d2206d5d52f15198f.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Integer dan Float",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11862",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760092739_493b2ac07296b11e1785/480p/1760092739_493b2ac07296b11e1785.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760092739_493b2ac07296b11e1785/1080p/1760092739_493b2ac07296b11e1785.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Manipulasi String",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11863",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760092843_0cd6d0dc38574de9dcc8/480p/1760092843_0cd6d0dc38574de9dcc8.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760092843_0cd6d0dc38574de9dcc8/1080p/1760092843_0cd6d0dc38574de9dcc8.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Null dan Boolean",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11864",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760092825_a76c9cac1b7866e1507b/480p/1760092825_a76c9cac1b7866e1507b.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760092825_a76c9cac1b7866e1507b/1080p/1760092825_a76c9cac1b7866e1507b.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Array",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11865",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760092893_3dcbbae5ec48ab3b1855/480p/1760092893_3dcbbae5ec48ab3b1855.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760092893_3dcbbae5ec48ab3b1855/1080p/1760092893_3dcbbae5ec48ab3b1855.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Array Asosiatif",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11866",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760092871_5d6c91e9f72ac84a3a19/480p/1760092871_5d6c91e9f72ac84a3a19.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760092871_5d6c91e9f72ac84a3a19/1080p/1760092871_5d6c91e9f72ac84a3a19.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Array Multidimensi",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11867",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760092942_f40511a22871beb8d4fc/480p/1760092942_f40511a22871beb8d4fc.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760092942_f40511a22871beb8d4fc/1080p/1760092942_f40511a22871beb8d4fc.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Fungsi dan Operasi Array",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11868",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093000_540ebc279b2b3c81c81b/480p/1760093000_540ebc279b2b3c81c81b.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093000_540ebc279b2b3c81c81b/1080p/1760093000_540ebc279b2b3c81c81b.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Date Time Sederhana",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11869",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760092994_d62c22414a94cbc2e7fc/480p/1760092994_d62c22414a94cbc2e7fc.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760092994_d62c22414a94cbc2e7fc/1080p/1760092994_d62c22414a94cbc2e7fc.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Form",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11870",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093085_f7c98b49a568ba13afdf/480p/1760093085_f7c98b49a568ba13afdf.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093085_f7c98b49a568ba13afdf/1080p/1760093085_f7c98b49a568ba13afdf.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Query String GET",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11871",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093070_fbaef11302cb56c8e437/480p/1760093070_fbaef11302cb56c8e437.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093070_fbaef11302cb56c8e437/1080p/1760093070_fbaef11302cb56c8e437.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Global Variable POST",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11872",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093141_fa18836b16250d01bc72/480p/1760093141_fa18836b16250d01bc72.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093141_fa18836b16250d01bc72/1080p/1760093141_fa18836b16250d01bc72.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Parsing Array GET dan POST",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11873",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093147_b4842d6722faf5d56215/480p/1760093147_b4842d6722faf5d56215.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093147_b4842d6722faf5d56215/1080p/1760093147_b4842d6722faf5d56215.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Upload File",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11874",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093247_65ae5af082032c41028e/480p/1760093247_65ae5af082032c41028e.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093247_65ae5af082032c41028e/1080p/1760093247_65ae5af082032c41028e.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Validasi Form",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11875",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093222_c3f502d1b4dab4e4b852/480p/1760093222_c3f502d1b4dab4e4b852.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093222_c3f502d1b4dab4e4b852/1080p/1760093222_c3f502d1b4dab4e4b852.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "If Else",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11876",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093246_ea7c32f87920eab8874e/480p/1760093246_ea7c32f87920eab8874e.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093246_ea7c32f87920eab8874e/1080p/1760093246_ea7c32f87920eab8874e.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "If Elseif Else",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11877",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093299_1dd101d7f4327337593a/480p/1760093299_1dd101d7f4327337593a.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093299_1dd101d7f4327337593a/1080p/1760093299_1dd101d7f4327337593a.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "If Bersarang",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11878",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093331_9408d71e578ba07fd5d6/480p/1760093331_9408d71e578ba07fd5d6.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093331_9408d71e578ba07fd5d6/1080p/1760093331_9408d71e578ba07fd5d6.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Switch Case",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11879",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093386_8c217e9dde34d6e06c5b/480p/1760093386_8c217e9dde34d6e06c5b.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093386_8c217e9dde34d6e06c5b/1080p/1760093386_8c217e9dde34d6e06c5b.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Pengecekan Kondisi Ganda",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11880",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093424_5f7a71497752ac1fd54d/480p/1760093424_5f7a71497752ac1fd54d.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093424_5f7a71497752ac1fd54d/1080p/1760093424_5f7a71497752ac1fd54d.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Ternary Operator",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11881",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093402_252323c0112572765483/480p/1760093402_252323c0112572765483.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093402_252323c0112572765483/1080p/1760093402_252323c0112572765483.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "For",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11882",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093501_995b3501c80f65e0bdfe/480p/1760093501_995b3501c80f65e0bdfe.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093501_995b3501c80f65e0bdfe/1080p/1760093501_995b3501c80f65e0bdfe.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "For Array",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11883",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093514_05f67ba5c45cb2536851/480p/1760093514_05f67ba5c45cb2536851.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093514_05f67ba5c45cb2536851/1080p/1760093514_05f67ba5c45cb2536851.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "While",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11884",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093609_c39cb3659986cd8f8d91/480p/1760093609_c39cb3659986cd8f8d91.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093609_c39cb3659986cd8f8d91/1080p/1760093609_c39cb3659986cd8f8d91.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Foreach",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11885",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093586_4c44286660c50e9762b0/480p/1760093586_4c44286660c50e9762b0.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093586_4c44286660c50e9762b0/1080p/1760093586_4c44286660c50e9762b0.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Break",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11886",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093641_d035fd588ba17da6daa3/480p/1760093641_d035fd588ba17da6daa3.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093641_d035fd588ba17da6daa3/1080p/1760093641_d035fd588ba17da6daa3.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Continue",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11887",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093679_a735603dccf306258c10/480p/1760093679_a735603dccf306258c10.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093679_a735603dccf306258c10/1080p/1760093679_a735603dccf306258c10.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menampilkan Data Array ke Tabel",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11888",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093692_7b4c5c0a0a255fbc73b3/480p/1760093692_7b4c5c0a0a255fbc73b3.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093692_7b4c5c0a0a255fbc73b3/1080p/1760093692_7b4c5c0a0a255fbc73b3.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Fungsi dan Parameter",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11889",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093744_f49a5ed0aa2793c4c4c3/480p/1760093744_f49a5ed0aa2793c4c4c3.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093744_f49a5ed0aa2793c4c4c3/1080p/1760093744_f49a5ed0aa2793c4c4c3.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Scope Variable",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11890",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093747_a70de4763730b93da92a/480p/1760093747_a70de4763730b93da92a.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093747_a70de4763730b93da92a/1080p/1760093747_a70de4763730b93da92a.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengembalikan Nilai dari Fungsi",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11891",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093801_5634d3c5f0bf3fbbdf91/480p/1760093801_5634d3c5f0bf3fbbdf91.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093801_5634d3c5f0bf3fbbdf91/1080p/1760093801_5634d3c5f0bf3fbbdf91.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Parameter Referensi",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11892",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093778_1bad4e2c3734ae522775/480p/1760093778_1bad4e2c3734ae522775.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093778_1bad4e2c3734ae522775/1080p/1760093778_1bad4e2c3734ae522775.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Include dan Require",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11893",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093814_996224f2d34433131b81/480p/1760093814_996224f2d34433131b81.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093814_996224f2d34433131b81/1080p/1760093814_996224f2d34433131b81.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menulis dan Membaca File",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11894",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093875_b698196e637a602c5b23/480p/1760093875_b698196e637a602c5b23.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093875_b698196e637a602c5b23/1080p/1760093875_b698196e637a602c5b23.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menyimpan File Dalam Format Serialize dan JSON",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11895",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093869_a5b7535531aa122b3f4f/480p/1760093869_a5b7535531aa122b3f4f.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093869_a5b7535531aa122b3f4f/1080p/1760093869_a5b7535531aa122b3f4f.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Template - Studi Kasus Aplikasi ToDo List",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11896",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093902_eac0ba8fff865656915a/480p/1760093902_eac0ba8fff865656915a.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093902_eac0ba8fff865656915a/1080p/1760093902_eac0ba8fff865656915a.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menambahkan Data - Studi Kasus Aplikasi ToDo List",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11897",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093942_c1c31c32f8e40fdac2a7/480p/1760093942_c1c31c32f8e40fdac2a7.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093942_c1c31c32f8e40fdac2a7/1080p/1760093942_c1c31c32f8e40fdac2a7.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menampilkan Data - Studi Kasus Aplikasi ToDo List",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11898",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760093936_6bc72a2da793524dd670/480p/1760093936_6bc72a2da793524dd670.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760093936_6bc72a2da793524dd670/1080p/1760093936_6bc72a2da793524dd670.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Update Data - Studi Kasus Aplikasi ToDo List",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11899",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760094091_27ca469c84a93144673d/480p/1760094091_27ca469c84a93144673d.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760094091_27ca469c84a93144673d/1080p/1760094091_27ca469c84a93144673d.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Hapus Data - Studi Kasus Aplikasi ToDo List",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-php-untuk-pemula-konsep-dan-praktik/lessons/11900",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1760094081_d127f13faad9cc641c5d/480p/1760094081_d127f13faad9cc641c5d.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1760094081_d127f13faad9cc641c5d/1080p/1760094081_d127f13faad9cc641c5d.m3u8"
+                        ],
+                        "youtube_urls": []
+                    }
+                ]
+            }
+        ]
     }
 ]
