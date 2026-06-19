@@ -6361,5 +6361,583 @@ const COURSE_DATA = [
                 ]
             }
         ]
+    },
+    {
+        "course_title": "Belajar Vue.js 3 dan Firebase Studi Kasus Blog",
+        "course_slug": "belajar-vue-3-dan-firebase-studi-kasus-blog",
+        "course_url": "https://www.codepolitan.com/dashboard/learn/courses/detail/belajar-vue-3-dan-firebase-studi-kasus-blog",
+        "course_description": "Composition API adalah fitur utama yg dibuat pada Vue 3 untuk mempermudah proses development untuk aplikasi yg kompleks. Di kelas ini akan kita coba pelajari bersama fitur-fitur pada Vue 3 dengan realtime database yaitu Firebase untuk membangun contoh project blog. 494 Siswa 4.7 (86) Penilaian Level Beginner",
+        "about_course": "Arsitektur dalam pengembangan aplikasi khususnya pada teknologi web sudah banyak berkembang. Baik menggunakan monolithic, microservice sehingga terciptanya istilah backend dan frontend. Vue js adalah framework yg popular digunakan untuk teknologi frontend yang lebih dinamis dan progresif dan Firebase adalah layanan google yang memudahkan web developer untuk membangun teknologi backend tanpa harus repot setup manual atau ngoding sendiri. Kita akan gabungkan Vue 3 dengan Firebase untuk membuat blog sederhana menggunakan template bootstrap.\n\nTarget dan Sasaran Siswa\nKelas ini di desain untuk peserta yang sudah mempelajari tentang javascript\nDitunjukkan bagi peserta yang ingin mendalami framework JavaScript\nMampu membuat aplikasi berbasis single page application dan realtime database\nSilabus\n\nModul 1: Memahami Composition API\n\nModul 2: Fetch REST API dengan json server\n\nModul 3: Integrasi Vue CLI project dengan Template Bootstrap\n\nModul 4: Menggunakan Database Firestore di dalam Vue CLI\n\nMetode Ajar\n\nOnline Self-paced Learning\n\nTotal belajar adalah selama 2 jam 59 menit\nSiswa dapat menentukan sendiri waktu belajarnya\n\nFasilitas Pengajaran\n\nMateri bacaan elektronik: Materi disediakan berupa video\nForum tanya jawab: Forum digunakan apabila siswa mendapatkan kendala saat belajar, dan akan dibalas oleh tim support CodePolitan\nGrup telegram: Berisi member CodePolitan (khusus pembelian membership)\nEvaluasi pembelajaran: Ujian di akhir modul dan ujian di akhir kelas\nSertifikat kelulusan\n\nPeralatan Belajar Siswa\n\nSiswa wajib memiliki akses internet melalui komputer yang menggunakan Windows/Mac/Linux\n\nSpesifikasi minimal komputer milik siswa:\nSistem operasi : Windows, Linux, atau MacOS.\nProsesor : Intel Dual Core (Rekomendasi Core i3 ke atas).\nRAM : 1GB (Rekomendasi 2GB).\nResolusi layar : 1366 x 768 (Rekomendasi Full HD 1920 x 1080)\nSoftware:\nVisual Studio Code sebagai text editor\nNode.js sebagai server\nNPM sebagai Package Manager\nBrowser: Chrome / Firefox",
+        "mentors": [
+            "Ahmad Hakim"
+        ],
+        "modules": [
+            {
+                "module_title": "Memahami Composition API",
+                "lessons": [
+                    {
+                        "title": "Gambaran Composition API",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2003",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728358422_0bdd9392a511d9c4d3c3/480p/1728358422_0bdd9392a511d9c4d3c3.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728358422_0bdd9392a511d9c4d3c3/1080p/1728358422_0bdd9392a511d9c4d3c3.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Setup Project Dan Cara Kerja Composition API",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2004",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728358750_a139b3368301f78f452d/480p/1728358750_a139b3368301f78f452d.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728358750_a139b3368301f78f452d/1080p/1728358750_a139b3368301f78f452d.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Data pada Composition API",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2005",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728358821_37ca428de6344c20a7e5/480p/1728358821_37ca428de6344c20a7e5.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728358821_37ca428de6344c20a7e5/1080p/1728358821_37ca428de6344c20a7e5.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Memanfaatkan Ref Untuk Data Reactive",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2006",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728358949_d7a151f59e63222493ec/480p/1728358949_d7a151f59e63222493ec.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728358949_d7a151f59e63222493ec/1080p/1728358949_d7a151f59e63222493ec.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membandingkan Fungsi Ref Dengan Reactive",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2007",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728359133_5892d49534fffee23949/480p/1728359133_5892d49534fffee23949.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728359133_5892d49534fffee23949/1080p/1728359133_5892d49534fffee23949.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Manipulasi Data Dengan Computed Property",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2008",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728359319_c4957fa2da88c9d4c602/480p/1728359319_c4957fa2da88c9d4c602.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728359319_c4957fa2da88c9d4c602/1080p/1728359319_c4957fa2da88c9d4c602.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Memantau Perubahan Data Dengan Watch",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2009",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728359488_4de006defcc65fb9642d/480p/1728359488_4de006defcc65fb9642d.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728359488_4de006defcc65fb9642d/1080p/1728359488_4de006defcc65fb9642d.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menggunakan Props Di Composition API",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2010",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728359558_51c9afa750f14cd2398b/480p/1728359558_51c9afa750f14cd2398b.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728359558_51c9afa750f14cd2398b/1080p/1728359558_51c9afa750f14cd2398b.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Implementasi Lifecycle Hooks Vue 3",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2011",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728359576_28aa3abffad78d7164a1/480p/1728359576_28aa3abffad78d7164a1.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728359576_28aa3abffad78d7164a1/1080p/1728359576_28aa3abffad78d7164a1.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Kuis - Belajar Vue 3 dan Firebase Studi Kasus Blog - Topik 1",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/4811",
+                        "text_content": "<p>Dimana value dapat bekerja?</p>",
+                        "video_urls": [],
+                        "youtube_urls": []
+                    }
+                ]
+            },
+            {
+                "module_title": "Fetch Data REST API dengan Asynchronous",
+                "lessons": [
+                    {
+                        "title": "Membuat Fake REST API dan Mencoba Async Await",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2034",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://vz-5f5aaeb0-464.b-cdn.net/adf9ca01-6b95-4ff4-af39-c5bfadb9d024/playlist.m3u8",
+                            "https://vz-5f5aaeb0-464.b-cdn.net/adf9ca01-6b95-4ff4-af39-c5bfadb9d024/842x480/video.m3u8",
+                            "https://vz-5f5aaeb0-464.b-cdn.net/adf9ca01-6b95-4ff4-af39-c5bfadb9d024/1280x720/video.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat dan Memanggil Fungsi di Luar Component",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2035",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728358684_8fce6311a76a6c3a53b1/480p/1728358684_8fce6311a76a6c3a53b1.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728358684_8fce6311a76a6c3a53b1/1080p/1728358684_8fce6311a76a6c3a53b1.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Fungsi untuk Memanggil Single Data Post",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2036",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728358934_24112843530b452c8ef7/480p/1728358934_24112843530b452c8ef7.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728358934_24112843530b452c8ef7/1080p/1728358934_24112843530b452c8ef7.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mempelajari Promise Async Await untuk Menampilkan Loading",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2037",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728359002_1270693174d2e23093d5/480p/1728359002_1270693174d2e23093d5.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728359002_1270693174d2e23093d5/1080p/1728359002_1270693174d2e23093d5.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Halaman Create Post dan Input Tags",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2038",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728359213_b653012a6f0d00ff4066/480p/1728359213_b653012a6f0d00ff4066.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728359213_b653012a6f0d00ff4066/1080p/1728359213_b653012a6f0d00ff4066.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Fungsi Create Post untuk Menambah Data Baru",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2039",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728359494_17ae6de139307e14c19e/480p/1728359494_17ae6de139307e14c19e.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728359494_17ae6de139307e14c19e/1080p/1728359494_17ae6de139307e14c19e.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Kuis - Belajar Vue 3 dan Firebase Studi Kasus Blog - Topik 2",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/4812",
+                        "text_content": "<p>Cara menjalankan file db.json menggunakan json-server adalah...</p>",
+                        "video_urls": [],
+                        "youtube_urls": []
+                    }
+                ]
+            },
+            {
+                "module_title": "Integrasi Template Bootstrap di Vue CLI",
+                "lessons": [
+                    {
+                        "title": "Menginstall Library Pihak Ketiga Untuk Template Blog",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2057",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728358557_797c3320a7b7058ee925/480p/1728358557_797c3320a7b7058ee925.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728358557_797c3320a7b7058ee925/1080p/1728358557_797c3320a7b7058ee925.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Integrasi Vue dengan Template Bootstrap",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2058",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728358729_4ab148b06439ad8ef7dc/480p/1728358729_4ab148b06439ad8ef7dc.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728358729_4ab148b06439ad8ef7dc/1080p/1728358729_4ab148b06439ad8ef7dc.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Desain Halaman ShowPost",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2059",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728358883_9210b257c48b9fe966c7/480p/1728358883_9210b257c48b9fe966c7.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728358883_9210b257c48b9fe966c7/1080p/1728358883_9210b257c48b9fe966c7.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mempercantik Halaman Create Post",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2060",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728359054_c0ccad648ea0a53b3f2c/480p/1728359054_c0ccad648ea0a53b3f2c.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728359054_c0ccad648ea0a53b3f2c/1080p/1728359054_c0ccad648ea0a53b3f2c.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menampilkan Data Post Berdasarkan Tag",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2063",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728359353_0f4cbc4d6109591d5d76/480p/1728359353_0f4cbc4d6109591d5d76.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728359353_0f4cbc4d6109591d5d76/1080p/1728359353_0f4cbc4d6109591d5d76.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Kuis - Belajar Vue 3 dan Firebase Studi Kasus Blog - Topik 3",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/4813",
+                        "text_content": "<p>Agar data tags dapat sejajar atau inline maka perlu menambahkan class...</p>",
+                        "video_urls": [],
+                        "youtube_urls": []
+                    }
+                ]
+            },
+            {
+                "module_title": "Menggunakan Database Firebase",
+                "lessons": [
+                    {
+                        "title": "Membuat Project Layanan Firebase",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2064",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728358447_57f8210e6a5bc0932934/480p/1728358447_57f8210e6a5bc0932934.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728358447_57f8210e6a5bc0932934/1080p/1728358447_57f8210e6a5bc0932934.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Konfigurasi Sdk Firebase Di Vue Cli",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2065",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728358621_594ab667b55ba488dbef/480p/1728358621_594ab667b55ba488dbef.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728358621_594ab667b55ba488dbef/1080p/1728358621_594ab667b55ba488dbef.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Collection Di Firestore",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2066",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728358787_5af5795d4f9700478a29/480p/1728358787_5af5795d4f9700478a29.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728358787_5af5795d4f9700478a29/1080p/1728358787_5af5795d4f9700478a29.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menampilkan Seluruh Data Collection Firestore Dalam Vue",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2067",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728359107_bf7de3a588483f361d18/480p/1728359107_bf7de3a588483f361d18.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728359107_bf7de3a588483f361d18/1080p/1728359107_bf7de3a588483f361d18.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menampilkan Satu Data Collection Dalam Vue",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2068",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728359269_61e8126b3b35d3d1cb36/480p/1728359269_61e8126b3b35d3d1cb36.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728359269_61e8126b3b35d3d1cb36/1080p/1728359269_61e8126b3b35d3d1cb36.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menambah Data Collection Dari Vue",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2069",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728359442_b20b05e7f1cc9b650b6e/480p/1728359442_b20b05e7f1cc9b650b6e.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728359442_b20b05e7f1cc9b650b6e/1080p/1728359442_b20b05e7f1cc9b650b6e.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menghapus Collection Dari Vue",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/2070",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728359535_fb0422fb677fa4bf9df2/480p/1728359535_fb0422fb677fa4bf9df2.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728359535_fb0422fb677fa4bf9df2/1080p/1728359535_fb0422fb677fa4bf9df2.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Kuis - Belajar Vue 3 dan Firebase Studi Kasus Blog - Topik 4",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-vue-3-dan-firebase-studi-kasus-blog/lessons/4814",
+                        "text_content": "<p>Source code untuk requst menambahkan data posts baru</p>",
+                        "video_urls": [],
+                        "youtube_urls": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "course_title": "Belajar React.js Fundamental",
+        "course_slug": "belajar-reactjs",
+        "course_url": "https://www.codepolitan.com/dashboard/learn/courses/detail/belajar-reactjs",
+        "course_description": "Panduan untuk mempelajari ReactJS 247 Siswa 4.8 (143) Penilaian Level Beginner",
+        "about_course": "Panduan untuk mempelajari Panduan untuk mempelajari ReactJS\n\nTarget dan Sasaran Siswa\n\nKelas ditujukan bagi mereka yang tertarik untuk mempelajari ReactJS\nSiswa harus bisa belajar mandiri. Karena pada kelas ini siswa harus mengatur jadwal belajarnya sendiri.\n\nTujuan Umum dan Khusus Pelatihan\n\nDi akhir kelas, siswa dapat memahami Panduan untuk mempelajari ReactJS\n\nSilabus\n\nMemahami Panduan untuk mempelajari ReactJS\n\nMetode Ajar Online Self-paced Learning Siswa dapat menentukan sendiri waktu belajarnya\n\nFasilitas Pengajaran\n\nMateri disediakan berupa video\nForum tanya jawab: Forum digunakan apabila siswa mendapatkan kendala saat belajar, dan akan dibalas oleh tim support CodePolitan\nSertifikat kelulusan\n\nPeralatan Belajar Siswa\n\nSiswa wajib memiliki akses internet melalui komputer yang menggunakan Windows/Mac/Linux\nSpesifikasi minimal komputer milik siswa: Sistem operasi : Windows, Linux, atau MacOS. Prosesor : Intel Dual Core (Rekomendasi Core i3 ke atas). RAM : 1GB (Rekomendasi 2GB). Resolusi layar : 1366 x 768 (Rekomendasi Full HD 1920 x 1080)\nSoftware: Browser (tidak ada prefrensi khusus)",
+        "mentors": [
+            "Nusendra Hanggarawan"
+        ],
+        "modules": [
+            {
+                "module_title": "Belajar ReactJS",
+                "lessons": [
+                    {
+                        "title": "Introduction - Instalasi",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs/lessons/9250",
+                        "text_content": "<p>Source code : <a href=\"https://github.com/nusendra/reactjs-basic\">https://github.com/nusendra/reactjs-basic</a></p>",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728266117_5066549a847eb3b729c4/480p/1728266117_5066549a847eb3b729c4.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728266117_5066549a847eb3b729c4/1080p/1728266117_5066549a847eb3b729c4.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Pengenalan Project React",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs/lessons/9251",
+                        "text_content": "<p>Source code : <a href=\"https://github.com/nusendra/reactjs-basic\">https://github.com/nusendra/reactjs-basic</a></p>",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728266122_8ffadf15fb27d7ab6171/480p/1728266122_8ffadf15fb27d7ab6171.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728266122_8ffadf15fb27d7ab6171/1080p/1728266122_8ffadf15fb27d7ab6171.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Pengenalan Component Dasar",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs/lessons/9252",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728266125_09829c562648d6b18b22/480p/1728266125_09829c562648d6b18b22.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728266125_09829c562648d6b18b22/1080p/1728266125_09829c562648d6b18b22.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "JSX",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs/lessons/9272",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728266134_9ce44974a80665f0bb9d/480p/1728266134_9ce44974a80665f0bb9d.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728266134_9ce44974a80665f0bb9d/1080p/1728266134_9ce44974a80665f0bb9d.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Props pada Child Component",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs/lessons/9253",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728266134_104004fe0a1efc6a24a9/480p/1728266134_104004fe0a1efc6a24a9.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728266134_104004fe0a1efc6a24a9/1080p/1728266134_104004fe0a1efc6a24a9.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Blog sederhana menggunakan JSON",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs/lessons/9254",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728266150_85a7dd59e09500029582/480p/1728266150_85a7dd59e09500029582.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728266150_85a7dd59e09500029582/1080p/1728266150_85a7dd59e09500029582.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Fitur Filter Data dan Pengenalan useState",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs/lessons/9255",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728266147_726a368a2c52ec762538/480p/1728266147_726a368a2c52ec762538.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728266147_726a368a2c52ec762538/1080p/1728266147_726a368a2c52ec762538.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengembalikan Value ke Parent melalui Props",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs/lessons/9256",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728266157_8ed615ae9b9678118e5b/480p/1728266157_8ed615ae9b9678118e5b.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728266157_8ed615ae9b9678118e5b/1080p/1728266157_8ed615ae9b9678118e5b.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Conditional Rendering",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs/lessons/9257",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728266158_9e1e94f8e1457a032900/480p/1728266158_9e1e94f8e1457a032900.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728266158_9e1e94f8e1457a032900/1080p/1728266158_9e1e94f8e1457a032900.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Conditional Rendering 2",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs/lessons/9258",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728266164_278a0e86ff49634d0898/480p/1728266164_278a0e86ff49634d0898.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728266164_278a0e86ff49634d0898/1080p/1728266164_278a0e86ff49634d0898.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "onClick Methods",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs/lessons/9259",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728266169_51339842cb102e95b078/480p/1728266169_51339842cb102e95b078.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728266169_51339842cb102e95b078/1080p/1728266169_51339842cb102e95b078.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Lifecycle dan useEffect",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs/lessons/9260",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728266188_71f65329213a07210576/480p/1728266188_71f65329213a07210576.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728266188_71f65329213a07210576/1080p/1728266188_71f65329213a07210576.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Fetch API dengan useEffect",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs/lessons/9261",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728266180_2bb51b3c1abcc014a10b/480p/1728266180_2bb51b3c1abcc014a10b.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728266180_2bb51b3c1abcc014a10b/1080p/1728266180_2bb51b3c1abcc014a10b.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Multiple useEffect",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs/lessons/9262",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728266184_b60eba89fa450fdc7b5f/480p/1728266184_b60eba89fa450fdc7b5f.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728266184_b60eba89fa450fdc7b5f/1080p/1728266184_b60eba89fa450fdc7b5f.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Dasar State Management dengan useContext",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs/lessons/9263",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728266196_95a2bfc452ac29dfbf55/480p/1728266196_95a2bfc452ac29dfbf55.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728266196_95a2bfc452ac29dfbf55/1080p/1728266196_95a2bfc452ac29dfbf55.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menginstall React Router",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs/lessons/9264",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728266221_6a0d2f34ad97d6b99190/480p/1728266221_6a0d2f34ad97d6b99190.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728266221_6a0d2f34ad97d6b99190/1080p/1728266221_6a0d2f34ad97d6b99190.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Halaman About",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs/lessons/9265",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728266201_dcc0383b547f985dd1dd/480p/1728266201_dcc0383b547f985dd1dd.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728266201_dcc0383b547f985dd1dd/1080p/1728266201_dcc0383b547f985dd1dd.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Layouting dan Children Routes",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs/lessons/9266",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728266217_6a3e6579d5469bde6d45/480p/1728266217_6a3e6579d5469bde6d45.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728266217_6a3e6579d5469bde6d45/1080p/1728266217_6a3e6579d5469bde6d45.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Halaman Blog",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs/lessons/9267",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728266228_3e92830a8435bd79987c/480p/1728266228_3e92830a8435bd79987c.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728266228_3e92830a8435bd79987c/1080p/1728266228_3e92830a8435bd79987c.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Dynamic Parameter Route dan Menampilkan Artikel",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs/lessons/9268",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728266260_125eef03cd7a0b38f15e/480p/1728266260_125eef03cd7a0b38f15e.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728266260_125eef03cd7a0b38f15e/1080p/1728266260_125eef03cd7a0b38f15e.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "React Router Data Loader",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs/lessons/9269",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728266243_a0a382e9694f0ae0b673/480p/1728266243_a0a382e9694f0ae0b673.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728266243_a0a382e9694f0ae0b673/1080p/1728266243_a0a382e9694f0ae0b673.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Error Page",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs/lessons/9270",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728266247_7b46a655ad0eed116106/480p/1728266247_7b46a655ad0eed116106.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728266247_7b46a655ad0eed116106/1080p/1728266247_7b46a655ad0eed116106.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Dynamic Style untuk NavLink",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-reactjs/lessons/9271",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1728266263_0397f51a2d148ef562db/480p/1728266263_0397f51a2d148ef562db.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1728266263_0397f51a2d148ef562db/1080p/1728266263_0397f51a2d148ef562db.m3u8"
+                        ],
+                        "youtube_urls": []
+                    }
+                ]
+            }
+        ]
     }
 ];
