@@ -8,6 +8,13 @@
 error_reporting(0);
 ini_set('display_errors', 0);
 
+// Disable PHP output compression to prevent ERR_CONTENT_DECODING_FAILED
+ini_set('zlib.output_compression', 'Off');
+
+// Also try to disable apache/nginx gzip if possible using headers
+header('Cache-Control: no-cache');
+header('X-Accel-Buffering: no');
+
 if (!isset($_GET['url'])) {
     header("HTTP/1.1 400 Bad Request");
     exit("URL parameter is missing.");
@@ -35,7 +42,14 @@ $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $videoUrl);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-curl_setopt($ch, CURLOPT_ENCODING, ''); // Auto-decode gzip/deflate responses from CDN
+
+// Send neutral Accept-Encoding so CDN does not compress the data, avoiding need for cURL to decode
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+    'Accept: */*',
+    'Accept-Encoding: identity', 
+    'Connection: keep-alive'
+));
+
 curl_setopt($ch, CURLOPT_REFERER, 'https://www.codepolitan.com');
 curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
 // Set a reasonable timeout
@@ -49,6 +63,11 @@ curl_close($ch);
 if ($httpCode !== 200) {
     header("HTTP/1.1 " . $httpCode);
     exit("Failed to fetch video resource. HTTP Code: " . $httpCode);
+}
+
+// Clear any accidental output buffers that might contain a BOM or newline
+while (ob_get_level()) {
+    ob_end_clean();
 }
 
 // Determine if the file is an HLS playlist (m3u8)
@@ -110,6 +129,10 @@ if ($isM3u8) {
         }
     }
 }
+
+// Add Content-Length to avoid chunking issues with proxy streaming
+$contentLength = function_exists('mb_strlen') ? mb_strlen($response, '8bit') : strlen($response);
+header('Content-Length: ' . $contentLength);
 
 // Output proxy response
 echo $response;
