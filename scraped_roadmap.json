@@ -1,4 +1,4 @@
-const COURSE_DATA = [
+[
     {
         "course_title": "Panduan Member KelasFullstack.id",
         "course_slug": "panduan-member-kelasfullstackid",
@@ -2106,4 +2106,4 @@ const COURSE_DATA = [
             }
         ]
     }
-];
+]

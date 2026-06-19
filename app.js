@@ -196,7 +196,7 @@ function renderHome() {
     const totalL = course.modules.reduce((s, m) => s + m.lessons.length, 0);
     const hasVideo = course.modules.some(m => m.lessons.some(l => l.youtube_urls?.length || l.video_urls?.length));
     const mentorsHtml = course.mentors?.length
-      ? `<span class="card-pill">${escapeHtml(course.mentors.slice(0,2).join(', '))}${course.mentors.length>2?` +${course.mentors.length-2}`:''}</span>`
+      ? `<span class="card-pill">${escapeHtml(course.mentors.slice(0, 2).join(', '))}${course.mentors.length > 2 ? ` +${course.mentors.length - 2}` : ''}</span>`
       : '';
 
     const card = document.createElement('div');
@@ -239,8 +239,8 @@ function renderCourse(course, idx) {
   $('course-hero-badge').textContent = `Kursus ${idx + 1} dari ${state.courses.length}`;
   $('course-title').textContent = course.course_title;
 
-  const totalL = course.modules.reduce((s,m) => s + m.lessons.length, 0);
-  const totalVideos = course.modules.reduce((s,m) => s + m.lessons.filter(l => l.youtube_urls?.length || l.video_urls?.length).length, 0);
+  const totalL = course.modules.reduce((s, m) => s + m.lessons.length, 0);
+  const totalVideos = course.modules.reduce((s, m) => s + m.lessons.filter(l => l.youtube_urls?.length || l.video_urls?.length).length, 0);
 
   const metaHtml = [
     course.modules.length ? `<div class="meta-item"><span class="meta-dot"></span>${course.modules.length} Modul</div>` : '',
@@ -253,7 +253,7 @@ function renderCourse(course, idx) {
   // ── About Section ──────────────────────────────────────────
   const aboutEl = $('course-about-section');
   const rawAbout = (course.about_course || '').trim();
-  const rawDesc  = (course.course_description || '').trim();
+  const rawDesc = (course.course_description || '').trim();
 
   // Build sections from about_course (may contain embedded headings separated by double newline)
   let aboutHtml = '';
@@ -448,21 +448,21 @@ function renderLesson() {
     // detect resolution from URL path segment e.g. /1080p/ or /480p/
     const resMatch = url.match(/\/(\d{3,4}p)\//i);
     const resLabel = resMatch ? resMatch[1].toUpperCase() : 'Video';
-    const resNum   = resMatch ? parseInt(resMatch[1]) : 0;
+    const resNum = resMatch ? parseInt(resMatch[1]) : 0;
     rawVideos.push({ type: 'direct', url, label: resLabel, res: resNum });
   });
 
   // Sort direct videos: highest resolution first; YouTube stays at front
   const youtubeVids = rawVideos.filter(v => v.type === 'youtube');
-  const directVids  = rawVideos.filter(v => v.type === 'direct').sort((a, b) => b.res - a.res);
-  const allVideos   = [...youtubeVids, ...directVids];
+  const directVids = rawVideos.filter(v => v.type === 'direct').sort((a, b) => b.res - a.res);
+  const allVideos = [...youtubeVids, ...directVids];
 
   // Always default to first (highest-res direct, or YouTube)
   if (state.currentVideoIdx >= allVideos.length) state.currentVideoIdx = 0;
 
   // ── DOM refs ───────────────────────────────────────────────────
-  const videoSection    = $('video-section');
-  const videoContainer  = $('video-container');
+  const videoSection = $('video-section');
+  const videoContainer = $('video-container');
 
   if (allVideos.length > 0) {
     videoSection.style.display = '';
@@ -606,7 +606,7 @@ function updateBreadcrumb(view) {
 
 function toggleAbout() {
   const body = document.getElementById('about-body');
-  const btn  = document.getElementById('about-toggle-btn');
+  const btn = document.getElementById('about-toggle-btn');
   if (!body || !btn) return;
   const isCollapsed = body.classList.toggle('collapsed');
   btn.innerHTML = isCollapsed
@@ -651,22 +651,22 @@ document.addEventListener('keydown', e => {
 
 // ── Mobile Bottom Bar ──────────────────────────────────────────
 function updateMobileBar(flatIdx, total) {
-  const bar    = $('mobile-lesson-bar');
+  const bar = $('mobile-lesson-bar');
   const prevBtn = $('mobile-prev-btn');
   const nextBtn = $('mobile-next-btn');
-  const label  = $('mobile-counter-label');
+  const label = $('mobile-counter-label');
   if (!bar) return;
 
   bar.style.display = 'flex';
   if (prevBtn) prevBtn.disabled = flatIdx === 0;
   if (nextBtn) nextBtn.disabled = flatIdx === total - 1;
-  if (label)  label.textContent = `${flatIdx + 1} / ${total}`;
+  if (label) label.textContent = `${flatIdx + 1} / ${total}`;
 }
 
 // Wire up mobile bar buttons once DOM ready
 (function initMobileBar() {
-  const prevBtn     = $('mobile-prev-btn');
-  const nextBtn     = $('mobile-next-btn');
+  const prevBtn = $('mobile-prev-btn');
+  const nextBtn = $('mobile-next-btn');
   const playlistBtn = $('mobile-playlist-btn');
 
   prevBtn?.addEventListener('click', () => {
@@ -680,9 +680,9 @@ function updateMobileBar(flatIdx, total) {
 })();
 
 // ── Mobile Lesson Sheet ────────────────────────────────────────
-const lessonSheet   = $('mobile-lesson-sheet');
-const sheetOverlay  = $('sheet-overlay');
-const sheetList     = $('sheet-lesson-list');
+const lessonSheet = $('mobile-lesson-sheet');
+const sheetOverlay = $('sheet-overlay');
+const sheetList = $('sheet-lesson-list');
 const sheetCloseBtn = $('sheet-close-btn');
 
 function openLessonSheet() {
