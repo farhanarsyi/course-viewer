@@ -283,6 +283,12 @@ function showView(name) {
     mobBar.style.display = (name === 'lesson') ? 'flex' : 'none';
   }
 
+  // Stop video playback when leaving lesson view
+  if (name !== 'lesson') {
+    const vw = document.getElementById('video-wrapper');
+    if (vw) vw.innerHTML = '';
+  }
+
   const homeBtn = document.getElementById('nav-home-btn');
   const rmBtn = document.getElementById('nav-roadmap-btn');
   if (homeBtn) homeBtn.classList.toggle('active', name === 'home');
@@ -322,23 +328,72 @@ function renderNav(filter = '') {
   courseNav.innerHTML = '';
   const filt = filter.toLowerCase();
 
-  // When searching: flat list across all categories
+  // When searching: lesson-level results grouped by course
   if (filt) {
     const searchHeader = document.createElement('div');
     searchHeader.className = 'nav-section-label';
-    searchHeader.textContent = `Hasil pencarian`;
+    searchHeader.textContent = 'Hasil pencarian';
     courseNav.appendChild(searchHeader);
-    state.courses.forEach((course, idx) => {
-      if (!course.course_title.toLowerCase().includes(filt)) return;
-      const btn = document.createElement('button');
-      btn.className = 'nav-item' + (state.currentCourseIdx === idx ? ' active' : '');
-      btn.innerHTML = `
-        <span class="nav-index">${idx + 1}</span>
-        <span class="nav-text">${escapeHtml(course.course_title)}</span>
-      `;
-      btn.addEventListener('click', () => { goToCourse(idx); closeMobileSidebar(); });
-      courseNav.appendChild(btn);
+
+    let resultCount = 0;
+    state.courses.forEach((course, courseIdx) => {
+      const titleMatch = course.course_title.toLowerCase().includes(filt);
+
+      // Collect matching lessons
+      const matchingLessons = [];
+      (course.modules || []).forEach((mod, mIdx) => {
+        (mod.lessons || []).forEach((lesson, lIdx) => {
+          if (lesson.title && lesson.title.toLowerCase().includes(filt)) {
+            matchingLessons.push({ mIdx, lIdx, lesson });
+          }
+        });
+      });
+
+      if (!titleMatch && matchingLessons.length === 0) return;
+
+      if (titleMatch && matchingLessons.length === 0) {
+        // Course title matched — navigate to course overview
+        const btn = document.createElement('button');
+        btn.className = 'nav-item nav-item-course' + (state.currentCourseIdx === courseIdx ? ' active' : '');
+        btn.innerHTML = `
+          <span class="nav-index">${courseIdx + 1}</span>
+          <span class="nav-text">${escapeHtml(course.course_title)}</span>
+        `;
+        btn.addEventListener('click', () => { goToCourse(courseIdx); closeMobileSidebar(); });
+        courseNav.appendChild(btn);
+        resultCount++;
+      } else {
+        // Add course header label above the lessons
+        const courseHeader = document.createElement('div');
+        courseHeader.className = 'nav-search-course-header';
+        courseHeader.textContent = `${courseIdx + 1}. ${course.course_title}`;
+        courseNav.appendChild(courseHeader);
+
+        matchingLessons.forEach(({ mIdx, lIdx, lesson }) => {
+          const btn = document.createElement('button');
+          btn.className = 'nav-item nav-item-lesson';
+          btn.innerHTML = `
+            <span class="nav-lesson-icon">▶</span>
+            <span class="nav-lesson-info">
+              <span class="nav-lesson-title">${escapeHtml(lesson.title)}</span>
+            </span>
+          `;
+          btn.addEventListener('click', () => {
+            goToLessonDirect(courseIdx, mIdx, lIdx);
+            closeMobileSidebar();
+          });
+          courseNav.appendChild(btn);
+          resultCount++;
+        });
+      }
     });
+
+    if (resultCount === 0) {
+      const empty = document.createElement('div');
+      empty.style.cssText = 'padding:16px;font-size:12px;color:var(--text-tertiary);text-align:center';
+      empty.textContent = 'Tidak ada hasil ditemukan';
+      courseNav.appendChild(empty);
+    }
     return;
   }
 
@@ -596,7 +651,7 @@ function renderHome() {
       card.innerHTML = `
         <div class="card-cover">
           ${thumb ? `<img src="${thumb}" loading="lazy" alt="" onerror="this.style.display='none'">` : ''}
-          <div class="card-cover-placeholder">${catEmoji}</div>
+          <div class="card-cover-placeholder"></div>
         </div>
         <div class="card-content">
           <div class="card-number">KURSUS ${idx + 1}</div>
@@ -667,6 +722,28 @@ function goToCourse(idx) {
   renderCourse(course, idx);
   showView('course');
   updateBreadcrumb('course');
+}
+
+// ── Go to Lesson Directly (from search result) ─────────────────
+function goToLessonDirect(courseIdx, moduleIdx, lessonIdx) {
+  state.currentCourseIdx = courseIdx;
+  const course = state.courses[courseIdx];
+  // Build flat lesson list for this course
+  state.currentLessonFlat = buildFlatLessons(courseIdx);
+  // Find the flat index
+  const flatIdx = state.currentLessonFlat.findIndex(
+    fl => fl.moduleIdx === moduleIdx && fl.lessonIdx === lessonIdx
+  );
+  if (flatIdx < 0) {
+    // Fallback: open course view
+    renderCourse(course, courseIdx);
+    showView('course');
+    updateBreadcrumb('course');
+    return;
+  }
+  renderNav();
+  goToLesson(flatIdx);
+  $('lesson-counter').textContent = `${flatIdx + 1} / ${state.currentLessonFlat.length}`;
 }
 
 function renderCourse(course, idx) {
@@ -790,6 +867,21 @@ function renderCourse(course, idx) {
       // Global flat index
       const flatIdx = state.currentLessonFlat.findIndex(fl => fl.moduleIdx === mIdx && fl.lessonIdx === lIdx);
 
+      // Understanding tag from localStorage
+      const course = state.courses[idx];
+      const slug = course?.course_slug || idx;
+      const uKey = `understanding_${slug}_${mIdx}_${lIdx}`;
+      const uVal = localStorage.getItem(uKey);
+      const uDotColor = uVal === 'mengerti' ? '#34c759'
+                      : uVal === 'ragu'     ? '#ff9f0a'
+                      : uVal === 'belum'    ? '#ff3b30'
+                      : 'transparent';
+      const uDotBorder = uVal ? 'none' : '1.5px solid var(--border)';
+      const uDotTitle = uVal === 'mengerti' ? 'Mengerti'
+                      : uVal === 'ragu'     ? 'Ragu-ragu'
+                      : uVal === 'belum'    ? 'Belum Paham'
+                      : 'Belum ditandai';
+
       const li = document.createElement('li');
       li.className = 'lesson-item';
       li.innerHTML = `
@@ -802,6 +894,7 @@ function renderCourse(course, idx) {
             ${hasText ? `<span class="lesson-badge text">📝 Teks</span>` : ''}
           </div>
         </div>
+        <span class="lesson-utag-dot" title="${uDotTitle}" style="background:${uDotColor};border:${uDotBorder}"></span>
         <svg class="lesson-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="9 18 15 12 9 6"></polyline>
         </svg>
@@ -936,10 +1029,12 @@ function renderLesson() {
   // Video
   const allVideos = [];
   (lesson.youtube_urls || []).forEach((url, i) => {
-    allVideos.push({ type: 'youtube', url, label: lesson.youtube_urls.length > 1 ? `Video ${i+1}` : 'YouTube' });
+    allVideos.push({ type: 'youtube', url, label: lesson.youtube_urls.length > 1 ? `YouTube ${i+1}` : 'YouTube' });
   });
   (lesson.video_urls || []).forEach((url, i) => {
-    allVideos.push({ type: 'direct', url, label: lesson.video_urls.length > 1 ? `Video ${i+1}` : 'Video' });
+    const qMatch = url.match(/(240p|360p|480p|720p|1080p)/i);
+    const qLabel = qMatch ? qMatch[1] : (lesson.video_urls.length > 1 ? `Server ${i+1}` : 'Video');
+    allVideos.push({ type: 'direct', url, label: qLabel });
   });
 
   const videoWrapper = $('video-wrapper');

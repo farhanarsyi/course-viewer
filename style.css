@@ -202,6 +202,55 @@ body {
 }
 .nav-text { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
+/* Search: course group header above lesson results */
+.nav-search-course-header {
+  padding: 10px 12px 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  border-top: 1px solid var(--border-subtle);
+  margin-top: 4px;
+}
+.nav-search-course-header:first-child { border-top: none; margin-top: 0; }
+
+/* Lesson-level search result item */
+.nav-item-lesson {
+  align-items: flex-start;
+  padding: 9px 12px;
+  gap: 8px;
+}
+.nav-lesson-icon {
+  font-size: 8px;
+  color: var(--accent);
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+.nav-lesson-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+.nav-lesson-title {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.35;
+  white-space: normal;
+  word-break: break-word;
+}
+.nav-lesson-course {
+  font-size: 10.5px;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.nav-item-lesson:hover .nav-lesson-title { color: var(--accent); }
+
 /* ============================================================
    MAIN CONTENT
    ============================================================ */
@@ -758,6 +807,16 @@ body {
   transform: translateX(3px);
   color: var(--accent);
 }
+
+.lesson-utag-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: block;
+  transition: transform 0.2s;
+}
+.lesson-item:hover .lesson-utag-dot { transform: scale(1.2); }
 
 /* ============================================================
    LESSON VIEW
@@ -1564,8 +1623,8 @@ body {
 
 .cat-label {
   flex: 1;
-  font-size: 10.5px; font-weight: 700;
-  color: var(--text-secondary); letter-spacing: 0.7px; text-transform: uppercase;
+  font-size: 12px; font-weight: 600;
+  color: var(--text-secondary);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 
@@ -1896,9 +1955,8 @@ body {
 .cat-group:last-child { border-bottom: none; }
 .cat-body { overflow: hidden; }
 .cat-group.collapsed .cat-body { display: none; }
-.cat-group.collapsed .cat-chevron svg { transform: rotate(-90deg); }
 .cat-chevron { margin-left: auto; color: var(--text-tertiary); transition: transform var(--transition); }
-.cat-chevron svg { transition: transform var(--transition); display: block; }
+.cat-chevron svg { display: block; }
 .cat-emoji { font-size: 15px; flex-shrink: 0; }
 .cat-label { flex: 1; font-size: 12.5px; font-weight: 600; color: var(--text-secondary); text-align: left; }
 .cat-count { font-size: 10.5px; font-weight: 600; color: var(--text-tertiary); background: var(--bg); border: 1px solid var(--border); padding: 1px 6px; border-radius: 100px; flex-shrink: 0; }
@@ -2356,7 +2414,6 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 36px;
-  background: linear-gradient(135deg, var(--bg) 0%, var(--border-subtle) 100%);
 }
 
 .card-content {
