@@ -1038,33 +1038,44 @@ function renderLesson() {
     if (videoSection) videoSection.style.display = '';
     videoContainer.style.display = '';
 
-    // Build tab row
-    let tabsHtml = '';
-    tabsHtml = `<div class="video-tabs">` +
-      allVideos.map((v, i) => `
-        <button class="video-tab-btn${i === state.currentVideoIdx ? ' active' : ''}" data-vidx="${i}">
-          <span class="yt-dot"></span>${escapeHtml(v.label)}
-        </button>
-      `).join('') +
-      `</div>`;
-
-    // Inject below video wrapper
+    // Inject only video wrapper inside videoContainer
     videoContainer.innerHTML = `
       <div id="video-wrapper" class="video-wrapper">${buildVideoEmbed(allVideos[state.currentVideoIdx])}</div>
-      ${tabsHtml}
     `;
 
+    // Remove existing video-tabs inside videoSection if any (to prevent multiple tab bars)
+    const existingTabs = videoSection.querySelector('.video-tabs');
+    if (existingTabs) {
+      existingTabs.remove();
+    }
+
+    // Build tab row
+    const tabsDiv = document.createElement('div');
+    tabsDiv.className = 'video-tabs';
+    tabsDiv.innerHTML = allVideos.map((v, i) => `
+      <button class="video-tab-btn${i === state.currentVideoIdx ? ' active' : ''}" data-vidx="${i}">
+        <span class="yt-dot"></span>${escapeHtml(v.label)}
+      </button>
+    `).join('');
+
+    // Append tabs to videoSection (rendering below videoContainer)
+    videoSection.appendChild(tabsDiv);
+
     // Tab click events
-    videoContainer.querySelectorAll('.video-tab-btn').forEach(btn => {
+    tabsDiv.querySelectorAll('.video-tab-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         state.currentVideoIdx = parseInt(btn.dataset.vidx);
         document.getElementById('video-wrapper').innerHTML = buildVideoEmbed(allVideos[state.currentVideoIdx]);
-        videoContainer.querySelectorAll('.video-tab-btn').forEach(b => b.classList.toggle('active', b === btn));
+        tabsDiv.querySelectorAll('.video-tab-btn').forEach(b => b.classList.toggle('active', b === btn));
       });
     });
 
   } else {
-    if (videoSection) videoSection.style.display = 'none';
+    if (videoSection) {
+      videoSection.style.display = 'none';
+      const existingTabs = videoSection.querySelector('.video-tabs');
+      if (existingTabs) existingTabs.remove();
+    }
     videoContainer.style.display = 'none';
     videoContainer.innerHTML = '<div id="video-wrapper" class="video-wrapper"></div>';
   }

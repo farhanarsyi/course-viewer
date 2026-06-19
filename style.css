@@ -1055,36 +1055,6 @@ body {
 }
 .animate-in { animation: fadeIn 0.35s cubic-bezier(0.4,0,0.2,1) both; }
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
-@media (max-width: 900px) {
-  .lesson-container { grid-template-columns: 1fr; }
-  .lesson-sidebar { display: none; }
-}
-
-@media (max-width: 768px) {
-  :root { --sidebar-w: 260px; }
-  .sidebar { transform: translateX(-100%); }
-  .sidebar.mobile-open { transform: translateX(0); }
-  .main-content { margin-left: 0; }
-  .main-content.expanded { margin-left: 0; }
-  .mobile-lesson-bar { left: 0; }
-  .mobile-menu-btn { display: flex; }
-  .sidebar-toggle { display: none; }
-  .hero { padding: 40px 20px 24px; }
-  .course-grid { padding: 12px 16px; grid-template-columns: 1fr; }
-  .course-hero { padding: 28px 20px 24px; }
-  .course-about-section { padding: 0 16px 8px; }
-  .module-list { padding: 20px 16px; }
-  .lesson-content-wrap { padding: 24px 20px; }
-  .course-view { padding-bottom: 60px; }
-}
-
-@media (max-width: 480px) {
-  .hero-title { font-size: 28px; letter-spacing: -1px; }
-  .stats-bar { gap: 16px; }
-}
 
 /* ============================================================
    SCROLLBAR GLOBAL
@@ -2562,6 +2532,38 @@ body {
 
 .utag-label {
   line-height: 1;
+}
+
+/* ============================================================
+   RESPONSIVE OVERRIDES (Moved to end for correct CSS override priority)
+   ============================================================ */
+@media (max-width: 900px) {
+  .lesson-container { grid-template-columns: 1fr; }
+  .lesson-sidebar { display: none; }
+}
+
+@media (max-width: 768px) {
+  :root { --sidebar-w: 260px; }
+  .sidebar { transform: translateX(-100%); }
+  .sidebar.mobile-open { transform: translateX(0); }
+  .main-content { margin-left: 0; }
+  .main-content.expanded { margin-left: 0; }
+  .mobile-lesson-bar { left: 0 !important; }
+  .mobile-menu-btn { display: flex; }
+  .sidebar-toggle { display: none; }
+  .hero { padding: 40px 20px 24px; }
+  .course-grid { padding: 12px 16px; grid-template-columns: 1fr; }
+  .course-hero { padding: 28px 20px 24px; }
+  .course-about-section { padding: 0 16px 8px; }
+  .module-list { padding: 20px 16px; }
+  .lesson-content-wrap { padding: 24px 20px; }
+  .course-view { padding-bottom: 60px; }
+  .video-tabs { padding: 10px 16px; }
+}
+
+@media (max-width: 480px) {
+  .hero-title { font-size: 28px; letter-spacing: -1px; }
+  .stats-bar { gap: 16px; }
 }
 
 
