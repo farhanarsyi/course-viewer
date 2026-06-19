@@ -36,7 +36,7 @@ function getYoutubeId(url) {
 function buildYoutubeEmbed(url) {
   const id = getYoutubeId(url);
   if (!id) return null;
-  return `https://www.youtube.com/embed/${id}?rel=0&modestbranding=1&playsinline=1`;
+  return `https://www.youtube.com/embed/${id}?rel=0&modestbranding=1&playsinline=1&enablejsapi=1`;
 }
 
 function buildYoutubeThumbnail(url) {
@@ -138,7 +138,47 @@ function showView(name) {
   else if (name === 'course') courseView.classList.add('active');
   else if (name === 'lesson') lessonView.classList.add('active');
   window.scrollTo({ top: 0, behavior: 'instant' });
+
+  // Hentikan video jika keluar dari tampilan pelajaran
+  if (name !== 'lesson') {
+    stopCurrentVideo();
+  }
 }
+
+function stopCurrentVideo() {
+  const container = $('video-container');
+  if (container) {
+    const videoEl = container.querySelector('video');
+    if (videoEl) {
+      videoEl.pause();
+    }
+    // Hentikan YouTube player dengan menghapus innerHTML kontainer
+    container.innerHTML = '';
+  }
+  const tabsEl = $('video-tabs-row');
+  if (tabsEl) {
+    tabsEl.className = '';
+    tabsEl.innerHTML = '';
+  }
+}
+
+// Hentikan/Jeda video ketika tab browser diganti (tidak aktif)
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    const container = $('video-container');
+    if (container) {
+      const videoEl = container.querySelector('video');
+      if (videoEl && !videoEl.paused) {
+        videoEl.pause();
+      }
+      const iframe = container.querySelector('iframe');
+      if (iframe) {
+        iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+      }
+    }
+  }
+});
+
 
 // ── Sidebar toggle ─────────────────────────────────────────────
 sidebarToggle.addEventListener('click', () => {
