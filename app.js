@@ -1027,8 +1027,22 @@ function renderLesson() {
     allVideos.push({ type: 'youtube', url, label: lesson.youtube_urls.length > 1 ? `YouTube ${i+1}` : 'YouTube' });
   });
   (lesson.video_urls || []).forEach((url, i) => {
-    const qMatch = url.match(/(240p|360p|480p|720p|1080p)/i);
-    const qLabel = qMatch ? qMatch[1] : (lesson.video_urls.length > 1 ? `Server ${i+1}` : 'Video');
+    let qLabel = '';
+    if (url.toLowerCase().includes('playlist.m3u8')) {
+      qLabel = 'Auto';
+    } else {
+      const qMatch = url.match(/(240p|360p|480p|720p|1080p)/i);
+      if (qMatch) {
+        qLabel = qMatch[1].toLowerCase();
+      } else {
+        const numMatch = url.match(/(1080|720|480|360|240)/);
+        if (numMatch) {
+          qLabel = numMatch[1] + 'p';
+        } else {
+          qLabel = lesson.video_urls.length > 1 ? `Kualitas ${i+1}` : 'Video';
+        }
+      }
+    }
     allVideos.push({ type: 'direct', url, label: qLabel });
   });
 
