@@ -1105,7 +1105,12 @@ function buildVideoEmbed(vid) {
     return `<iframe src="${embed}" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>`;
   }
   // Direct video
-  return `<video controls style="width:100%;height:100%;background:#000"><source src="${escapeHtml(vid.url)}">Browser tidak mendukung video ini.</video>`;
+  let videoSrc = vid.url;
+  const isCdn = /b-cdn\.net|diupload\.com/i.test(videoSrc);
+  if (isCdn) {
+    videoSrc = `video_proxy.php?url=${encodeURIComponent(videoSrc)}`;
+  }
+  return `<video controls style="width:100%;height:100%;background:#000"><source src="${escapeHtml(videoSrc)}">Browser tidak mendukung video ini.</video>`;
 }
 
 function renderLessonSidebar() {
