@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="KelasFullstack" />
+  <meta name="theme-color" content="#0a0a0f" />
+  <title>KelasFullstack.id — Course Viewer</title>
+  <meta name="description" content="Akses semua materi kursus KelasFullstack.id secara offline, lengkap dengan video preview dan konten pembelajaran." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <span class="logo-text">KelasFullstack</span>
+      </div>
+      <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle sidebar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="sidebar-search">
+      <div class="search-box">
+        <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input id="search-input" type="text" placeholder="Cari kursus..." autocomplete="off" />
+      </div>
+    </div>
+
+    <nav id="course-nav" class="course-nav">
+      <!-- Course list injected by JS -->
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main id="main-content" class="main-content">
+
+    <!-- Top Bar -->
+    <header class="topbar">
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <div id="breadcrumb" class="breadcrumb">
+        <span class="breadcrumb-home">Home</span>
+      </div>
+      <div class="topbar-actions">
+        <span id="lesson-counter" class="lesson-counter"></span>
+      </div>
+    </header>
+
+    <!-- Home / Landing View -->
+    <section id="home-view" class="view home-view active">
+      <div class="hero">
+        <div class="hero-badge">📚 KelasFullstack.id</div>
+        <h1 class="hero-title">Roadmap<br /><span class="gradient-text">Belajar Fullstack</span></h1>
+        <p class="hero-desc">Akses semua materi pembelajaran. Pilih kursus untuk mulai belajar.</p>
+        <div id="stats-bar" class="stats-bar">
+          <!-- injected -->
+        </div>
+      </div>
+      <div id="course-grid" class="course-grid">
+        <!-- Course cards injected by JS -->
+      </div>
+    </section>
+
+    <!-- Course Detail View -->
+    <section id="course-view" class="view course-view">
+      <div class="course-hero">
+        <div id="course-hero-badge" class="course-hero-badge"></div>
+        <h1 id="course-title" class="course-title"></h1>
+        <div id="course-meta" class="course-meta"></div>
+      </div>
+      <div id="course-about-section" class="course-about-section"></div>
+      <div id="module-list" class="module-list"></div>
+    </section>
+
+    <!-- Lesson Detail View -->
+    <section id="lesson-view" class="view lesson-view">
+      <div class="lesson-container">
+        <div class="lesson-main">
+          <div id="video-section" class="video-section" style="display:none">
+            <!-- video-tabs-row injected here by JS when multiple resolutions -->
+            <div id="video-container" class="video-container">
+              <!-- video/iframe injected by renderActiveVideo() -->
+            </div>
+          </div>
+          <div class="lesson-content-wrap">
+            <div id="lesson-nav-pills" class="lesson-nav-pills"></div>
+            <h1 id="lesson-title" class="lesson-title"></h1>
+            <div id="lesson-text" class="lesson-text"></div>
+          </div>
+        </div>
+        <aside class="lesson-sidebar">
+          <div class="lesson-sidebar-header">Daftar Pelajaran</div>
+          <div id="lesson-list-sidebar" class="lesson-list-sidebar"></div>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Mobile Bottom Nav (lesson view only) -->
+  <nav id="mobile-lesson-bar" class="mobile-lesson-bar" style="display:none">
+    <button id="mobile-prev-btn" class="mobile-nav-btn" disabled>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      <span>Prev</span>
+    </button>
+    <button id="mobile-playlist-btn" class="mobile-playlist-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+      <span id="mobile-counter-label">1 / 1</span>
+    </button>
+    <button id="mobile-next-btn" class="mobile-nav-btn">
+      <span>Next</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Lesson Sheet (slide up) -->
+  <div id="sheet-overlay" class="sheet-overlay"></div>
+  <div id="mobile-lesson-sheet" class="mobile-lesson-sheet">
+    <div class="sheet-drag-handle"></div>
+    <div class="sheet-header">
+      <span class="sheet-title">Daftar Pelajaran</span>
+      <button id="sheet-close-btn" class="sheet-close-btn" aria-label="Tutup">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="sheet-lesson-list" class="sheet-lesson-list">
+      <!-- cloned from lesson-list-sidebar by JS -->
+    </div>
+  </div>
+
+  <!-- Overlay for mobile sidebar -->
+  <div id="overlay" class="overlay"></div>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-inner">
+      <div class="loading-spinner"></div>
+      <div class="loading-title">KelasFullstack.id</div>
+      <div class="loading-sub" id="loading-status">Memuat data kursus...</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest/dist/hls.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
