@@ -310,9 +310,15 @@ if (_navHomeBtn) _navHomeBtn.addEventListener('click', () => goHome());
 if (_navRoadmapBtn) _navRoadmapBtn.addEventListener('click', () => goRoadmap());
 
 mobileMenuBtn.addEventListener('click', () => {
-  state.mobileSidebarOpen = true;
-  sidebar.classList.add('mobile-open');
-  overlay.classList.add('active');
+  if (window.innerWidth > 768) {
+    state.sidebarCollapsed = false;
+    sidebar.classList.remove('collapsed');
+    mainContent.classList.remove('expanded');
+  } else {
+    state.mobileSidebarOpen = true;
+    sidebar.classList.add('mobile-open');
+    overlay.classList.add('active');
+  }
 });
 
 overlay.addEventListener('click', closeMobileSidebar);
@@ -1011,20 +1017,9 @@ function renderLesson() {
   }
 
   // Nav pills
+  // Nav pills above title
   const pills = $('lesson-nav-pills');
-  pills.innerHTML = `
-    <button class="nav-pill-btn" id="prev-lesson-btn" ${flatIdx === 0 ? 'disabled' : ''}>
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-      Prev
-    </button>
-    <span style="font-size:12px;color:var(--text-tertiary);padding:0 6px;align-self:center">${moduleName}</span>
-    <button class="nav-pill-btn" id="next-lesson-btn" ${flatIdx === total - 1 ? 'disabled' : ''}>
-      Next
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-    </button>
-  `;
-  document.getElementById('prev-lesson-btn')?.addEventListener('click', () => goToLesson(flatIdx - 1));
-  document.getElementById('next-lesson-btn')?.addEventListener('click', () => goToLesson(flatIdx + 1));
+  pills.innerHTML = '';
 
   // Video
   const allVideos = [];
@@ -1043,22 +1038,20 @@ function renderLesson() {
     if (videoSection) videoSection.style.display = '';
     videoContainer.style.display = '';
 
-    // Build tab row if multiple
+    // Build tab row
     let tabsHtml = '';
-    if (allVideos.length > 1) {
-      tabsHtml = `<div class="video-tabs">` +
-        allVideos.map((v, i) => `
-          <button class="video-tab-btn${i === state.currentVideoIdx ? ' active' : ''}" data-vidx="${i}">
-            <span class="yt-dot"></span>${escapeHtml(v.label)}
-          </button>
-        `).join('') +
-        `</div>`;
-    }
+    tabsHtml = `<div class="video-tabs">` +
+      allVideos.map((v, i) => `
+        <button class="video-tab-btn${i === state.currentVideoIdx ? ' active' : ''}" data-vidx="${i}">
+          <span class="yt-dot"></span>${escapeHtml(v.label)}
+        </button>
+      `).join('') +
+      `</div>`;
 
-    // Inject above video wrapper (inside videoContainer parent we need a flex col)
+    // Inject below video wrapper
     videoContainer.innerHTML = `
-      ${tabsHtml}
       <div id="video-wrapper" class="video-wrapper">${buildVideoEmbed(allVideos[state.currentVideoIdx])}</div>
+      ${tabsHtml}
     `;
 
     // Tab click events

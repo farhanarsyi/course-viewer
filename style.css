@@ -264,6 +264,8 @@ body {
   transition: margin-left var(--transition);
 }
 .main-content.expanded { margin-left: 0; }
+.main-content.expanded .mobile-menu-btn { display: flex; }
+.sidebar.collapsed ~ .mobile-lesson-bar { left: 0; }
 
 /* Topbar */
 .topbar {
@@ -859,7 +861,7 @@ body {
   gap: 8px;
   padding: 14px 28px;
   background: var(--bg-elevated);
-  border-bottom: 1px solid var(--border);
+  border-top: 1px solid var(--border);
   overflow-x: auto;
 }
 .video-tab-btn {
@@ -1067,6 +1069,7 @@ body {
   .sidebar.mobile-open { transform: translateX(0); }
   .main-content { margin-left: 0; }
   .main-content.expanded { margin-left: 0; }
+  .mobile-lesson-bar { left: 0; }
   .mobile-menu-btn { display: flex; }
   .sidebar-toggle { display: none; }
   .hero { padding: 40px 20px 24px; }
@@ -2023,7 +2026,8 @@ body {
   display: none;
   position: fixed;
   bottom: 0;
-  left: 0;
+  left: var(--sidebar-w);
+  transition: left var(--transition);
   right: 0;
   height: 60px;
   background: var(--bg-glass);
