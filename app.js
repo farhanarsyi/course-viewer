@@ -20,6 +20,8 @@ const state = {
   // Category state
   activeCategory: 'all',
   categoryCollapsed: {},   // { categoryId: true/false }
+  // Current top-level view: 'home' | 'roadmap'
+  topView: 'home',
 };
 
 // ── Card accent colors (cycling) ───────────────────────────────
@@ -33,6 +35,30 @@ const CARD_ACCENTS = [
   'linear-gradient(90deg,#0071e3,#30d158)',
   'linear-gradient(90deg,#30d158,#6c37c9)',
 ];
+
+// ── Roadmap Groups (for roadmap view & sidebar) ───────────────
+const ROADMAP_GROUPS = [
+  { id: 'g-foundation',  label: 'Foundation & Setup',       emoji: '🧱', color: '#7c3aed', slugs: ['panduan-member','intro-to-programming','algoritma','text-editor','terminal','cmd','git-pemula','git-dasar'] },
+  { id: 'g-design',     label: 'UI/UX Design',              emoji: '🎨', color: '#db2777', slugs: ['figma','uiux','developer-desain'] },
+  { id: 'g-fe-basic',   label: 'Frontend Basics',           emoji: '🌐', color: '#2563eb', slugs: ['dasar-html','dasar-css','belajar-bootstrap-css-framework','kelas-javascript','oop-di-javascript','javascript-asynchronous','javascript-dom','ajax','jquery','bootstrap-4'] },
+  { id: 'g-css-fw',     label: 'CSS Frameworks',            emoji: '💅', color: '#0891b2', slugs: ['tailwind','sass','landing-page','ewallet','crowd-funding','portofolio-menggunakan-tailwind'] },
+  { id: 'g-vue',        label: 'Vue.js & Nuxt',             emoji: '💚', color: '#059669', slugs: ['vue','nuxt','alpine','astro'] },
+  { id: 'g-react',      label: 'React.js & Next',           emoji: '⚛️', color: '#0284c7', slugs: ['react','nextjs'] },
+  { id: 'g-php',        label: 'PHP & MySQL',               emoji: '🐘', color: '#7c3aed', slugs: ['php','mysql','pengenalan-database','berorientasi-objek'] },
+  { id: 'g-laravel',    label: 'Laravel & CodeIgniter',     emoji: '🔴', color: '#dc2626', slugs: ['laravel','codeigniter','filament','security-for-developer'] },
+  { id: 'g-nodejs',     label: 'Node.js & Backend',         emoji: '🟩', color: '#16a34a', slugs: ['nodejs','expressjs','express','mongodb','nestjs','adonis','fullstack-tutorial','implementasi','manajemen','belajar-restful','belajar-konsep-auth','directory-listing','event-management','belajar-dasar-expressjs','belajar-mongodb'] },
+  { id: 'g-testing',   label: 'Testing',                   emoji: '🧪', color: '#d97706', slugs: ['selenium'] },
+  { id: 'g-devops',    label: 'DevOps & Deployment',       emoji: '🚀', color: '#0f766e', slugs: ['vps','nginx','shared-hosting','netlify','deploy','firebase-hosting','github-pages','vercel','cli-di-linux','revolusi-deployment','devops'] },
+  { id: 'g-career',    label: 'Karir & Soft Skills',       emoji: '💼', color: '#4f46e5', slugs: ['kode-etik','personal-branding','dunia-kerja','strategi-karir','freelance','english','interview','live-class','english-for-developer','belajar-interview','belajar-freelance','berbagi-ilmu','membangun-personal'] },
+];
+
+function getCourseGroup(course) {
+  const slug = course.course_slug || '';
+  for (const g of ROADMAP_GROUPS) {
+    if (g.slugs.some(s => slug.includes(s))) return g;
+  }
+  return ROADMAP_GROUPS[0];
+}
 
 // ── Roadmap Categories ─────────────────────────────────────────
 const CATEGORIES = [
@@ -105,13 +131,13 @@ function getCourseCategory(course) {
   return 'fundamental';
 }
 
-function getCourseThumb(course) {
+function getCourseThumb(course, quality = 'hqdefault') {
   for (const mod of (course.modules || [])) {
     for (const lesson of (mod.lessons || [])) {
       const ytUrls = lesson.youtube_urls || [];
       if (ytUrls.length > 0) {
         const id = getYoutubeId(ytUrls[0]);
-        if (id) return `https://img.youtube.com/vi/${id}/mqdefault.jpg`;
+        if (id) return `https://img.youtube.com/vi/${id}/${quality}.jpg`;
       }
     }
   }
@@ -217,15 +243,28 @@ const mobileMenuBtn = $('mobile-menu-btn');
 const breadcrumb = $('breadcrumb');
 
 const homeView = $('home-view');
+const roadmapView = $('roadmap-view');
 const courseView = $('course-view');
 const lessonView = $('lesson-view');
 
 // ── Show/Hide Views ────────────────────────────────────────────
 function showView(name) {
-  [homeView, courseView, lessonView].forEach(v => v.classList.remove('active'));
+  [homeView, roadmapView, courseView, lessonView].forEach(v => v && v.classList.remove('active'));
   if (name === 'home') homeView.classList.add('active');
+  else if (name === 'roadmap') roadmapView && roadmapView.classList.add('active');
   else if (name === 'course') courseView.classList.add('active');
   else if (name === 'lesson') lessonView.classList.add('active');
+
+  // Show/hide mobile bottom bar
+  const mobBar = $('mobile-lesson-bar');
+  if (mobBar) {
+    mobBar.style.display = (name === 'lesson') ? 'flex' : 'none';
+  }
+
+  const homeBtn = document.getElementById('nav-home-btn');
+  const rmBtn = document.getElementById('nav-roadmap-btn');
+  if (homeBtn) homeBtn.classList.toggle('active', name === 'home');
+  if (rmBtn) rmBtn.classList.toggle('active', name === 'roadmap');
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
@@ -235,6 +274,12 @@ sidebarToggle.addEventListener('click', () => {
   sidebar.classList.toggle('collapsed', state.sidebarCollapsed);
   mainContent.classList.toggle('expanded', state.sidebarCollapsed);
 });
+
+// Wire sidebar top nav buttons via addEventListener (not onclick= attr)
+const _navHomeBtn = document.getElementById('nav-home-btn');
+const _navRoadmapBtn = document.getElementById('nav-roadmap-btn');
+if (_navHomeBtn) _navHomeBtn.addEventListener('click', () => goHome());
+if (_navRoadmapBtn) _navRoadmapBtn.addEventListener('click', () => goRoadmap());
 
 mobileMenuBtn.addEventListener('click', () => {
   state.mobileSidebarOpen = true;
@@ -257,6 +302,10 @@ function renderNav(filter = '') {
 
   // When searching: flat list across all categories
   if (filt) {
+    const searchHeader = document.createElement('div');
+    searchHeader.className = 'nav-section-label';
+    searchHeader.textContent = `Hasil pencarian`;
+    courseNav.appendChild(searchHeader);
     state.courses.forEach((course, idx) => {
       if (!course.course_title.toLowerCase().includes(filt)) return;
       const btn = document.createElement('button');
@@ -271,32 +320,31 @@ function renderNav(filter = '') {
     return;
   }
 
-  // No search: group by category
-  // Build a map: categoryId → [{courseIdx, course}]
-  const catMap = {};
-  CATEGORIES.filter(c => c.id !== 'all').forEach(c => { catMap[c.id] = []; });
+  // No search: show roadmap groups in sidebar
+  // Build map: groupId -> [{courseIdx, course}]
+  const groupMap = {};
+  ROADMAP_GROUPS.forEach(g => { groupMap[g.id] = []; });
   state.courses.forEach((course, idx) => {
-    const catId = getCourseCategory(course);
-    if (!catMap[catId]) catMap[catId] = [];
-    catMap[catId].push({ idx, course });
+    const g = getCourseGroup(course);
+    if (groupMap[g.id]) groupMap[g.id].push({ idx, course });
+    else groupMap[ROADMAP_GROUPS[0].id].push({ idx, course });
   });
 
-  CATEGORIES.filter(c => c.id !== 'all').forEach(cat => {
-    const items = catMap[cat.id] || [];
+  ROADMAP_GROUPS.forEach(group => {
+    const items = groupMap[group.id] || [];
     if (!items.length) return;
 
-    const isCollapsed = !!state.categoryCollapsed[cat.id];
-
-    const group = document.createElement('div');
-    group.className = 'cat-group' + (isCollapsed ? ' collapsed' : '');
-    group.dataset.catId = cat.id;
-
     const hasActive = items.some(it => it.idx === state.currentCourseIdx);
+    const isCollapsed = state.categoryCollapsed[group.id] !== false && !hasActive;
 
-    group.innerHTML = `
-      <button class="cat-header" data-cat="${cat.id}">
-        <span class="cat-emoji">${cat.emoji}</span>
-        <span class="cat-label">${cat.label}</span>
+    const grpEl = document.createElement('div');
+    grpEl.className = 'cat-group' + (isCollapsed ? ' collapsed' : '');
+    grpEl.dataset.catId = group.id;
+
+    grpEl.innerHTML = `
+      <button class="cat-header" data-cat="${group.id}" style="--grp-color:${group.color}">
+        <span class="cat-emoji">${group.emoji}</span>
+        <span class="cat-label">${group.label}</span>
         <span class="cat-count">${items.length}</span>
         <span class="cat-chevron">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
@@ -305,7 +353,7 @@ function renderNav(filter = '') {
       <div class="cat-body"></div>
     `;
 
-    const body = group.querySelector('.cat-body');
+    const body = grpEl.querySelector('.cat-body');
     items.forEach(({ idx, course }) => {
       const btn = document.createElement('button');
       btn.className = 'nav-item' + (state.currentCourseIdx === idx ? ' active' : '');
@@ -317,19 +365,17 @@ function renderNav(filter = '') {
       body.appendChild(btn);
     });
 
-    // Collapse toggle
-    group.querySelector('.cat-header').addEventListener('click', () => {
-      const col = group.classList.toggle('collapsed');
-      state.categoryCollapsed[cat.id] = col;
+    grpEl.querySelector('.cat-header').addEventListener('click', () => {
+      const col = grpEl.classList.toggle('collapsed');
+      state.categoryCollapsed[group.id] = col;
     });
 
-    // Auto-expand if contains active course
     if (hasActive) {
-      group.classList.remove('collapsed');
-      state.categoryCollapsed[cat.id] = false;
+      grpEl.classList.remove('collapsed');
+      state.categoryCollapsed[group.id] = false;
     }
 
-    courseNav.appendChild(group);
+    courseNav.appendChild(grpEl);
   });
 }
 
@@ -612,15 +658,25 @@ function renderLesson() {
   const flatIdx = state.currentLessonFlatIdx;
   const total = state.currentLessonFlat.length;
 
+  // Update mobile bottom nav elements
+  const mobPrevBtn = $('mobile-prev-btn');
+  const mobNextBtn = $('mobile-next-btn');
+  const mobCounter = $('mobile-counter-label');
+  if (mobPrevBtn) mobPrevBtn.disabled = (flatIdx === 0);
+  if (mobNextBtn) mobNextBtn.disabled = (flatIdx === total - 1);
+  if (mobCounter) mobCounter.textContent = `${flatIdx + 1} / ${total}`;
+
   // Title
   $('lesson-title').textContent = lesson.title;
 
   const lessonTextEl = $('lesson-text');
   const quizContainer = $('quiz-container');
   const videoContainer = $('video-container');
+  const videoSection = $('video-section');
 
   if (lesson.quiz_data) {
     lessonTextEl.style.display = 'none';
+    if (videoSection) videoSection.style.display = 'none';
     videoContainer.style.display = 'none';
     
     if (quizContainer) {
@@ -696,10 +752,10 @@ function renderLesson() {
     allVideos.push({ type: 'direct', url, label: lesson.video_urls.length > 1 ? `Video ${i+1}` : 'Video' });
   });
 
-  const videoContainer = $('video-container');
   const videoWrapper = $('video-wrapper');
 
   if (allVideos.length > 0) {
+    if (videoSection) videoSection.style.display = '';
     videoContainer.style.display = '';
 
     // Build tab row if multiple
@@ -730,6 +786,7 @@ function renderLesson() {
     });
 
   } else {
+    if (videoSection) videoSection.style.display = 'none';
     videoContainer.style.display = 'none';
     videoContainer.innerHTML = '<div id="video-wrapper" class="video-wrapper"></div>';
   }
@@ -749,30 +806,41 @@ function buildVideoEmbed(vid) {
 }
 
 function renderLessonSidebar() {
-  const container = $('lesson-list-sidebar');
-  container.innerHTML = '';
-  const flat = state.currentLessonFlat;
-  let lastModule = null;
+  const sidebarContainer = $('lesson-list-sidebar');
+  const sheetContainer = $('sheet-lesson-list');
 
-  flat.forEach((item, i) => {
-    if (item.moduleName !== lastModule) {
-      const sep = document.createElement('div');
-      sep.style.cssText = 'padding:10px 16px 4px;font-size:10px;font-weight:700;color:var(--text-tertiary);letter-spacing:0.6px;text-transform:uppercase;background:var(--bg);border-bottom:1px solid var(--border-subtle)';
-      sep.textContent = item.moduleName;
-      container.appendChild(sep);
-      lastModule = item.moduleName;
-    }
+  const renderToList = (container) => {
+    if (!container) return;
+    container.innerHTML = '';
+    const flat = state.currentLessonFlat;
+    let lastModule = null;
 
-    const el = document.createElement('div');
-    el.className = 'sidebar-lesson-item' + (i === state.currentLessonFlatIdx ? ' active' : '');
-    el.innerHTML = `<span class="sidebar-lesson-num">${i + 1}</span><span>${escapeHtml(item.lesson.title)}</span>`;
-    el.addEventListener('click', () => goToLesson(i));
-    container.appendChild(el);
-  });
+    flat.forEach((item, i) => {
+      if (item.moduleName !== lastModule) {
+        const sep = document.createElement('div');
+        sep.style.cssText = 'padding:10px 16px 4px;font-size:10px;font-weight:700;color:var(--text-tertiary);letter-spacing:0.6px;text-transform:uppercase;background:var(--bg);border-bottom:1px solid var(--border-subtle)';
+        sep.textContent = item.moduleName;
+        container.appendChild(sep);
+        lastModule = item.moduleName;
+      }
 
-  // Scroll active into view
-  const active = container.querySelector('.sidebar-lesson-item.active');
-  if (active) active.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      const el = document.createElement('div');
+      el.className = 'sidebar-lesson-item' + (i === state.currentLessonFlatIdx ? ' active' : '');
+      el.innerHTML = `<span class="sidebar-lesson-num">${i + 1}</span><span>${escapeHtml(item.lesson.title)}</span>`;
+      el.addEventListener('click', () => {
+        goToLesson(i);
+        closeMobileSheet();
+      });
+      container.appendChild(el);
+    });
+
+    // Scroll active into view
+    const active = container.querySelector('.sidebar-lesson-item.active');
+    if (active) active.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  };
+
+  renderToList(sidebarContainer);
+  renderToList(sheetContainer);
 }
 
 // ── Breadcrumb ─────────────────────────────────────────────────
@@ -803,13 +871,103 @@ function toggleAbout() {
 }
 
 function goHome() {
+  state.topView = 'home';
   state.currentCourseIdx = null;
   state.currentLessonFlatIdx = null;
   renderNav();
   showView('home');
-  breadcrumb.innerHTML = `<span class="breadcrumb-home" id="bc-home">Home</span>`;
-  document.getElementById('bc-home')?.addEventListener('click', goHome);
+  updateBreadcrumb('home');
   $('lesson-counter').textContent = '';
+  closeMobileSidebar();
+}
+
+// ── Render Roadmap View ───────────────────────────────────────
+function renderRoadmapView() {
+  // Stats
+  let totalLessons = 0, totalModules = 0;
+  state.courses.forEach(c => {
+    c.modules.forEach(m => { totalModules++; totalLessons += m.lessons.length; });
+  });
+  const statsEl = $('roadmap-stats-bar');
+  if (statsEl) statsEl.innerHTML = `
+    <div class="stat-item"><div class="stat-num">${state.courses.length}</div><div class="stat-label">Kursus</div></div>
+    <div class="stat-item"><div class="stat-num">${totalModules}</div><div class="stat-label">Modul</div></div>
+    <div class="stat-item"><div class="stat-num">${totalLessons}</div><div class="stat-label">Pelajaran</div></div>
+    <div class="stat-item"><div class="stat-num">${ROADMAP_GROUPS.length}</div><div class="stat-label">Kategori</div></div>
+  `;
+
+  const container = $('roadmap-groups-container');
+  if (!container) return;
+
+  // Build group -> courses map
+  const groupMap = {};
+  ROADMAP_GROUPS.forEach(g => { groupMap[g.id] = []; });
+  state.courses.forEach((course, idx) => {
+    const g = getCourseGroup(course);
+    (groupMap[g.id] || (groupMap[ROADMAP_GROUPS[0].id])).push({ idx, course });
+  });
+
+  container.innerHTML = '';
+  ROADMAP_GROUPS.forEach((group, gIdx) => {
+    const items = groupMap[group.id] || [];
+    if (!items.length) return;
+
+    const section = document.createElement('div');
+    section.className = 'rm-group';
+    section.style.animationDelay = `${gIdx * 40}ms`;
+
+    const headerEl = document.createElement('div');
+    headerEl.className = 'rm-group-header';
+    headerEl.style.setProperty('--grp-color', group.color);
+    headerEl.innerHTML = `
+      <div class="rm-group-left">
+        <span class="rm-group-icon" style="background:${group.color}20;color:${group.color}">${group.emoji}</span>
+        <div>
+          <div class="rm-group-title" style="color:${group.color}">${group.label}</div>
+          <div class="rm-group-count">${items.length} kursus</div>
+        </div>
+      </div>
+      <span class="rm-chevron">▾</span>
+    `;
+    headerEl.addEventListener('click', () => {
+      section.classList.toggle('collapsed');
+    });
+
+    const grid = document.createElement('div');
+    grid.className = 'rm-cards-grid';
+
+    items.forEach(({ idx, course }) => {
+      const thumb = getCourseThumb(course, 'mqdefault');
+      const totalL = course.modules.reduce((s, m) => s + m.lessons.length, 0);
+      const hasVideo = course.modules.some(m => m.lessons.some(l => l.youtube_urls?.length || l.video_urls?.length));
+      const deprecated = course.course_title?.includes('[Deprecated]') || course.course_slug?.includes('deprecated');
+
+      const card = document.createElement('div');
+      card.className = 'rm-card';
+      card.innerHTML = `
+        <div class="rm-card-thumb" style="--rm-color:${group.color}">
+          ${thumb ? `<img src="${thumb}" loading="lazy" alt="" onerror="this.style.display='none'">` : ''}
+          <div class="rm-card-thumb-placeholder" style="color:${group.color}">${group.emoji}</div>
+          ${deprecated ? '<span class="rm-deprecated-badge">Deprecated</span>' : ''}
+        </div>
+        <div class="rm-card-body">
+          <div class="rm-card-num" style="color:${group.color}">#${idx + 1}</div>
+          <div class="rm-card-title">${escapeHtml(course.course_title)}</div>
+          <div class="rm-card-meta">
+            ${totalL ? `<span>📖 ${totalL}</span>` : ''}
+            ${hasVideo ? '<span>🎬 Video</span>' : ''}
+            ${course.mentors?.length ? `<span>👤 ${escapeHtml(course.mentors[0])}</span>` : ''}
+          </div>
+        </div>
+      `;
+      card.addEventListener('click', () => goToCourse(idx));
+      grid.appendChild(card);
+    });
+
+    section.appendChild(headerEl);
+    section.appendChild(grid);
+    container.appendChild(section);
+  });
 }
 
 // ── Keyboard shortcuts ─────────────────────────────────────────
@@ -1011,6 +1169,20 @@ function renderQuiz(quiz, container) {
   }
 }
 
+// Mobile Lesson Sheet functions
+const mobileSheet = $('mobile-lesson-sheet');
+const sheetOverlay = $('sheet-overlay');
+
+function openMobileSheet() {
+  if (mobileSheet) mobileSheet.classList.add('active');
+  if (sheetOverlay) sheetOverlay.classList.add('active');
+}
+
+function closeMobileSheet() {
+  if (mobileSheet) mobileSheet.classList.remove('active');
+  if (sheetOverlay) sheetOverlay.classList.remove('active');
+}
+
 // ── Init ───────────────────────────────────────────────────────
 function init() {
   // COURSE_DATA is injected from data.js (works without a server)
@@ -1032,6 +1204,45 @@ function init() {
   renderHome();
   showView('home');
   updateBreadcrumb('home');
+
+  // Wire up mobile bar & sheet event listeners
+  const mobPrevBtn = $('mobile-prev-btn');
+  const mobNextBtn = $('mobile-next-btn');
+  const mobPlaylistBtn = $('mobile-playlist-btn');
+  const sheetCloseBtn = $('sheet-close-btn');
+
+  if (mobPrevBtn) {
+    mobPrevBtn.addEventListener('click', () => {
+      if (state.currentLessonFlatIdx !== null && state.currentLessonFlatIdx > 0) {
+        goToLesson(state.currentLessonFlatIdx - 1);
+      }
+    });
+  }
+  if (mobNextBtn) {
+    mobNextBtn.addEventListener('click', () => {
+      if (state.currentLessonFlatIdx !== null && state.currentLessonFlatIdx < state.currentLessonFlat.length - 1) {
+        goToLesson(state.currentLessonFlatIdx + 1);
+      }
+    });
+  }
+  if (mobPlaylistBtn) {
+    mobPlaylistBtn.addEventListener('click', openMobileSheet);
+  }
+  if (sheetOverlay) {
+    sheetOverlay.addEventListener('click', closeMobileSheet);
+  }
+  if (sheetCloseBtn) {
+    sheetCloseBtn.addEventListener('click', closeMobileSheet);
+  }
+
+  // Fade out loading screen
+  const loadingScreen = $('loading-screen');
+  if (loadingScreen) {
+    loadingScreen.classList.add('fade-out');
+    setTimeout(() => {
+      loadingScreen.style.display = 'none';
+    }, 400);
+  }
 }
 
 init();

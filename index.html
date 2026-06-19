@@ -38,6 +38,16 @@
       </button>
     </div>
 
+    <!-- Top nav links -->
+    <div class="sidebar-top-links">
+      <button id="nav-home-btn" class="sidebar-top-link active">
+        <span class="stl-icon">🏠</span><span>Beranda</span>
+      </button>
+      <button id="nav-roadmap-btn" class="sidebar-top-link">
+        <span class="stl-icon">🗺️</span><span>Roadmap</span>
+      </button>
+    </div>
+
     <div class="sidebar-search">
       <div class="search-box">
         <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -77,7 +87,7 @@
     <section id="home-view" class="view home-view active">
       <div class="hero">
         <div class="hero-badge">📚 KelasFullstack.id</div>
-        <h1 class="hero-title">Roadmap<br /><span class="gradient-text">Belajar Fullstack</span></h1>
+        <h1 class="hero-title">Semua<br /><span class="gradient-text">Kursus</span></h1>
         <p class="hero-desc">Akses semua materi pembelajaran. Pilih kursus untuk mulai belajar.</p>
         <div id="stats-bar" class="stats-bar">
           <!-- injected -->
@@ -85,6 +95,21 @@
       </div>
       <div id="course-grid" class="course-grid">
         <!-- Course cards injected by JS -->
+      </div>
+    </section>
+
+    <!-- Roadmap View -->
+    <section id="roadmap-view" class="view roadmap-view">
+      <div class="roadmap-hero">
+        <div class="hero-badge">🗺️ Roadmap Lengkap</div>
+        <h1 class="hero-title">Menjadi <span class="gradient-text">Fullstack Developer</span></h1>
+        <p class="hero-desc">101 kursus terstruktur dari nol hingga mahir, dikelompokkan berdasarkan jalur belajar.</p>
+        <div id="roadmap-stats-bar" class="stats-bar">
+          <!-- injected -->
+        </div>
+      </div>
+      <div id="roadmap-groups-container" class="roadmap-groups-container">
+        <!-- Roadmap groups injected by JS -->
       </div>
     </section>
 
