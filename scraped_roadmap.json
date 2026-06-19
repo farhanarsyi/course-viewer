@@ -6037,5 +6037,329 @@
                 ]
             }
         ]
+    },
+    {
+        "course_title": "Belajar Fetch API Dengan Vue.js 3",
+        "course_slug": "belajar-fetch-api-dengan-vue-3",
+        "course_url": "https://www.codepolitan.com/dashboard/learn/courses/detail/belajar-fetch-api-dengan-vue-3",
+        "course_description": "Dalam kelas \"Belajar Fetch API Dengan Vue 3,\" kamu akan belajar bagaimana menggunakan Fetch API untuk mengambil data dari server dan menampilkannya dalam aplikasi Vue.js. Kelas ini dirancang untuk membantu kamu memahami konsep dasar Fetch API dan cara integrasinya dengan Vue 3. 11 Siswa 4.9 (7) Penilaian Level Beginner",
+        "about_course": "Kelas online \"Belajar Fetch API Dengan Vue 3\" adalah kursus yang dirancang untuk memberikan pemahaman mendalam tentang penggunaan Fetch API dalam aplikasi Vue.js. Dalam kelas ini, kamu akan mempelajari bagaimana melakukan permintaan HTTP untuk mengambil dan mengelola data dari server, serta menampilkan data tersebut dalam aplikasi Vue 3.\n\nTujuan Umum dan Khusus Pelatihan\n\nMemahami prinsip dasar Fetch API dan cara kerjanya.\nMenguasai teknik mengambil data dari server menggunakan Fetch API.\nMampu mengintegrasikan Fetch API dengan aplikasi Vue 3 untuk menampilkan data dinamis.\n\nSilabus\n\nPengenalan Fetch API: Memahami dasar-dasar Fetch API dan kegunaannya dalam pengembangan web.\nPermintaan GET dan POST: Mempelajari cara melakukan permintaan GET untuk mengambil data dan permintaan POST untuk mengirim data ke server.\nMengelola Response dan Error Handling: Mengelola respons dari server dan menangani kesalahan yang mungkin terjadi.\nIntegrasi Fetch API dengan Vue 3: Cara mengintegrasikan Fetch API dalam komponen Vue 3.\nMenampilkan Data Dinamis: Menampilkan data yang diambil dari server dalam aplikasi Vue.\n\nMetode Ajar\n\nPembelajaran Mandiri Online: Kamu dapat menentukan sendiri waktu belajarmu.\nMateri Berupa Video: Materi pembelajaran disajikan dalam bentuk video yang jelas dan mudah dipahami.\nForum Tanya Jawab: Fasilitas untuk berdiskusi dan bertanya mengenai materi pelajaran dengan instruktur dan peserta lainnya.\n\nPeralatan Belajar Peserta\n\nKomputer dengan Akses Internet: Pastikan kamu memiliki komputer dan koneksi internet yang stabil.\nSoftware: Browser terkini untuk mengakses materi pembelajaran dan software editor teks untuk mengembangkan aplikasi web.\n\nKelas ini sangat cocok untuk pengembang web yang ingin meningkatkan keterampilan mereka dalam mengambil dan mengelola data dari server menggunakan Fetch API dalam aplikasi Vue.js. Dengan mengikuti kelas ini, kamu akan memperoleh pengetahuan dan keterampilan yang diperlukan untuk membangun aplikasi web yang dinamis dan responsif.",
+        "mentors": [
+            "Ahmad Hakim"
+        ],
+        "modules": [
+            {
+                "module_title": "Belajar Fetch API Dengan Vue 3",
+                "lessons": [
+                    {
+                        "title": "Persiapan Project",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-fetch-api-dengan-vue-3/lessons/10416",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731756_b331cc0382c29dce8446/480p/1726731756_b331cc0382c29dce8446.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731756_b331cc0382c29dce8446/1080p/1726731756_b331cc0382c29dce8446.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Manfaat Memisahkan Element Ke Masing-Masing Component",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-fetch-api-dengan-vue-3/lessons/10417",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731755_5fe8473c6246ad400517/480p/1726731755_5fe8473c6246ad400517.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731755_5fe8473c6246ad400517/1080p/1726731755_5fe8473c6246ad400517.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengenal Lifecycle Hook Vue.Js",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-fetch-api-dengan-vue-3/lessons/10418",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731773_d6a612f3d1dfa44a7ea5/480p/1726731773_d6a612f3d1dfa44a7ea5.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731773_d6a612f3d1dfa44a7ea5/1080p/1726731773_d6a612f3d1dfa44a7ea5.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengenal Lifecycle Onbeforemount Dan Onmount",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-fetch-api-dengan-vue-3/lessons/10419",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731782_ba70b8f2306f2644e27a/480p/1726731782_ba70b8f2306f2644e27a.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731782_ba70b8f2306f2644e27a/1080p/1726731782_ba70b8f2306f2644e27a.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengenal Lifecycle Onbeforeupdate Dan Onupdated",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-fetch-api-dengan-vue-3/lessons/10420",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731788_b613ab262d7cddca260c/480p/1726731788_b613ab262d7cddca260c.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731788_b613ab262d7cddca260c/1080p/1726731788_b613ab262d7cddca260c.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengenal Lifecycle Onbeforeunmount Dan Onunmounted",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-fetch-api-dengan-vue-3/lessons/10421",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731795_d2db118c53f1faf16548/480p/1726731795_d2db118c53f1faf16548.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731795_d2db118c53f1faf16548/1080p/1726731795_d2db118c53f1faf16548.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Membuat Restful API Tanpa Backend",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-fetch-api-dengan-vue-3/lessons/10422",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731808_d615d3b8488dbbc7cbca/480p/1726731808_d615d3b8488dbbc7cbca.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731808_d615d3b8488dbbc7cbca/1080p/1726731808_d615d3b8488dbbc7cbca.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Fetch Data Dengan Axios Dan Async Component",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-fetch-api-dengan-vue-3/lessons/10423",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731832_730bd9b5270d09447236/480p/1726731832_730bd9b5270d09447236.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731832_730bd9b5270d09447236/1080p/1726731832_730bd9b5270d09447236.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Mengenal Component Suspense Dan Cara Kerjanya",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-fetch-api-dengan-vue-3/lessons/10424",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731820_0d30f346f63d416bd91c/480p/1726731820_0d30f346f63d416bd91c.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731820_0d30f346f63d416bd91c/1080p/1726731820_0d30f346f63d416bd91c.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menampilkan Data Product Ke Component Melalui Props",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-fetch-api-dengan-vue-3/lessons/10425",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731845_0993eb8476bf0ed00bb4/480p/1726731845_0993eb8476bf0ed00bb4.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731845_0993eb8476bf0ed00bb4/1080p/1726731845_0993eb8476bf0ed00bb4.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Persiapan Fetch Data Menggunakan Pagination",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-fetch-api-dengan-vue-3/lessons/10426",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731865_16f0890caa923a2b98e7/480p/1726731865_16f0890caa923a2b98e7.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731865_16f0890caa923a2b98e7/1080p/1726731865_16f0890caa923a2b98e7.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Fungsi Pagination Bekerja Dengan Emit",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-fetch-api-dengan-vue-3/lessons/10427",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731873_aaf970c834eacf7e1fdc/480p/1726731873_aaf970c834eacf7e1fdc.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731873_aaf970c834eacf7e1fdc/1080p/1726731873_aaf970c834eacf7e1fdc.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Implementasi Lifecycle Untuk Fetch Data Dari API",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-fetch-api-dengan-vue-3/lessons/10428",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731885_7541e3d6fe7ac3c079fd/480p/1726731885_7541e3d6fe7ac3c079fd.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731885_7541e3d6fe7ac3c079fd/1080p/1726731885_7541e3d6fe7ac3c079fd.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Lain Untuk Menampilkan UI Loading",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-fetch-api-dengan-vue-3/lessons/10429",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731898_6e1aa486ed5badf826e6/480p/1726731898_6e1aa486ed5badf826e6.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731898_6e1aa486ed5badf826e6/1080p/1726731898_6e1aa486ed5badf826e6.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menjalankan Logic Lebih Praktis Dengan Watcheffect",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-fetch-api-dengan-vue-3/lessons/10430",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731906_536f97d1b065610ad4a8/480p/1726731906_536f97d1b065610ad4a8.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731906_536f97d1b065610ad4a8/1080p/1726731906_536f97d1b065610ad4a8.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Menampilkan Halaman Detail Product",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-fetch-api-dengan-vue-3/lessons/10431",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731920_2537f5fbe04dcf7bbc09/480p/1726731920_2537f5fbe04dcf7bbc09.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731920_2537f5fbe04dcf7bbc09/1080p/1726731920_2537f5fbe04dcf7bbc09.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Fungsi Hapus Data Product Dari API",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-fetch-api-dengan-vue-3/lessons/10432",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731936_58087970e89dc8105877/480p/1726731936_58087970e89dc8105877.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731936_58087970e89dc8105877/1080p/1726731936_58087970e89dc8105877.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Persiapan Form Untuk Create Dan Update Product",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-fetch-api-dengan-vue-3/lessons/10433",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731939_e587d0f0e20067caafea/480p/1726731939_e587d0f0e20067caafea.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731939_e587d0f0e20067caafea/1080p/1726731939_e587d0f0e20067caafea.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Fungsi Create Data Melalui API",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-fetch-api-dengan-vue-3/lessons/10434",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731960_5a6066604a859d6c8486/480p/1726731960_5a6066604a859d6c8486.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731960_5a6066604a859d6c8486/1080p/1726731960_5a6066604a859d6c8486.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Fungsi Update Data Melalui API",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-fetch-api-dengan-vue-3/lessons/10435",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731978_e758111ded62dffee406/480p/1726731978_e758111ded62dffee406.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731978_e758111ded62dffee406/1080p/1726731978_e758111ded62dffee406.m3u8"
+                        ],
+                        "youtube_urls": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "course_title": "Belajar State Management Vue.js 3 dengan Pinia",
+        "course_slug": "belajar-state-management-vue-3-dengan-pinia",
+        "course_url": "https://www.codepolitan.com/dashboard/learn/courses/detail/belajar-state-management-vue-3-dengan-pinia",
+        "course_description": "Dalam kelas \"Belajar State Management Vue 3 dengan Pinia,\" kamu akan belajar cara mengelola state aplikasi menggunakan Pinia, state management library yang ringan dan intuitif untuk Vue.js. Kelas ini akan membantumu memahami konsep dasar state management dan cara mengimplementasikannya dengan Pinia di Vue 3. 16 Siswa 5.0 (5) Penilaian Level Beginner",
+        "about_course": "Kelas online \"Belajar State Management Vue 3 dengan Pinia\" adalah kursus yang dirancang untuk memberikan pemahaman mendalam tentang pengelolaan state dalam aplikasi Vue 3 menggunakan Pinia. Pinia adalah library state management baru yang dibuat untuk menggantikan Vuex, dengan antarmuka yang lebih sederhana dan efisien. Dalam kelas ini, kamu akan mempelajari cara mengelola state secara efektif untuk membuat aplikasi Vue yang lebih terstruktur dan mudah dipelihara.\n\nTujuan Umum dan Khusus Pelatihan\n\nMemahami konsep dasar state management dalam Vue.js.\nMenguasai dasar-dasar penggunaan Pinia untuk mengelola state aplikasi.\nMampu mengintegrasikan Pinia dalam aplikasi Vue 3 untuk state management yang efisien.\n\nSilabus\n\nPengenalan State Management: Memahami apa itu state management dan mengapa penting dalam pengembangan aplikasi.\nDasar-dasar Pinia: Memahami apa itu Pinia dan bagaimana cara kerjanya.\nMenggunakan Pinia dalam Vue 3: Cara mengintegrasikan Pinia dalam aplikasi Vue 3.\nState dan Getters: Mengelola state dan menggunakan getters untuk mengakses state.\nActions dan Mutations: Menggunakan actions untuk mengubah state dan menjaga konsistensi data.\n\nMetode Ajar\n\nPembelajaran Mandiri Online: Kamu dapat menentukan sendiri waktu belajarmu.\nMateri Berupa Video: Materi pembelajaran disajikan dalam bentuk video yang jelas dan mudah dipahami.\nForum Tanya Jawab: Fasilitas untuk berdiskusi dan bertanya mengenai materi pelajaran dengan instruktur dan peserta lainnya.\n\nPeralatan Belajar Peserta\n\nKomputer dengan Akses Internet: Pastikan kamu memiliki komputer dan koneksi internet yang stabil.\nSoftware: Browser terkini untuk mengakses materi pembelajaran dan software editor teks untuk mengembangkan aplikasi web.\n\nKelas ini sangat cocok untuk pengembang web yang ingin meningkatkan keterampilan mereka dalam mengelola state aplikasi menggunakan Pinia di Vue 3. Dengan mengikuti kelas ini, kamu akan memperoleh pengetahuan dan keterampilan yang diperlukan untuk membangun aplikasi Vue yang lebih terstruktur, efisien, dan mudah dipelihara.",
+        "mentors": [
+            "Ahmad Hakim"
+        ],
+        "modules": [
+            {
+                "module_title": "Belajar State Management Vue 3 dengan Pinia",
+                "lessons": [
+                    {
+                        "title": "Cara Kerja State Management Dengan Ref",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-state-management-vue-3-dengan-pinia/lessons/10407",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731774_b08af0e3541d2a466c9d/480p/1726731774_b08af0e3541d2a466c9d.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731774_b08af0e3541d2a466c9d/1080p/1726731774_b08af0e3541d2a466c9d.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menyimpan Nilai State Dengan Reactive",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-state-management-vue-3-dengan-pinia/lessons/10408",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731776_0cd6579701a2d92e7fb4/480p/1726731776_0cd6579701a2d92e7fb4.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731776_0cd6579701a2d92e7fb4/1080p/1726731776_0cd6579701a2d92e7fb4.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Perbedaan Menggunakan Ref Dan Reactive",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-state-management-vue-3-dengan-pinia/lessons/10409",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731800_c75bde987277b0f43ec3/480p/1726731800_c75bde987277b0f43ec3.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731800_c75bde987277b0f43ec3/1080p/1726731800_c75bde987277b0f43ec3.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Membuat Skenario State Pada Component Bersarang",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-state-management-vue-3-dengan-pinia/lessons/10410",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731797_3879ef496437b762b783/480p/1726731797_3879ef496437b762b783.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731797_3879ef496437b762b783/1080p/1726731797_3879ef496437b762b783.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Kondisi Prop Drilling Yang Tidak Disarankan",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-state-management-vue-3-dengan-pinia/lessons/10411",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731814_25ba46cb69cf7fc20092/480p/1726731814_25ba46cb69cf7fc20092.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731814_25ba46cb69cf7fc20092/1080p/1726731814_25ba46cb69cf7fc20092.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Berbagi State Data Dengan Provide Dan Inject",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-state-management-vue-3-dengan-pinia/lessons/10412",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731814_c2d96d8a1778bf55766e/480p/1726731814_c2d96d8a1778bf55766e.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731814_c2d96d8a1778bf55766e/1080p/1726731814_c2d96d8a1778bf55766e.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Memisahkan State Dengan Composable",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-state-management-vue-3-dengan-pinia/lessons/10413",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731841_9355ac87f75016ea74e8/480p/1726731841_9355ac87f75016ea74e8.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731841_9355ac87f75016ea74e8/1080p/1726731841_9355ac87f75016ea74e8.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Menyimpan Global State Dengan Pinia",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-state-management-vue-3-dengan-pinia/lessons/10414",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731838_746470f2eb8bd80c12c0/480p/1726731838_746470f2eb8bd80c12c0.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731838_746470f2eb8bd80c12c0/1080p/1726731838_746470f2eb8bd80c12c0.m3u8"
+                        ],
+                        "youtube_urls": []
+                    },
+                    {
+                        "title": "Cara Menggunakan Fungsi Dan Mengubah Nilai Di Pinia",
+                        "url": "https://www.codepolitan.com/dashboard/learn/courses/belajar-state-management-vue-3-dengan-pinia/lessons/10415",
+                        "text_content": "",
+                        "video_urls": [
+                            "https://hls.diupload.com/pl/codepolitan/1726731862_8cbebf876215080fc649/480p/1726731862_8cbebf876215080fc649.m3u8",
+                            "https://hls.diupload.com/pl/codepolitan/1726731862_8cbebf876215080fc649/1080p/1726731862_8cbebf876215080fc649.m3u8"
+                        ],
+                        "youtube_urls": []
+                    }
+                ]
+            }
+        ]
     }
 ]
