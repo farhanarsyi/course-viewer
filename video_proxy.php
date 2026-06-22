@@ -12,8 +12,11 @@ ini_set('display_errors', 0);
 ini_set('zlib.output_compression', 'Off');
 
 // Also try to disable apache/nginx gzip if possible using headers
-header('Cache-Control: no-cache');
+header('Cache-Control: no-transform, no-cache, no-store, must-revalidate');
 header('X-Accel-Buffering: no');
+if (function_exists('apache_setenv')) {
+    apache_setenv('no-gzip', '1');
+}
 
 if (!isset($_GET['url'])) {
     header("HTTP/1.1 400 Bad Request");
@@ -63,11 +66,6 @@ curl_close($ch);
 if ($httpCode !== 200) {
     header("HTTP/1.1 " . $httpCode);
     exit("Failed to fetch video resource. HTTP Code: " . $httpCode);
-}
-
-// Clear any accidental output buffers that might contain a BOM or newline
-while (ob_get_level()) {
-    ob_end_clean();
 }
 
 // Ensure no conflicting encoding headers are sent by PHP
