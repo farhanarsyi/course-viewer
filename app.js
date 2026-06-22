@@ -1122,7 +1122,11 @@ function buildVideoEmbed(vid) {
   }
   // Direct video
   let videoSrc = vid.url;
-  // Kami hapus fitur proxy sepenuhnya agar ekstensi ModHeader bisa langsung menembak ke b-cdn.net
+  const isCdn = /b-cdn\.net/i.test(videoSrc);
+  if (isCdn) {
+    // Route b-cdn.net videos through our new Cloudflare Worker proxy
+    videoSrc = `https://video-proxy.farhanarsyi.workers.dev/?url=${encodeURIComponent(videoSrc)}`;
+  }
   return `<video controls style="width:100%;height:100%;background:#000"><source src="${escapeHtml(videoSrc)}">Browser tidak mendukung video ini.</video>`;
 }
 
