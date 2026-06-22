@@ -1,10 +1,13 @@
 """
 download_videos.py — Download course videos from video_links.json
+
 Features:
   - Resume support (log-based, lanjut dari terakhir)
   - Overall progress bar
   - Per-video progress bar + file size (MB)
   - Picks highest available quality per lesson
+  - Folder structure: downloaded_videos/Course/Module/Lesson.mp4
+
 Usage:
   pip install tqdm   (opsional, untuk progress bar lebih bagus)
   python download_videos.py
@@ -18,6 +21,7 @@ import re
 import subprocess
 import sys
 import threading
+from datetime import datetime
 from pathlib import Path
 
 # ── Config ─────────────────────────────────────────────────────────────
@@ -55,6 +59,9 @@ class SimpleBar:
     def set_postfix_str(self, s):
         self.postfix = s
 
+    def set_description(self, s):
+        self.desc = s
+
     def refresh(self):
         self._draw()
 
@@ -64,7 +71,7 @@ class SimpleBar:
         if self.total > 0:
             pct = self.n / self.total * 100
             bar_len = 25
-            filled = int(bar_len * self.n / self.total)
+            filled = int(bar_len * min(self.n / self.total, 1.0))
             bar = "█" * filled + "░" * (bar_len - filled)
             line = (
                 f"\r  {self.desc} {bar} "
@@ -82,7 +89,7 @@ class SimpleBar:
             if self.leave:
                 print()
             else:
-                print("\r" + " " * 100 + "\r", end="", flush=True)
+                print("\r" + " " * 120 + "\r", end="", flush=True)
 
     def __enter__(self):
         return self
@@ -99,22 +106,27 @@ def make_bar(*args, **kwargs):
 
 
 # ── Resume Log ─────────────────────────────────────────────────────────
-def load_completed() -> set[str]:
-    """Load set of already-downloaded file paths from log."""
+def load_log() -> dict:
+    """Load download log for resume support."""
     if LOG_FILE.exists():
         try:
             with open(LOG_FILE, "r", encoding="utf-8") as f:
                 data = json.load(f)
-                return set(data) if isinstance(data, list) else set()
+                if isinstance(data, dict) and "completed" in data:
+                    return data
         except (json.JSONDecodeError, TypeError):
             pass
-    return set()
+    return {
+        "completed": [],
+        "failed": [],
+        "stats": {"total_mb": 0.0, "started": None},
+    }
 
 
-def save_completed(completed: set[str]):
-    """Save completed download paths to log file."""
+def save_log(log: dict):
+    """Save download log to file."""
     with open(LOG_FILE, "w", encoding="utf-8") as f:
-        json.dump(sorted(completed), f, indent=2, ensure_ascii=False)
+        json.dump(log, f, indent=2, ensure_ascii=False)
 
 
 # ── Helpers ────────────────────────────────────────────────────────────
@@ -152,6 +164,14 @@ def format_size(mb: float) -> str:
     if mb >= 1024:
         return f"{mb / 1024:.2f} GB"
     return f"{mb:.1f} MB"
+
+
+def get_file_size_mb(filepath: str) -> float:
+    """Get file size in MB."""
+    try:
+        return os.path.getsize(filepath) / (1024 * 1024)
+    except OSError:
+        return 0.0
 
 
 # ── ffmpeg ─────────────────────────────────────────────────────────────
@@ -219,7 +239,7 @@ def download_video(url: str, output_path: str) -> tuple[bool, float]:
     # Per-video progress bar
     pbar = make_bar(
         total=duration if duration > 0 else 0,
-        desc="  ▸ Progress",
+        desc="    ▸ Progress",
         unit="s",
         leave=False,
         position=1,
@@ -272,31 +292,44 @@ def download_video(url: str, output_path: str) -> tuple[bool, float]:
     return success, last_size_mb
 
 
-# ── Task Collection ────────────────────────────────────────────────────
-def collect_tasks(
-    data: dict, path_parts: list[str] | None = None
-) -> list[tuple[str, str, str, str]]:
+# ── Task Collection (new flat-list format) ─────────────────────────────
+def collect_tasks(entries: list[dict]) -> list[dict]:
     """
-    Flatten the nested JSON into a list of tasks.
-    Each task: (display_name, url, output_path, quality_label)
+    Flatten the JSON array into a list of download tasks.
+    Each entry has: course, module, lesson, urls
     """
-    if path_parts is None:
-        path_parts = []
-    tasks: list[tuple[str, str, str, str]] = []
+    tasks = []
 
-    for key, value in data.items():
-        safe = sanitize(key)
-        if isinstance(value, dict):
-            tasks.extend(collect_tasks(value, path_parts + [safe]))
-        elif isinstance(value, list):
-            url = pick_best_url(value)
-            if url:
-                ql = quality_label(url)
-                folder = os.path.join(OUTPUT_DIR, *path_parts)
-                filename = f"{safe} ({ql}).mp4"
-                output_path = os.path.join(folder, filename)
-                display = os.path.join(*path_parts, safe) if path_parts else safe
-                tasks.append((display, url, output_path, ql))
+    for entry in entries:
+        course = sanitize(entry.get("course", "Unknown"))
+        module = sanitize(entry.get("module", "Unknown"))
+        lesson = sanitize(entry.get("lesson", "Unknown"))
+        urls = entry.get("urls", [])
+
+        url = pick_best_url(urls)
+        if not url:
+            continue
+
+        ql = quality_label(url)
+
+        # Folder: downloaded_videos/Course/Module/
+        # File:   Lesson (1080p).mp4
+        folder = os.path.join(OUTPUT_DIR, course, module)
+        filename = f"{lesson} ({ql}).mp4"
+        output_path = os.path.join(folder, filename)
+
+        # Display path for progress
+        display = f"{course} > {module} > {lesson}"
+
+        tasks.append(
+            {
+                "display": display,
+                "url": url,
+                "output": output_path,
+                "quality": ql,
+                "filename": filename,
+            }
+        )
 
     return tasks
 
@@ -316,20 +349,36 @@ def main():
         print(f"\n  [ERROR] '{JSON_FILE}' not found.")
         sys.exit(1)
 
+    # Load JSON
     with open(JSON_FILE, "r", encoding="utf-8") as f:
-        data = json.load(f)
+        raw = json.load(f)
 
-    # Collect & filter
-    all_tasks = collect_tasks(data)
-    completed = load_completed()
-    pending = [
-        t
-        for t in all_tasks
-        if t[2] not in completed  # t[2] = output_path
-    ]
+    # Support both new flat-list format and old nested dict format
+    if isinstance(raw, list):
+        entries = raw
+    elif isinstance(raw, dict):
+        # Old format — convert to flat list
+        entries = _flatten_old_format(raw)
+    else:
+        print("  [ERROR] Invalid JSON format.")
+        sys.exit(1)
 
-    print(f"\n  Total videos   : {len(all_tasks)}")
-    print(f"  Already done   : {len(completed)}")
+    # Load resume log
+    log = load_log()
+    completed_set = set(log["completed"])
+
+    if not log["stats"]["started"]:
+        log["stats"]["started"] = datetime.now().isoformat()
+
+    # Collect all tasks
+    all_tasks = collect_tasks(entries)
+    total_videos = len(all_tasks)
+
+    # Filter out already completed
+    pending = [t for t in all_tasks if t["output"] not in completed_set]
+
+    print(f"\n  Total videos   : {total_videos}")
+    print(f"  Already done   : {len(completed_set)}")
     print(f"  To download    : {len(pending)}")
 
     if not pending:
@@ -337,8 +386,12 @@ def main():
         print(f"    Output: {OUTPUT_DIR}")
         return
 
-    stats = {"success": 0, "failed": 0, "total_mb": 0.0}
-    skipped_on_interrupt = 0
+    stats = {
+        "success": 0,
+        "failed": 0,
+        "skipped": 0,
+        "total_mb": log["stats"]["total_mb"],
+    }
 
     overall = make_bar(
         total=len(pending),
@@ -348,8 +401,13 @@ def main():
     )
 
     try:
-        for i, (display, url, output_path, ql) in enumerate(pending, 1):
-            overall.set_postfix_str(display[:55])
+        for i, task in enumerate(pending, 1):
+            display = task["display"]
+            url = task["url"]
+            output_path = task["output"]
+            ql = task["quality"]
+
+            overall.set_description(f"  [{i}/{len(pending)}]")
             overall.refresh()
 
             print(f"\n  [{i}/{len(pending)}] {display} [{ql}]")
@@ -359,35 +417,69 @@ def main():
             if ok:
                 stats["success"] += 1
                 stats["total_mb"] += size_mb
-                completed.add(output_path)
-                save_completed(completed)
-                print(f"  ✓ Done — {format_size(size_mb)}")
+                log["completed"].append(output_path)
+                log["stats"]["total_mb"] = stats["total_mb"]
+                save_log(log)
+                completed_set.add(output_path)
+                print(f"    ✓ Done — {format_size(size_mb)}")
             else:
                 stats["failed"] += 1
-                print(f"  ✗ Failed")
+                if output_path not in log["failed"]:
+                    log["failed"].append(output_path)
+                save_log(log)
+                print(f"    ✗ Failed")
 
             overall.update(1)
 
     except KeyboardInterrupt:
-        skipped_on_interrupt = len(pending) - stats["success"] - stats["failed"]
-        save_completed(completed)
+        stats["skipped"] = len(pending) - stats["success"] - stats["failed"]
+        save_log(log)
         print(f"\n\n  [!] Interrupted — progress saved to {LOG_FILE.name}")
 
     overall.close()
 
     # Summary
+    log["stats"]["completed"] = datetime.now().isoformat()
+    save_log(log)
+
     print()
     print("=" * 64)
     print(f"  ✓ Success      : {stats['success']}")
     print(f"  ✗ Failed       : {stats['failed']}")
-    if skipped_on_interrupt:
-        print(f"  ⏭ Skipped      : {skipped_on_interrupt} (interrupted)")
+    if stats["skipped"]:
+        print(f"  ⏭ Skipped      : {stats['skipped']} (interrupted)")
     print(f"  ↓ Downloaded   : {format_size(stats['total_mb'])}")
     print(f"  📁 Output      : {OUTPUT_DIR}")
     print(f"  📋 Log         : {LOG_FILE.name}")
     print("=" * 64)
     print("  Jalankan lagi kapan saja untuk melanjutkan download.")
     print()
+
+
+# ── Old format support ─────────────────────────────────────────────────
+def _flatten_old_format(data: dict, path_parts: list[str] | None = None) -> list[dict]:
+    """Convert old nested dict format to flat list of entries."""
+    if path_parts is None:
+        path_parts = []
+    entries = []
+
+    for key, value in data.items():
+        if isinstance(value, dict):
+            entries.extend(_flatten_old_format(value, path_parts + [key]))
+        elif isinstance(value, list) and value:
+            course = path_parts[0] if len(path_parts) > 0 else "Unknown"
+            module = path_parts[1] if len(path_parts) > 1 else "Unknown"
+            lesson = key
+            entries.append(
+                {
+                    "course": course,
+                    "module": module,
+                    "lesson": lesson,
+                    "urls": value,
+                }
+            )
+
+    return entries
 
 
 if __name__ == "__main__":
