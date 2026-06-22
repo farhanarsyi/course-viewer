@@ -48,14 +48,28 @@ export default {
 
         const lines = body.split('\n');
         const rewrittenLines = lines.map(line => {
-          line = line.trim();
-          // Jika baris bukan berupa teks "#" (berarti ini link file .ts atau resolusi m3u8 lain)
-          if (line && !line.startsWith('#')) {
-            let absoluteUrl = line;
-            if (!line.startsWith('http')) {
-              absoluteUrl = line.startsWith('/') ? targetUrlObj.origin + line : baseUrl + line;
+          let trimmed = line.trim();
+          
+          if (trimmed.startsWith('#')) {
+            // Check if there is an embedded URI="..." (e.g. for EXT-X-KEY)
+            const uriMatch = trimmed.match(/URI="([^"]+)"/);
+            if (uriMatch) {
+              let rawUri = uriMatch[1];
+              let absoluteUri = rawUri;
+              if (!rawUri.startsWith('http')) {
+                absoluteUri = rawUri.startsWith('/') ? targetUrlObj.origin + rawUri : baseUrl + rawUri;
+              }
+              let proxiedUri = url.origin + url.pathname + '?url=' + encodeURIComponent(absoluteUri);
+              trimmed = trimmed.replace(`URI="${rawUri}"`, `URI="${proxiedUri}"`);
             }
-            // Ubah link aslinya agar menempel pada link proxy Cloudflare kita
+            return trimmed;
+          } else if (trimmed) {
+            // It's a file path/URL
+            let absoluteUrl = trimmed;
+            if (!trimmed.startsWith('http')) {
+              absoluteUrl = trimmed.startsWith('/') ? targetUrlObj.origin + trimmed : baseUrl + trimmed;
+            }
+            // Rewrite it to point to this worker
             return url.origin + url.pathname + '?url=' + encodeURIComponent(absoluteUrl);
           }
           return line;
