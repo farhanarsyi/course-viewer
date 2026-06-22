@@ -63,9 +63,11 @@ $contentType = curl_getinfo($ch, CURLINFO_CONTENT_TYPE);
 $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
 
-if ($httpCode !== 200) {
-    header("HTTP/1.1 " . $httpCode);
-    exit("Failed to fetch video resource. HTTP Code: " . $httpCode);
+if ($response === false || $httpCode !== 200) {
+    $errorMsg = curl_error($ch);
+    $status = ($httpCode > 0) ? $httpCode : 502;
+    header("HTTP/1.1 " . $status);
+    exit("Failed to fetch video resource. HTTP Code: " . $httpCode . " | cURL Error: " . $errorMsg);
 }
 
 // Ensure no conflicting encoding headers are sent by PHP
