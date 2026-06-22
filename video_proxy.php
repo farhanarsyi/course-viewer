@@ -43,10 +43,10 @@ curl_setopt($ch, CURLOPT_URL, $videoUrl);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 
-// Send neutral Accept-Encoding so CDN does not compress the data, avoiding need for cURL to decode
+// Let cURL handle encoding automatically (gzip, deflate, br)
+curl_setopt($ch, CURLOPT_ENCODING, "");
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'Accept: */*',
-    'Accept-Encoding: identity', 
     'Connection: keep-alive'
 ));
 
@@ -69,6 +69,9 @@ if ($httpCode !== 200) {
 while (ob_get_level()) {
     ob_end_clean();
 }
+
+// Ensure no conflicting encoding headers are sent by PHP
+header_remove('Content-Encoding');
 
 // Determine if the file is an HLS playlist (m3u8)
 $isM3u8 = (
@@ -130,9 +133,8 @@ if ($isM3u8) {
     }
 }
 
-// Add Content-Length to avoid chunking issues with proxy streaming
-$contentLength = function_exists('mb_strlen') ? mb_strlen($response, '8bit') : strlen($response);
-header('Content-Length: ' . $contentLength);
+// Remove manual Content-Length as it conflicts with Apache/Nginx gzip compression and causes ERR_CONTENT_DECODING_FAILED
+// Let the web server handle chunking and length automatically.
 
 // Output proxy response
 echo $response;
