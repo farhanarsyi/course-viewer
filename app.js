@@ -1122,7 +1122,7 @@ function buildVideoEmbed(vid) {
   }
   // Direct video
   let videoSrc = vid.url;
-  const isCdn = /b-cdn\.net|diupload\.com/i.test(videoSrc);
+  const isCdn = /b-cdn\.net/i.test(videoSrc);
   if (isCdn) {
     videoSrc = `video_proxy.php?url=${encodeURIComponent(videoSrc)}`;
   }
