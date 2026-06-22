@@ -1066,11 +1066,21 @@ function renderLesson() {
     // Build tab row
     const tabsDiv = document.createElement('div');
     tabsDiv.className = 'video-tabs';
+    tabsDiv.style.display = 'flex';
+    tabsDiv.style.alignItems = 'center';
+    tabsDiv.style.flexWrap = 'wrap';
+    tabsDiv.style.gap = '8px';
+
     tabsDiv.innerHTML = allVideos.map((v, i) => `
       <button class="video-tab-btn${i === state.currentVideoIdx ? ' active' : ''}" data-vidx="${i}">
         <span class="yt-dot"></span>${escapeHtml(v.label)}
       </button>
-    `).join('');
+    `).join('') + `
+      <a id="external-video-link" href="${escapeHtml(allVideos[state.currentVideoIdx].url)}" target="_blank" rel="noopener noreferrer" style="margin-left:auto;display:inline-flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,0.1);color:#fff;text-decoration:none;border-radius:6px;font-size:12px;font-weight:600;transition:background 0.2s;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        Tonton di Tab Baru
+      </a>
+    `;
 
     // Append tabs to videoSection (rendering below videoContainer)
     videoSection.appendChild(tabsDiv);
@@ -1081,6 +1091,12 @@ function renderLesson() {
         state.currentVideoIdx = parseInt(btn.dataset.vidx);
         document.getElementById('video-wrapper').innerHTML = buildVideoEmbed(allVideos[state.currentVideoIdx]);
         tabsDiv.querySelectorAll('.video-tab-btn').forEach(b => b.classList.toggle('active', b === btn));
+        
+        // Update the external link URL
+        const extLink = document.getElementById('external-video-link');
+        if (extLink) {
+          extLink.href = allVideos[state.currentVideoIdx].url;
+        }
       });
     });
 
